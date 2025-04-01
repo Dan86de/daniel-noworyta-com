@@ -3,12 +3,15 @@ import tsConfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-	vite: {
-		plugins: [
-			tsConfigPaths({
-				projects: ["./tsconfig.json"],
-			}),
-			tailwindcss(),
-		],
-	},
+  vite: {
+    plugins: [
+      tsConfigPaths({
+        projects: ["./tsconfig.json"],
+      }),
+      tailwindcss(),
+    ],
+  },
+  server: {
+    preset: "vercel",
+  },
 });
