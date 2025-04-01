@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
-/* FONTS */
+@custom-variant dark (&:where(.dark, .dark *));
 
+/* FONTS */
 /* Geomanist Font */
 @font-face {
 	font-family: "Geomanist";
@@ -227,8 +228,28 @@
 	--font-heading: "Geomanist", "sans-serif";
 	--color-vaillant: #00917e;
 	--color-primary: #f25118;
-	--background: #0a0a0a;
+	--foreground: #0a0a0a;
+	--background: #ededed;
+	--gradient-title-primary: var(--color-neutral-950);
+	--gradient-title-secondary: var(--color-neutral-800);
+}
+
+:root {
+	line-height: 1.5;
+	font-weight: 400;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+.dark {
 	--foreground: #ededed;
+	--background: #0a0a0a;
+	--gradient-title-primary: var(--color-neutral-100);
+	--gradient-title-secondary: var(--color-neutral-300);
 }
 
 body {
@@ -236,6 +257,7 @@ body {
 	color: var(--foreground);
 	font-family: var(--font-sans);
 }
+
 
 h1,
 h2,
@@ -247,5 +269,12 @@ h6 {
 }
 
 p {
-	@apply my-5 text-base/6 lg:text-lg/7;
+	@apply my-5 text-base lg:text-lg ;
 }
+
+/* Nice trick for mobile buttons to make touchable area bigger on tablets and mobile devices */
+/* More info here: https://www.youtube.com/watch?v=soFSSkf4oVY */
+span.touch-target {
+	@apply absolute top-1/2 left-1/2 -translate-1/2 [@media(pointer:fine)]:hidden;
+}
+

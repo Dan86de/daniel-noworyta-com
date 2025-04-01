@@ -17,8 +17,8 @@ export const GradientTitle = ({
 		<h1
 			style={
 				{
-					"--primary": primaryColor ?? "#ededed",
-					"--secondary": secondaryColor ?? "#c7c7c7",
+					"--primary": primaryColor ?? "var(--gradient-title-primary)",
+					"--secondary": secondaryColor ?? "var(--gradient-title-secondary)",
 				} as CSSProperties
 			}
 			className={clsx(

@@ -11,7 +11,7 @@ function RouteComponent() {
 			<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
 				Think. Write. Share.
 			</GradientTitle>
-			<p className={"text-neutral-300"}>
+			<p>
 				Writing helps me <strong>organize my thoughts</strong> and share
 				knowledge. Through articles, I document my journey, share technical
 				insights, and help others learn from my experiences in programming and

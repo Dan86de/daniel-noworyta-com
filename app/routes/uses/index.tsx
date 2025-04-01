@@ -11,7 +11,7 @@ function RouteComponent() {
 			<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
 				Tools. Tech. Workflow.
 			</GradientTitle>
-			<p className={"text-neutral-300"}>
+			<p>
 				Every developer&apos;s setup is unique. Here&apos;s a detailed look at
 				the <strong>tools and technologies</strong> I use daily to stay
 				productive. From hardware to software, these are the essentials that

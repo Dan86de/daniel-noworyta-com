@@ -4,6 +4,7 @@ import {
 	createRootRoute,
 	HeadContent,
 	Scripts,
+	ScriptOnce,
 } from "@tanstack/react-router";
 
 import appCss from "@/lib/styles/app.css?url";
@@ -45,11 +46,17 @@ function RootComponent() {
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<head>
 				<HeadContent />
 			</head>
 			<body className="font-sans antialiased">
+				<ScriptOnce>
+					{`document.documentElement.classList.toggle(
+            'dark',
+            localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+            )`}
+				</ScriptOnce>
 				<div className="relative z-0 flex min-h-screen flex-col">
 					<Header />
 					{children}

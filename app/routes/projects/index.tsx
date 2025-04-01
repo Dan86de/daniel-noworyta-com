@@ -11,7 +11,7 @@ function RouteComponent() {
 			<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
 				Ideas Made Real.
 			</GradientTitle>
-			<p className={"text-neutral-300"}>
+			<p>
 				Every idea has potential to become something{" "}
 				<strong>meaningful and impactful</strong>. Here I showcase my journey of
 				turning concepts into reality through{" "}

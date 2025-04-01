@@ -11,7 +11,7 @@ function RouteComponent() {
 			<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
 				Developer. Father. Creator.
 			</GradientTitle>
-			<p className={"text-neutral-300"}>
+			<p>
 				From dreaming of becoming a programmer to{" "}
 				<strong>making it reality</strong> in 2020. Now I&apos;m sharing my
 				journey through <strong>teaching and creating</strong>, helping others
@@ -29,7 +29,7 @@ function RouteComponent() {
 						filter: "blur(0px) brightness(130%) grayscale(100%)",
 						scale: [0.9, 1.2, 1],
 					}}
-					transition={{ duration: 0.3 }}
+					transition={{ duration: 0.4 }}
 					alt="Daniel Noworyta"
 					src="/images/avatar.webp"
 					width="336"
@@ -37,12 +37,12 @@ function RouteComponent() {
 					className="mx-auto aspect-square max-w-80 rounded-lg"
 				/>
 				<div className="leading-relaxed">
-					<p className=" text-neutral-300">
+					<p>
 						<strong>Hey, I&apos;m Daniel Noworyta.</strong> For most of my life,
 						I pushed aside my dream of becoming a programmer and doing what I
 						love. In 2020, I fulfilled that dream and became a programmer.
 					</p>
-					<p className=" text-neutral-300">
+					<p>
 						I have a{" "}
 						<a
 							href="https://youtube.com/c/danielnoworyta"
@@ -54,7 +54,7 @@ function RouteComponent() {
 						programming, transitioning to new fields, and advancing my career in
 						IT.
 					</p>
-					<p className=" text-neutral-300">
+					<p>
 						I love dark mode and side projects. When I&apos;m not working, I
 						like playing football, reading, and eating pizza.
 					</p>

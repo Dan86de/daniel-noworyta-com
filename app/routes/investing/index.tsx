@@ -11,7 +11,7 @@ function RouteComponent() {
 			<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
 				Research. Invest. Grow.
 			</GradientTitle>
-			<p className={"text-neutral-300"}>
+			<p>
 				I believe in m aking informed financial decisions and{" "}
 				<strong>growing wealth</strong> through smart investments. Here I share
 				my research, strategies, and lessons learned from my journey in the{" "}

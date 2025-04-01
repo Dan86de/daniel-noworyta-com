@@ -11,7 +11,7 @@ function RouteComponent() {
 			<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
 				Listen. Learn. Grow.
 			</GradientTitle>
-			<p className={"text-neutral-300"}>
+			<p>
 				Podcasts are a window into <strong>new perspectives</strong> and
 				knowledge. Through conversations and storytelling, I explore tech,
 				development, and personal growth. Join me in these{" "}
