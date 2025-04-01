@@ -12,7 +12,7 @@ function RouteComponent() {
 				Research. Invest. Grow.
 			</GradientTitle>
 			<p>
-				I believe in m aking informed financial decisions and{" "}
+				I believe in making informed financial decisions and{" "}
 				<strong>growing wealth</strong> through smart investments. Here I share
 				my research, strategies, and lessons learned from my journey in the{" "}
 				<strong>investment world</strong>.
