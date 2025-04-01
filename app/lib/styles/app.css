@@ -1,0 +1,251 @@
+@import "tailwindcss";
+
+/* FONTS */
+
+/* Geomanist Font */
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-regular-webfont.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-regular-italic-webfont.woff2")
+		format("woff2");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-thin-webfont.woff2") format("woff2");
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-thin-italic-webfont.woff2")
+		format("woff2");
+	font-weight: 100;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-extralight-webfont.woff2") format("woff2");
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-extralight-italic-webfont.woff2")
+		format("woff2");
+	font-weight: 200;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-light-webfont.woff2") format("woff2");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-light-italic-webfont.woff2")
+		format("woff2");
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-book-webfont.woff2") format("woff2");
+	font-weight: 450;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-book-italic-webfont.woff2")
+		format("woff2");
+	font-weight: 450;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-medium-webfont.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-medium-italic-webfont.woff2")
+		format("woff2");
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-bold-webfont.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-bold-italic-webfont.woff2")
+		format("woff2");
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-black-webfont.woff2") format("woff2");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-black-italic-webfont.woff2")
+		format("woff2");
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-ultra-webfont.woff2") format("woff2");
+	font-weight: 950;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geomanist";
+	src: url("/font/Geomanist/geomanist-ultra-italic-webfont.woff2")
+		format("woff2");
+	font-weight: 950;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* Biotif Font */
+@font-face {
+	font-family: "Biotif";
+	src: url("/font/Biotif/Biotif-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Biotif";
+	src: url("/font/Biotif/Biotif-RegularItalic.woff2") format("woff2");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Biotif";
+	src: url("/font/Biotif/Biotif-Book.woff2") format("woff2");
+	font-weight: 450;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Biotif";
+	src: url("/font/Biotif/Biotif-Book.woff2") format("woff2");
+	font-weight: 450;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Biotif";
+	src: url("/font/Biotif/Biotif-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Biotif";
+	src: url("/font/Biotif/Biotif-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Biotif";
+	src: url("/font/Biotif/Biotif-SemiBold.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Biotif";
+	src: url("/font/Biotif/Biotif-SemiBold.woff2") format("woff2");
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+}
+
+@theme {
+	--font-display: "Biotif", "sans-serif";
+	--font-sans: "Biotif", "sans-serif";
+	--font-heading: "Geomanist", "sans-serif";
+	--color-vaillant: #00917e;
+	--color-primary: #f25118;
+	--background: #0a0a0a;
+	--foreground: #ededed;
+}
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-heading);
+}
+
+p {
+	@apply my-5 text-base/6 lg:text-lg/7;
+}
