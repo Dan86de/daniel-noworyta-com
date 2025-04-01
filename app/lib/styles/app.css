@@ -273,8 +273,9 @@ p {
 }
 
 /* Nice trick for mobile buttons to make touchable area bigger on tablets and mobile devices */
+/* Don't forget to add relative to the parent element */
 /* More info here: https://www.youtube.com/watch?v=soFSSkf4oVY */
 span.touch-target {
-	@apply absolute top-1/2 left-1/2 -translate-1/2 [@media(pointer:fine)]:hidden;
+	@apply size-12 absolute top-1/2 left-1/2 -translate-1/2 [@media(pointer:fine)]:hidden;
 }
 

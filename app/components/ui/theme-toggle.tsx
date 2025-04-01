@@ -16,16 +16,15 @@ export function ThemeToggle() {
 				}}
 				onClick={toggleTheme}
 				type="button"
-				className="flex h-8 w-12 cursor-pointer items-center justify-center rounded-(--toggle-radius) border px-(--toggle-padding) [--toggle-padding:--spacing(1)] [--toggle-radius:var(--radius-2xl)]"
+				className="relative flex h-6 w-10 cursor-pointer items-center justify-center rounded-(--toggle-radius) border px-(--toggle-padding) [--toggle-padding:--spacing(0.75)] [--toggle-radius:var(--radius-2xl)]"
 				style={{
 					justifyContent: theme === "dark" ? "flex-start" : "flex-end",
 				}}
 			>
 				<span className="touch-target" />
-
 				<motion.div
 					layout
-					className="flex h-6 w-6 items-center justify-center rounded-[calc(var(--toggle-radius)-var(--toggle-padding))] bg-(--foreground) p-1"
+					className="flex h-4 w-4 items-center justify-center rounded-[calc(var(--toggle-radius)-var(--toggle-padding))] bg-(--foreground) p-0.5"
 				>
 					{theme === "dark" ? (
 						<MoonIcon className="fill-(--background) text-(--background)" />
