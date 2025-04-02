@@ -258,7 +258,6 @@ body {
 	font-family: var(--font-sans);
 }
 
-
 h1,
 h2,
 h3,
@@ -269,7 +268,7 @@ h6 {
 }
 
 p {
-	@apply my-5 text-base lg:text-lg ;
+	@apply my-5 text-base lg:text-lg;
 }
 
 /* Nice trick for mobile buttons to make touchable area bigger on tablets and mobile devices */
@@ -278,4 +277,3 @@ p {
 span.touch-target {
 	@apply size-12 absolute top-1/2 left-1/2 -translate-1/2 [@media(pointer:fine)]:hidden;
 }
-

@@ -1,4 +1,5 @@
 import { GradientTitle } from "@/components/ui/gradient-title";
+import { cn } from "@/lib/utils";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 export const Route = createFileRoute("/about/")({
@@ -17,26 +18,29 @@ function RouteComponent() {
 				journey through <strong>teaching and creating</strong>, helping others
 				transition into tech while building useful things along the way.
 			</p>
-			<div className="mt-12 flex flex-col gap-8 md:flex-row md:items-center">
+			<div className="mt-12 grid items-center gap-6 sm:grid-cols-2 md:items-center">
 				<motion.img
 					initial={{
 						opacity: 0,
 						filter: "blur(10px) brightness(20%) grayscale(100%)",
-						scale: 0.9,
+						scale: 0.7,
+						rotate: -30,
 					}}
 					animate={{
 						opacity: 1,
 						filter: "blur(0px) brightness(130%) grayscale(100%)",
-						scale: [0.9, 1.2, 1],
+						scale: [0.7, 1.1, 1],
+						rotate: 0,
 					}}
 					transition={{ duration: 0.4 }}
 					alt="Daniel Noworyta"
 					src="/images/avatar.webp"
 					width="336"
 					height="336"
-					className="mx-auto aspect-square max-w-80 rounded-lg"
+					className={cn("mx-auto aspect-square w-full rounded-lg object-cover")}
 				/>
-				<div className="leading-relaxed">
+
+				<div className="relative">
 					<p>
 						<strong>Hey, I&apos;m Daniel Noworyta.</strong> For most of my life,
 						I pushed aside my dream of becoming a programmer and doing what I
