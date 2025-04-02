@@ -1,3 +1,4 @@
+import { FadeUp } from "@/components/ui/fade-up";
 import { GradientTitle } from "@/components/ui/gradient-title";
 import { cn } from "@/lib/utils";
 import { createFileRoute } from "@tanstack/react-router";
@@ -40,29 +41,32 @@ function RouteComponent() {
 					className={cn("mx-auto aspect-square w-full rounded-lg object-cover")}
 				/>
 
-				<div className="relative">
-					<p>
-						<strong>Hey, I&apos;m Daniel Noworyta.</strong> For most of my life,
-						I pushed aside my dream of becoming a programmer and doing what I
-						love. In 2020, I fulfilled that dream and became a programmer.
-					</p>
-					<p>
-						I have a{" "}
-						<a
-							href="https://youtube.com/c/danielnoworyta"
-							className="underline"
-						>
-							channel
-						</a>{" "}
-						on YouTube where I share my insights and experiences in learning
-						programming, transitioning to new fields, and advancing my career in
-						IT.
-					</p>
-					<p>
-						I love dark mode and side projects. When I&apos;m not working, I
-						like playing football, reading, and eating pizza.
-					</p>
-				</div>
+				<FadeUp>
+					<div className="relative">
+						<p>
+							<strong>Hey, I&apos;m Daniel Noworyta.</strong> For most of my
+							life, I pushed aside my dream of becoming a programmer and doing
+							what I love. In 2020, I fulfilled that dream and became a
+							programmer.
+						</p>
+						<p>
+							I have a{" "}
+							<a
+								href="https://youtube.com/c/danielnoworyta"
+								className="underline"
+							>
+								channel
+							</a>{" "}
+							on YouTube where I share my insights and experiences in learning
+							programming, transitioning to new fields, and advancing my career
+							in IT.
+						</p>
+						<p>
+							I love dark mode and side projects. When I&apos;m not working, I
+							like playing football, reading, and eating pizza.
+						</p>
+					</div>
+				</FadeUp>
 			</div>
 		</div>
 	);
