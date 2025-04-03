@@ -41,7 +41,7 @@ function RouteComponent() {
 					className={cn("mx-auto aspect-square w-full rounded-lg object-cover")}
 				/>
 
-				<FadeUp>
+				<FadeUp delay={0.2}>
 					<div className="relative">
 						<p>
 							<strong>Hey, I&apos;m Daniel Noworyta.</strong> For most of my

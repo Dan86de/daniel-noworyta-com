@@ -194,37 +194,16 @@ export const Footer = () => {
 };
 
 const AnimatedLink = ({ link }: { link: (typeof links)[number] }) => {
-	const [isHovered, setIsHovered] = useState(false);
 	return (
 		<li>
 			<Link
 				to={link.url}
 				className="group relative flex flex-col items-center gap-2"
-				onMouseEnter={() => setIsHovered(true)}
-				onMouseLeave={() => setIsHovered(false)}
 			>
 				<span className="touch-target" />
-				<motion.div
-					initial={{ rotate: 0 }}
-					animate={
-						isHovered
-							? {
-									rotate: [0, -10, 10, -10, 10, 0],
-									color: "var(--color-primary)",
-								}
-							: {
-									rotate: [0, 10, -10, 10, -10, 0],
-									color: "currentColor",
-								}
-					}
-					transition={{
-						duration: 1,
-						ease: "easeInOut",
-					}}
-					className="flex h-5 w-5 items-center justify-center"
-				>
+				<div className="flex h-5 w-5 items-center justify-center transition-colors duration-200 group-hover:text-primary">
 					{link.icon}
-				</motion.div>
+				</div>
 				<span className="text-xs transition-colors duration-200 group-hover:text-primary">
 					{link.title}
 				</span>
