@@ -1,5 +1,11 @@
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+
+/**
+ * Hero animation component
+ * @returns Hero animation component
+ * @deprecated This was only tryout. It's not used anymore.
+ */
 export const HeroAnimation = () => {
 	return (
 		<div className="relative z-10 hidden h-100 w-100 items-center justify-center sm:flex">

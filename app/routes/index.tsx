@@ -32,9 +32,6 @@ function Home() {
 			<span className="-mt-3 block">
 				Obsessed with user and developer experience
 			</span>
-			<div className="-top-45 absolute right-4 flex items-center justify-center">
-				<HeroAnimation />
-			</div>
 		</div>
 	);
 }
