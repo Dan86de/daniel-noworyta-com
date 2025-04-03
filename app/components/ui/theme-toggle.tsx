@@ -7,6 +7,15 @@ export function ThemeToggle() {
 	return (
 		<>
 			<motion.button
+				initial={{
+					opacity: 0,
+					style: {
+						justifyContent: theme === "dark" ? "flex-start" : "flex-end",
+					},
+				}}
+				animate={{
+					opacity: 1,
+				}}
 				transition={{
 					type: "spring",
 					visualDuration: 0.2,
@@ -118,8 +127,6 @@ export function ThemeToggle() {
 								d="M7.93405 7.93423L6.74991 6.75003"
 							/>
 						</svg>
-
-						// <SunIcon className="fill-(--background) text-(--background)" />
 					)}
 				</motion.div>
 				<span className="sr-only">Toggle theme</span>

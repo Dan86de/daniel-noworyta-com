@@ -2,14 +2,16 @@ import { Body } from "@/components/ui/Typography/Body";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { GradientTitle } from "@/components/ui/gradient-title";
 import { motion } from "framer-motion";
+import { HeroAnimation } from "@/components/hero-animation";
+
 export const Route = createFileRoute("/")({
 	component: Home,
 });
 
 function Home() {
 	return (
-		<div className="container mx-auto my-auto h-full max-w-3xl p-4 text-left">
-			<GradientTitle className="text-xl md:text-5xl">
+		<div className="container relative mx-auto my-auto h-full max-w-3xl p-4 text-left">
+			<GradientTitle className="text-2xl md:text-5xl">
 				Daniel Noworyta
 			</GradientTitle>
 			<Body className="mt-4">
@@ -30,6 +32,9 @@ function Home() {
 			<span className="-mt-3 block">
 				Obsessed with user and developer experience
 			</span>
+			<div className="-top-45 absolute right-4 flex items-center justify-center">
+				<HeroAnimation />
+			</div>
 		</div>
 	);
 }
