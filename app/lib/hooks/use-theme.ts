@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 // Check if we're in a browser environment
 const isClient = typeof window !== "undefined";
@@ -22,8 +22,6 @@ export function useTheme() {
 
 		// Set initial states
 		const initialIsDark = checkIsDark();
-
-		console.log("initialIsDark", initialIsDark);
 		setIsDark(initialIsDark);
 		setTheme(initialIsDark ? "dark" : "light");
 
@@ -42,7 +40,7 @@ export function useTheme() {
 	}, []);
 
 	// Toggle theme function
-	const toggleTheme = () => {
+	const toggleTheme = useCallback(() => {
 		if (!isClient) return;
 
 		const newTheme = theme === "dark" ? "light" : "dark";
@@ -60,7 +58,7 @@ export function useTheme() {
 		// Update state
 		setTheme(newTheme);
 		setIsDark(newTheme === "dark");
-	};
+	}, [theme]);
 
 	return {
 		theme,

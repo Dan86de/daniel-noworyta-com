@@ -51,12 +51,6 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
 				<HeadContent />
 			</head>
 			<body className="font-sans antialiased">
-				<ScriptOnce>
-					{`document.documentElement.classList.toggle(
-            'dark',
-            localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-            )`}
-				</ScriptOnce>
 				<div className="relative z-0 flex min-h-screen flex-col">
 					<Header />
 					{children}
