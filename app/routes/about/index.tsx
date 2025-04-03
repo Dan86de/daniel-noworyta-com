@@ -6,6 +6,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 export const Route = createFileRoute("/about/")({
 	component: RouteComponent,
+	loader: async () => {
+		throw new Error("test");
+	},
 });
 
 function RouteComponent() {
