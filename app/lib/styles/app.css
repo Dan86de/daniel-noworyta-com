@@ -267,10 +267,6 @@ h6 {
 	font-family: var(--font-heading);
 }
 
-p {
-	@apply my-5 text-base lg:text-lg;
-}
-
 /* Nice trick for mobile buttons to make touchable area bigger on tablets and mobile devices */
 /* Don't forget to add relative to the parent element */
 /* More info here: https://www.youtube.com/watch?v=soFSSkf4oVY */

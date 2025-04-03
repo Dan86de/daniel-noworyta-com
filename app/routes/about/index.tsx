@@ -1,5 +1,6 @@
 import { FadeUp } from "@/components/ui/fade-up";
 import { GradientTitle } from "@/components/ui/gradient-title";
+import { Body } from "@/components/ui/Typography/Body";
 import { cn } from "@/lib/utils";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
@@ -13,12 +14,12 @@ function RouteComponent() {
 			<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
 				Developer. Father. Creator.
 			</GradientTitle>
-			<p>
+			<Body>
 				From dreaming of becoming a programmer to{" "}
 				<strong>making it reality</strong> in 2020. Now I&apos;m sharing my
 				journey through <strong>teaching and creating</strong>, helping others
 				transition into tech while building useful things along the way.
-			</p>
+			</Body>
 			<div className="mt-12 grid items-center gap-6 sm:grid-cols-2 md:items-center">
 				<motion.img
 					initial={{
@@ -43,13 +44,13 @@ function RouteComponent() {
 
 				<FadeUp delay={0.2}>
 					<div className="relative">
-						<p>
+						<Body>
 							<strong>Hey, I&apos;m Daniel Noworyta.</strong> For most of my
 							life, I pushed aside my dream of becoming a programmer and doing
 							what I love. In 2020, I fulfilled that dream and became a
 							programmer.
-						</p>
-						<p>
+						</Body>
+						<Body>
 							I have a{" "}
 							<a
 								href="https://youtube.com/c/danielnoworyta"
@@ -60,11 +61,11 @@ function RouteComponent() {
 							on YouTube where I share my insights and experiences in learning
 							programming, transitioning to new fields, and advancing my career
 							in IT.
-						</p>
-						<p>
+						</Body>
+						<Body>
 							I love dark mode and side projects. When I&apos;m not working, I
 							like playing football, reading, and eating pizza.
-						</p>
+						</Body>
 					</div>
 				</FadeUp>
 			</div>

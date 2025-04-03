@@ -1,3 +1,4 @@
+import { Body } from "@/components/ui/Typography/Body";
 import { GradientTitle } from "@/components/ui/gradient-title";
 import { createFileRoute } from "@tanstack/react-router";
 
@@ -11,12 +12,12 @@ function RouteComponent() {
 			<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
 				Tools. Tech. Workflow.
 			</GradientTitle>
-			<p>
+			<Body>
 				Every developer&apos;s setup is unique. Here&apos;s a detailed look at
 				the <strong>tools and technologies</strong> I use daily to stay
 				productive. From hardware to software, these are the essentials that
 				power my <strong>development workflow</strong>.
-			</p>
+			</Body>
 		</div>
 	);
 }
