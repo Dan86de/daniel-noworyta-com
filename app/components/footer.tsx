@@ -183,7 +183,7 @@ export const Footer = () => {
 	return (
 		<footer className="grid w-full grid-cols-3 p-4">
 			<div className="mr-auto" />
-			<ul className="flex items-center justify-center gap-8">
+			<ul className="flex items-center justify-center gap-4 sm:gap-8">
 				{links.map((link) => (
 					<AnimatedLink key={link.title} link={link} />
 				))}
@@ -203,7 +203,7 @@ const AnimatedLink = ({ link }: { link: (typeof links)[number] }) => {
 				className="group relative flex flex-col items-center gap-2"
 			>
 				<span className="touch-target" />
-				<div className="flex h-5 w-5 items-center justify-center transition-colors duration-200 group-hover:text-primary">
+				<div className="flex h-8 w-8 items-center justify-center transition-colors duration-200 group-hover:text-primary sm:h-5 sm:w-5">
 					<span className="sr-only">{link.title}</span>
 					<span className="touch-target" />
 					{link.icon}
