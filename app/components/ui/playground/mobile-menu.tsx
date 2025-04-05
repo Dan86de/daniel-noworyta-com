@@ -1,134 +1,75 @@
 import {
-	Description,
-	Dialog,
-	DialogBackdrop,
-	DialogPanel,
-	DialogTitle,
-} from "@headlessui/react";
-import { Link } from "@tanstack/react-router";
-import { motion, AnimatePresence } from "motion/react";
-import { useState } from "react";
-import { ThemeToggle } from "../theme-toggle";
+	Sidebar,
+	SidebarBody,
+	SidebarHeader,
+	SidebarItem,
+	SidebarSection,
+} from "@/components/catalyst/sidebar";
+import { Link, linkOptions } from "@tanstack/react-router";
+import { NavbarItem } from "@/components/catalyst/navbar";
+import * as Headless from "@headlessui/react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
+
+function CloseMenuIcon() {
+	return (
+		<svg data-slot="icon" viewBox="0 0 20 20" aria-hidden="true">
+			<path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+		</svg>
+	);
+}
+
+const tabs = linkOptions([
+	{ id: "home", label: "Home", to: "/" },
+	{ id: "about", label: "About", to: "/about" },
+	{ id: "articles", label: "Articles", to: "/articles" },
+	{ id: "projects", label: "Projects", to: "/projects" },
+	{ id: "podcasts", label: "Podcasts", to: "/podcasts" },
+	{ id: "uses", label: "Uses", to: "/uses" },
+	{ id: "investing", label: "Investing", to: "/investing" },
+]);
 
 export const MobileMenu = () => {
-	const [isOpen, setIsOpen] = useState(false);
-
 	return (
-		<>
-			<motion.button
-				initial={{
-					opacity: 0,
-				}}
-				animate={{
-					opacity: 1,
-				}}
-				type="button"
-				onClick={() => setIsOpen(true)}
-				className="lg:hidden"
-			>
-				<span className="sr-only">Menu</span>
-				<span className="touch-target" />
-				<svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-					<title className="sr-only">Menu</title>
-					<path
-						stroke="currentColor"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						strokeWidth="2"
-						d="M4.75 5.75H19.25"
-					/>
-					<path
-						stroke="currentColor"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						strokeWidth="2"
-						d="M4.75 18.25H19.25"
-					/>
-					<path
-						stroke="currentColor"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						strokeWidth="2"
-						d="M4.75 12H19.25"
-					/>
-				</svg>
-			</motion.button>
-			<AnimatePresence>
-				{isOpen && (
-					<Dialog
-						static
-						open={isOpen}
-						onClose={() => setIsOpen(false)}
-						className="relative z-50"
+		<Sidebar>
+			<SidebarHeader>
+				<div className="flex items-center justify-between">
+					<svg
+						width="82"
+						height="70"
+						viewBox="0 0 82 70"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						className="ml-2 flex h-6 w-6 items-center"
 					>
-						<DialogBackdrop
-							as={motion.div}
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							exit={{ opacity: 0, transition: { delay: 0.2 } }}
-							className="fixed inset-0 bg-(--foreground)/30 backdrop-blur-[2px]"
-						/>
-						<div className="fixed top-0 right-0 bottom-0 flex items-center justify-end">
-							<DialogPanel
-								as={motion.div}
-								initial={{ x: 100 }}
-								animate={{
-									x: 0,
-									transition: { duration: 0.3 },
-								}}
-								exit={{
-									x: 100,
-									transition: { duration: 0.2, delay: 0.2 },
-								}}
-								className="h-full w-full max-w-[300px] bg-(--background) p-4 sm:w-full"
-							>
-								<motion.div
-									initial={{ opacity: 0 }}
-									animate={{
-										opacity: 1,
-										transition: { duration: 0.3, delay: 0.3 },
-									}}
-									exit={{ opacity: 0, transition: { duration: 0.2 } }}
-								>
-									<DialogTitle className="flex items-center justify-between font-bold text-lg">
-										<span />
-										<button type="button" onClick={() => setIsOpen(false)}>
-											<span className="sr-only">Close</span>
-											<span className="touch-target" />
-											<svg
-												width="24"
-												height="24"
-												fill="inherit"
-												viewBox="0 0 24 24"
-												className="ml-auto fill-current text-foreground"
-											>
-												<title className="sr-only">Close</title>
-												<path
-													stroke="currentColor"
-													strokeLinecap="round"
-													strokeLinejoin="round"
-													strokeWidth="2"
-													d="M17.25 6.75L6.75 17.25"
-												/>
-												<path
-													stroke="currentColor"
-													strokeLinecap="round"
-													strokeLinejoin="round"
-													strokeWidth="2"
-													d="M6.75 6.75L17.25 17.25"
-												/>
-											</svg>
-										</button>
-									</DialogTitle>
-									<Description>
-										Use the menu button to navigate the site on mobile.
-									</Description>
-								</motion.div>
-							</DialogPanel>
-						</div>
-					</Dialog>
-				)}
-			</AnimatePresence>
-		</>
+						<title>Daniel Noworyta Logo</title>
+						<g clipPath="url(#clip0_1185_138)">
+							<path
+								d="M49.9939 49.3047L51.6454 51.8779C48.8207 57.7859 44.0613 62.5524 38.1568 65.3841C33.8635 67.4385 29.2412 68.7136 24.5029 69.1498C22.5646 69.3539 20.6158 69.4541 18.6653 69.4506H0.375V16.8892H14.2382V57.4552H19.1542C20.9465 57.464 22.737 57.3057 24.4994 56.9856C30.6782 55.8389 35.4025 52.578 38.1128 47.2504C39.7855 43.9666 41.5197 40.7251 41.5197 35.8759C41.5197 35.788 41.5197 35.7 41.5162 35.6156L49.9939 49.3065V49.3047Z"
+								fill="#F05924"
+							/>
+							<path
+								d="M81.625 0.625V69.4487H67.8603L53.5045 47.0533L42.5012 28.9231C42.4484 28.8264 42.4009 28.7279 42.3446 28.6188C40.9534 26.1899 39.4144 23.8471 37.7365 21.6063C36.3716 19.7859 34.7552 18.1695 32.933 16.8064L32.0096 16.1609C29.8955 14.7908 27.5457 13.8269 25.078 13.3169C24.8898 13.2746 24.6981 13.2377 24.4994 13.2008C23.1239 12.9405 21.7292 12.7857 20.3309 12.7382C19.9439 12.7259 19.55 12.7171 19.156 12.7171H0.375V0.625H18.6635C19.2263 0.625 19.7804 0.633794 20.3309 0.649624C21.7556 0.691836 23.1451 0.785055 24.4994 0.932798C36.0409 2.18334 44.8387 7.23299 49.9851 15.3729L50.0009 15.4028L51.5733 18.2205L67.9605 47.6214V0.625H81.625Z"
+								fill="var(--foreground)"
+							/>
+						</g>
+					</svg>
+					<Headless.CloseButton as={NavbarItem} aria-label="Close navigation">
+						<CloseMenuIcon />
+					</Headless.CloseButton>
+				</div>
+			</SidebarHeader>
+			<SidebarBody>
+				<SidebarSection>
+					{tabs.map(({ label, to }) => (
+						<SidebarItem key={label} href={to}>
+							{label}
+						</SidebarItem>
+					))}
+				</SidebarSection>
+				<SidebarSection>
+					<ThemeToggle />
+				</SidebarSection>
+			</SidebarBody>
+		</Sidebar>
 	);
 };

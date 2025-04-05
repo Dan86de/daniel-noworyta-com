@@ -22,7 +22,7 @@ export const GradientTitle = ({
 				} as CSSProperties
 			}
 			className={clsx(
-				"bg-[linear-gradient(135deg,var(--primary)_0%,var(--secondary)_100%)] bg-clip-text font-heading font-medium text-5xl text-transparent leading-16",
+				"bg-[linear-gradient(135deg,var(--primary)_0%,var(--secondary)_100%)] bg-clip-text font-heading font-medium text-3xl text-transparent leading-8 md:text-5xl md:leading-16",
 				className,
 			)}
 		>

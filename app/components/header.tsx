@@ -2,9 +2,10 @@ import { Link } from "@tanstack/react-router";
 import { AnimatedTabs } from "@/components/animated-tabs";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { MobileMenu } from "@/components/ui/playground/mobile-menu";
+
 export const Header = () => {
 	return (
-		<div className="container mx-auto flex items-center p-4">
+		<div className="flex items-center justify-between p-4">
 			<Link to="/" className="flex items-center">
 				<svg
 					width="82"
@@ -33,7 +34,6 @@ export const Header = () => {
 			</section>
 			<div className="flex grow" />
 			<section className="flex gap-4">
-				<MobileMenu />
 				<ThemeToggle className="hidden lg:flex" />
 			</section>
 		</div>
