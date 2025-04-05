@@ -20,7 +20,7 @@ function RouteComponent() {
 				journey through <strong>teaching and creating</strong>, helping others
 				transition into tech while building useful things along the way.
 			</Body>
-			<div className="mt-8 grid items-center gap-6 sm:grid-cols-2 md:items-center">
+			<div className="mt:2 grid items-center gap-2 sm:grid-cols-2 sm:gap-6 md:items-center">
 				<motion.img
 					initial={{
 						opacity: 0,
