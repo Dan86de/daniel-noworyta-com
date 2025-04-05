@@ -80,7 +80,7 @@ export const MobileMenu = () => {
 									x: 100,
 									transition: { duration: 0.2, delay: 0.2 },
 								}}
-								className="h-full w-full max-w-[300px] space-y-4 bg-(--background) p-4 sm:w-full"
+								className="h-full w-full max-w-[300px] bg-(--background) p-4 sm:w-full"
 							>
 								<motion.div
 									initial={{ opacity: 0 }}
@@ -89,7 +89,6 @@ export const MobileMenu = () => {
 										transition: { duration: 0.3, delay: 0.3 },
 									}}
 									exit={{ opacity: 0, transition: { duration: 0.2 } }}
-									className="space-y-4"
 								>
 									<DialogTitle className="flex items-center justify-between font-bold text-lg">
 										<span />

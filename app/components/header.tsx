@@ -4,8 +4,8 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { MobileMenu } from "@/components/ui/playground/mobile-menu";
 export const Header = () => {
 	return (
-		<div className="container mx-auto flex items-center px-2 py-4">
-			<Link to="/" className="flex items-center px-2">
+		<div className="container mx-auto flex items-center p-4">
+			<Link to="/" className="flex items-center">
 				<svg
 					width="82"
 					height="70"
