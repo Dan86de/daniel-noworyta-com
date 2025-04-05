@@ -27,9 +27,9 @@ export const MobileMenu = () => {
 				className="lg:hidden"
 			>
 				<span className="sr-only">Menu</span>
-				<span className="touch-target">Menu</span>
+				<span className="touch-target" />
 				<svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-					<title>Menu</title>
+					<title className="sr-only">Menu</title>
 					<path
 						stroke="currentColor"
 						strokeLinecap="round"
@@ -93,13 +93,9 @@ export const MobileMenu = () => {
 								>
 									<DialogTitle className="flex items-center justify-between font-bold text-lg">
 										<span />
-										<button
-											type="button"
-											onClick={() => setIsOpen(false)}
-											className="touch-target"
-										>
+										<button type="button" onClick={() => setIsOpen(false)}>
 											<span className="sr-only">Close</span>
-											<span className="touch-target">Close</span>
+											<span className="touch-target" />
 											<svg
 												width="24"
 												height="24"
@@ -107,7 +103,7 @@ export const MobileMenu = () => {
 												viewBox="0 0 24 24"
 												className="ml-auto fill-current text-foreground"
 											>
-												<title>Close</title>
+												<title className="sr-only">Close</title>
 												<path
 													stroke="currentColor"
 													strokeLinecap="round"

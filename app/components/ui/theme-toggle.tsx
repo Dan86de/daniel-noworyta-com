@@ -46,7 +46,7 @@ export function ThemeToggle({ className }: { className?: string }) {
 						xmlns="http://www.w3.org/2000/svg"
 						className="fill-(--background) text-(--background)"
 					>
-						<title>Moon</title>
+						<title className="sr-only">Moon</title>
 						<path
 							d="M18.25 15.0314C17.7575 15.1436 17.2459 15.2027 16.7209 15.2027C12.8082 15.2027 9.63607 11.9185 9.63607 7.86709C9.63607 6.75253 9.87614 5.69603 10.3057 4.75C7.12795 5.47387 4.75 8.40659 4.75 11.9143C4.75 15.9657 7.9221 19.25 11.8348 19.25C14.6711 19.25 17.1182 17.5242 18.25 15.0314Z"
 							stroke="currentColor"
@@ -63,7 +63,7 @@ export function ThemeToggle({ className }: { className?: string }) {
 						viewBox="0 0 24 24"
 						className="fill-(--background) text-(--background)"
 					>
-						<title>Sun</title>
+						<title className="sr-only">Sun</title>
 						<circle
 							cx="12"
 							cy="12"
