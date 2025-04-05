@@ -4,6 +4,7 @@ import {
 	SidebarHeader,
 	SidebarItem,
 	SidebarSection,
+	SidebarSpacer,
 } from "@/components/catalyst/sidebar";
 import { Link, linkOptions } from "@tanstack/react-router";
 import { NavbarItem } from "@/components/catalyst/navbar";
@@ -66,6 +67,7 @@ export const MobileMenu = () => {
 						</SidebarItem>
 					))}
 				</SidebarSection>
+				<SidebarSpacer />
 				<SidebarSection>
 					<ThemeToggle />
 				</SidebarSection>
