@@ -188,7 +188,9 @@ export const Footer = () => {
 					<AnimatedLink key={link.title} link={link} />
 				))}
 			</ul>
-			<span className="ml-auto flex items-center text-xs">© 2025</span>
+			<span className="ml-auto hidden items-center text-xs sm:flex">
+				© 2025
+			</span>
 		</footer>
 	);
 };
@@ -202,9 +204,11 @@ const AnimatedLink = ({ link }: { link: (typeof links)[number] }) => {
 			>
 				<span className="touch-target" />
 				<div className="flex h-5 w-5 items-center justify-center transition-colors duration-200 group-hover:text-primary">
+					<span className="sr-only">{link.title}</span>
+					<span className="touch-target" />
 					{link.icon}
 				</div>
-				<span className="text-xs transition-colors duration-200 group-hover:text-primary">
+				<span className="hidden text-xs transition-colors duration-200 group-hover:text-primary sm:block">
 					{link.title}
 				</span>
 			</Link>

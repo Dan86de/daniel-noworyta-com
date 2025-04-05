@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { AnimatedTabs } from "./animated-tabs";
-import { ThemeToggle } from "./ui/theme-toggle";
-
+import { AnimatedTabs } from "@/components/animated-tabs";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { MobileMenu } from "@/components/ui/playground/mobile-menu";
 export const Header = () => {
 	return (
 		<div className="container mx-auto flex items-center px-2 py-4">
@@ -12,7 +12,7 @@ export const Header = () => {
 					viewBox="0 0 82 70"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
-					className="h-10 w-10"
+					className="h-6 w-6"
 				>
 					<title>Daniel Noworyta Logo</title>
 					<g clipPath="url(#clip0_1185_138)">
@@ -28,12 +28,13 @@ export const Header = () => {
 				</svg>
 			</Link>
 			<div className="flex grow" />
-			<section className="flex gap-5">
+			<section className="hidden gap-5 lg:flex">
 				<AnimatedTabs />
 			</section>
 			<div className="flex grow" />
-			<section className="pr-12">
-				<ThemeToggle />
+			<section className="flex gap-4">
+				<MobileMenu />
+				<ThemeToggle className="hidden lg:flex" />
 			</section>
 		</div>
 	);

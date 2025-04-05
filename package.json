@@ -13,6 +13,7 @@
 	},
 	"description": "",
 	"dependencies": {
+		"@headlessui/react": "^2.2.1",
 		"@tailwindcss/vite": "^4.1.2",
 		"@tanstack/react-router": "^1.114.29",
 		"@tanstack/react-start": "^1.114.31",
