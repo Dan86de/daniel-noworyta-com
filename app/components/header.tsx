@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { AnimatedTabs } from "@/components/animated-tabs";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { MobileMenu } from "@/components/ui/playground/mobile-menu";
 
 export const Header = () => {
 	return (

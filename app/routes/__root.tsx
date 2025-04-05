@@ -51,10 +51,6 @@ export const Route = createRootRoute({
 	component: RootComponent,
 });
 
-{
-	/* <link rel="icon" href="favicon-light.ico" type="image/x-icon" media="(prefers-color-scheme: light)"> */
-}
-
 function RootComponent() {
 	return (
 		<RootDocument>

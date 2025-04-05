@@ -6,10 +6,10 @@ import {
 	SidebarSection,
 	SidebarSpacer,
 } from "@/components/catalyst/sidebar";
-import { Link, linkOptions } from "@tanstack/react-router";
 import { NavbarItem } from "@/components/catalyst/navbar";
 import * as Headless from "@headlessui/react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { activePages } from "@/lib/pages";
 
 function CloseMenuIcon() {
 	return (
@@ -18,16 +18,6 @@ function CloseMenuIcon() {
 		</svg>
 	);
 }
-
-const tabs = linkOptions([
-	{ id: "home", label: "Home", to: "/" },
-	{ id: "about", label: "About", to: "/about" },
-	{ id: "articles", label: "Articles", to: "/articles" },
-	{ id: "projects", label: "Projects", to: "/projects" },
-	{ id: "podcasts", label: "Podcasts", to: "/podcasts" },
-	{ id: "uses", label: "Uses", to: "/uses" },
-	{ id: "investing", label: "Investing", to: "/investing" },
-]);
 
 export const MobileMenu = () => {
 	return (
@@ -61,7 +51,7 @@ export const MobileMenu = () => {
 			</SidebarHeader>
 			<SidebarBody>
 				<SidebarSection>
-					{tabs.map(({ label, to }) => (
+					{activePages.map(({ label, to }) => (
 						<SidebarItem key={label} href={to}>
 							{label}
 						</SidebarItem>
