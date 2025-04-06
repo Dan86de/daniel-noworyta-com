@@ -9,11 +9,10 @@ import {
 
 import appCss from "@/lib/styles/app.css?url";
 import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
 import { StackedLayout } from "@/components/catalyst/stacked-layout";
-import { MobileMenu } from "@/components/ui/playground/mobile-menu";
+import { MobileMenu } from "@/components/ui/mobile-menu";
 import { ThemeProvider } from "@/lib/styles/theme-provider";
-
+import { Footer } from "@/components/footer";
 export const Route = createRootRoute({
 	head: () => ({
 		meta: [

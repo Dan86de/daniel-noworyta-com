@@ -8,8 +8,8 @@ import {
 } from "@/components/catalyst/sidebar";
 import { NavbarItem } from "@/components/catalyst/navbar";
 import * as Headless from "@headlessui/react";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { activePages } from "@/lib/pages";
+import { ThemeSwitcher } from "./playground/theme-switcher";
 
 function CloseMenuIcon() {
 	return (
@@ -59,7 +59,7 @@ export const MobileMenu = () => {
 				</SidebarSection>
 				<SidebarSpacer />
 				<SidebarSection>
-					<ThemeToggle />
+					<ThemeSwitcher />
 				</SidebarSection>
 			</SidebarBody>
 		</Sidebar>

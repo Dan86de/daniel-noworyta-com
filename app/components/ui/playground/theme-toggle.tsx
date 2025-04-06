@@ -5,6 +5,8 @@ import { motion } from "motion/react";
 export function ThemeToggle({ className }: { className?: string }) {
 	const { theme, setTheme } = useTheme();
 
+	console.log({ theme });
+
 	return (
 		<motion.button
 			initial={{

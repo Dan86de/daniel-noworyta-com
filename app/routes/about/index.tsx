@@ -62,7 +62,7 @@ function RouteComponent() {
 					</Body>
 					<Body>
 						I love dark mode and side projects. When I&apos;m not working, I
-						like playing football, reading, and eating pizza.
+						like playing football, reading books, and eating pizza.
 					</Body>
 				</FadeUp>
 			</div>

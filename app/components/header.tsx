@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { AnimatedTabs } from "@/components/animated-tabs";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { ThemeSwitcher } from "@/components/ui/playground/theme-switcher";
 
 export const Header = () => {
 	return (
@@ -33,7 +33,7 @@ export const Header = () => {
 			</section>
 			<div className="flex grow" />
 			<section className="flex gap-4">
-				<ThemeToggle className="hidden lg:flex" />
+				<ThemeSwitcher className="hidden lg:flex" />
 			</section>
 		</div>
 	);
