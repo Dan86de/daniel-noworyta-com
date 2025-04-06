@@ -29,7 +29,7 @@ export const AnimatedTabs = () => {
 				>
 					{activeTab === id && (
 						<motion.span
-							layoutId="bubble"
+							layoutId="animated-tabs"
 							className="absolute right-0 bottom-0 left-0 h-0.5 bg-primary"
 							style={{ borderRadius: 2 }}
 							transition={{ type: "spring", bounce: 0.4, duration: 0.7 }}
