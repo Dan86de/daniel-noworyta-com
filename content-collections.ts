@@ -11,6 +11,7 @@ const articles = defineCollection({
     date: z.string(),
     author: z.string(),
     status: z.enum(["draft", "published"]),
+    tags: z.array(z.string()),
   }),
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document);

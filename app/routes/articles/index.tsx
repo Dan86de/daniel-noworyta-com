@@ -10,6 +10,7 @@ import { createFileRoute, useLoaderData } from "@tanstack/react-router";
 import { Body } from "@/components/ui/Typography/Body";
 import { allArticles } from "content-collections";
 import { Link } from "@/components/catalyst/link";
+import { Badge } from "@/components/catalyst/badge";
 
 export const Route = createFileRoute("/articles/")({
 	component: RouteComponent,
@@ -48,6 +49,13 @@ function RouteComponent() {
 						<Card>
 							<CardHeader>
 								<CardTitle>{article.title}</CardTitle>
+								<div className="mt-2 flex flex-wrap gap-2">
+									{article.tags.map((tag) => (
+										<Badge key={tag} color="primary">
+											{tag}
+										</Badge>
+									))}
+								</div>
 								<CardDescription>{article.summary}</CardDescription>
 							</CardHeader>
 							<CardContent>
