@@ -10,268 +10,268 @@
 
 // Import Routes
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as IndexImport } from './routes/index'
-import { Route as UsesIndexImport } from './routes/uses/index'
-import { Route as ProjectsIndexImport } from './routes/projects/index'
-import { Route as PodcastsIndexImport } from './routes/podcasts/index'
-import { Route as PlaygroundIndexImport } from './routes/playground/index'
-import { Route as NewsletterIndexImport } from './routes/newsletter/index'
-import { Route as InvestingIndexImport } from './routes/investing/index'
-import { Route as ContactIndexImport } from './routes/contact/index'
-import { Route as ArticlesIndexImport } from './routes/articles/index'
-import { Route as AboutIndexImport } from './routes/about/index'
+import { Route as rootRoute } from "./routes/__root";
+import { Route as IndexImport } from "./routes/index";
+import { Route as UsesIndexImport } from "./routes/uses/index";
+import { Route as ProjectsIndexImport } from "./routes/projects/index";
+import { Route as PodcastsIndexImport } from "./routes/podcasts/index";
+import { Route as PlaygroundIndexImport } from "./routes/playground/index";
+import { Route as NewsletterIndexImport } from "./routes/newsletter/index";
+import { Route as InvestingIndexImport } from "./routes/investing/index";
+import { Route as ContactIndexImport } from "./routes/contact/index";
+import { Route as ArticlesIndexImport } from "./routes/articles/index";
+import { Route as AboutIndexImport } from "./routes/about/index";
 
 // Create/Update Routes
 
 const IndexRoute = IndexImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRoute,
-} as any)
+	id: "/",
+	path: "/",
+	getParentRoute: () => rootRoute,
+} as any);
 
 const UsesIndexRoute = UsesIndexImport.update({
-  id: '/uses/',
-  path: '/uses/',
-  getParentRoute: () => rootRoute,
-} as any)
+	id: "/uses/",
+	path: "/uses/",
+	getParentRoute: () => rootRoute,
+} as any);
 
 const ProjectsIndexRoute = ProjectsIndexImport.update({
-  id: '/projects/',
-  path: '/projects/',
-  getParentRoute: () => rootRoute,
-} as any)
+	id: "/projects/",
+	path: "/projects/",
+	getParentRoute: () => rootRoute,
+} as any);
 
 const PodcastsIndexRoute = PodcastsIndexImport.update({
-  id: '/podcasts/',
-  path: '/podcasts/',
-  getParentRoute: () => rootRoute,
-} as any)
+	id: "/podcasts/",
+	path: "/podcasts/",
+	getParentRoute: () => rootRoute,
+} as any);
 
 const PlaygroundIndexRoute = PlaygroundIndexImport.update({
-  id: '/playground/',
-  path: '/playground/',
-  getParentRoute: () => rootRoute,
-} as any)
+	id: "/playground/",
+	path: "/playground/",
+	getParentRoute: () => rootRoute,
+} as any);
 
 const NewsletterIndexRoute = NewsletterIndexImport.update({
-  id: '/newsletter/',
-  path: '/newsletter/',
-  getParentRoute: () => rootRoute,
-} as any)
+	id: "/newsletter/",
+	path: "/newsletter/",
+	getParentRoute: () => rootRoute,
+} as any);
 
 const InvestingIndexRoute = InvestingIndexImport.update({
-  id: '/investing/',
-  path: '/investing/',
-  getParentRoute: () => rootRoute,
-} as any)
+	id: "/investing/",
+	path: "/investing/",
+	getParentRoute: () => rootRoute,
+} as any);
 
 const ContactIndexRoute = ContactIndexImport.update({
-  id: '/contact/',
-  path: '/contact/',
-  getParentRoute: () => rootRoute,
-} as any)
+	id: "/contact/",
+	path: "/contact/",
+	getParentRoute: () => rootRoute,
+} as any);
 
 const ArticlesIndexRoute = ArticlesIndexImport.update({
-  id: '/articles/',
-  path: '/articles/',
-  getParentRoute: () => rootRoute,
-} as any)
+	id: "/articles/",
+	path: "/articles/",
+	getParentRoute: () => rootRoute,
+} as any);
 
 const AboutIndexRoute = AboutIndexImport.update({
-  id: '/about/',
-  path: '/about/',
-  getParentRoute: () => rootRoute,
-} as any)
+	id: "/about/",
+	path: "/about/",
+	getParentRoute: () => rootRoute,
+} as any);
 
 // Populate the FileRoutesByPath interface
 
-declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/about/': {
-      id: '/about/'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutIndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/articles/': {
-      id: '/articles/'
-      path: '/articles'
-      fullPath: '/articles'
-      preLoaderRoute: typeof ArticlesIndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/contact/': {
-      id: '/contact/'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactIndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/investing/': {
-      id: '/investing/'
-      path: '/investing'
-      fullPath: '/investing'
-      preLoaderRoute: typeof InvestingIndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/newsletter/': {
-      id: '/newsletter/'
-      path: '/newsletter'
-      fullPath: '/newsletter'
-      preLoaderRoute: typeof NewsletterIndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/playground/': {
-      id: '/playground/'
-      path: '/playground'
-      fullPath: '/playground'
-      preLoaderRoute: typeof PlaygroundIndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/podcasts/': {
-      id: '/podcasts/'
-      path: '/podcasts'
-      fullPath: '/podcasts'
-      preLoaderRoute: typeof PodcastsIndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/projects/': {
-      id: '/projects/'
-      path: '/projects'
-      fullPath: '/projects'
-      preLoaderRoute: typeof ProjectsIndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/uses/': {
-      id: '/uses/'
-      path: '/uses'
-      fullPath: '/uses'
-      preLoaderRoute: typeof UsesIndexImport
-      parentRoute: typeof rootRoute
-    }
-  }
+declare module "@tanstack/react-router" {
+	interface FileRoutesByPath {
+		"/": {
+			id: "/";
+			path: "/";
+			fullPath: "/";
+			preLoaderRoute: typeof IndexImport;
+			parentRoute: typeof rootRoute;
+		};
+		"/about/": {
+			id: "/about/";
+			path: "/about";
+			fullPath: "/about";
+			preLoaderRoute: typeof AboutIndexImport;
+			parentRoute: typeof rootRoute;
+		};
+		"/articles/": {
+			id: "/articles/";
+			path: "/articles";
+			fullPath: "/articles";
+			preLoaderRoute: typeof ArticlesIndexImport;
+			parentRoute: typeof rootRoute;
+		};
+		"/contact/": {
+			id: "/contact/";
+			path: "/contact";
+			fullPath: "/contact";
+			preLoaderRoute: typeof ContactIndexImport;
+			parentRoute: typeof rootRoute;
+		};
+		"/investing/": {
+			id: "/investing/";
+			path: "/investing";
+			fullPath: "/investing";
+			preLoaderRoute: typeof InvestingIndexImport;
+			parentRoute: typeof rootRoute;
+		};
+		"/newsletter/": {
+			id: "/newsletter/";
+			path: "/newsletter";
+			fullPath: "/newsletter";
+			preLoaderRoute: typeof NewsletterIndexImport;
+			parentRoute: typeof rootRoute;
+		};
+		"/playground/": {
+			id: "/playground/";
+			path: "/playground";
+			fullPath: "/playground";
+			preLoaderRoute: typeof PlaygroundIndexImport;
+			parentRoute: typeof rootRoute;
+		};
+		"/podcasts/": {
+			id: "/podcasts/";
+			path: "/podcasts";
+			fullPath: "/podcasts";
+			preLoaderRoute: typeof PodcastsIndexImport;
+			parentRoute: typeof rootRoute;
+		};
+		"/projects/": {
+			id: "/projects/";
+			path: "/projects";
+			fullPath: "/projects";
+			preLoaderRoute: typeof ProjectsIndexImport;
+			parentRoute: typeof rootRoute;
+		};
+		"/uses/": {
+			id: "/uses/";
+			path: "/uses";
+			fullPath: "/uses";
+			preLoaderRoute: typeof UsesIndexImport;
+			parentRoute: typeof rootRoute;
+		};
+	}
 }
 
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/about': typeof AboutIndexRoute
-  '/articles': typeof ArticlesIndexRoute
-  '/contact': typeof ContactIndexRoute
-  '/investing': typeof InvestingIndexRoute
-  '/newsletter': typeof NewsletterIndexRoute
-  '/playground': typeof PlaygroundIndexRoute
-  '/podcasts': typeof PodcastsIndexRoute
-  '/projects': typeof ProjectsIndexRoute
-  '/uses': typeof UsesIndexRoute
+	"/": typeof IndexRoute;
+	"/about": typeof AboutIndexRoute;
+	"/articles": typeof ArticlesIndexRoute;
+	"/contact": typeof ContactIndexRoute;
+	"/investing": typeof InvestingIndexRoute;
+	"/newsletter": typeof NewsletterIndexRoute;
+	"/playground": typeof PlaygroundIndexRoute;
+	"/podcasts": typeof PodcastsIndexRoute;
+	"/projects": typeof ProjectsIndexRoute;
+	"/uses": typeof UsesIndexRoute;
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/about': typeof AboutIndexRoute
-  '/articles': typeof ArticlesIndexRoute
-  '/contact': typeof ContactIndexRoute
-  '/investing': typeof InvestingIndexRoute
-  '/newsletter': typeof NewsletterIndexRoute
-  '/playground': typeof PlaygroundIndexRoute
-  '/podcasts': typeof PodcastsIndexRoute
-  '/projects': typeof ProjectsIndexRoute
-  '/uses': typeof UsesIndexRoute
+	"/": typeof IndexRoute;
+	"/about": typeof AboutIndexRoute;
+	"/articles": typeof ArticlesIndexRoute;
+	"/contact": typeof ContactIndexRoute;
+	"/investing": typeof InvestingIndexRoute;
+	"/newsletter": typeof NewsletterIndexRoute;
+	"/playground": typeof PlaygroundIndexRoute;
+	"/podcasts": typeof PodcastsIndexRoute;
+	"/projects": typeof ProjectsIndexRoute;
+	"/uses": typeof UsesIndexRoute;
 }
 
 export interface FileRoutesById {
-  __root__: typeof rootRoute
-  '/': typeof IndexRoute
-  '/about/': typeof AboutIndexRoute
-  '/articles/': typeof ArticlesIndexRoute
-  '/contact/': typeof ContactIndexRoute
-  '/investing/': typeof InvestingIndexRoute
-  '/newsletter/': typeof NewsletterIndexRoute
-  '/playground/': typeof PlaygroundIndexRoute
-  '/podcasts/': typeof PodcastsIndexRoute
-  '/projects/': typeof ProjectsIndexRoute
-  '/uses/': typeof UsesIndexRoute
+	__root__: typeof rootRoute;
+	"/": typeof IndexRoute;
+	"/about/": typeof AboutIndexRoute;
+	"/articles/": typeof ArticlesIndexRoute;
+	"/contact/": typeof ContactIndexRoute;
+	"/investing/": typeof InvestingIndexRoute;
+	"/newsletter/": typeof NewsletterIndexRoute;
+	"/playground/": typeof PlaygroundIndexRoute;
+	"/podcasts/": typeof PodcastsIndexRoute;
+	"/projects/": typeof ProjectsIndexRoute;
+	"/uses/": typeof UsesIndexRoute;
 }
 
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/about'
-    | '/articles'
-    | '/contact'
-    | '/investing'
-    | '/newsletter'
-    | '/playground'
-    | '/podcasts'
-    | '/projects'
-    | '/uses'
-  fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/about'
-    | '/articles'
-    | '/contact'
-    | '/investing'
-    | '/newsletter'
-    | '/playground'
-    | '/podcasts'
-    | '/projects'
-    | '/uses'
-  id:
-    | '__root__'
-    | '/'
-    | '/about/'
-    | '/articles/'
-    | '/contact/'
-    | '/investing/'
-    | '/newsletter/'
-    | '/playground/'
-    | '/podcasts/'
-    | '/projects/'
-    | '/uses/'
-  fileRoutesById: FileRoutesById
+	fileRoutesByFullPath: FileRoutesByFullPath;
+	fullPaths:
+		| "/"
+		| "/about"
+		| "/articles"
+		| "/contact"
+		| "/investing"
+		| "/newsletter"
+		| "/playground"
+		| "/podcasts"
+		| "/projects"
+		| "/uses";
+	fileRoutesByTo: FileRoutesByTo;
+	to:
+		| "/"
+		| "/about"
+		| "/articles"
+		| "/contact"
+		| "/investing"
+		| "/newsletter"
+		| "/playground"
+		| "/podcasts"
+		| "/projects"
+		| "/uses";
+	id:
+		| "__root__"
+		| "/"
+		| "/about/"
+		| "/articles/"
+		| "/contact/"
+		| "/investing/"
+		| "/newsletter/"
+		| "/playground/"
+		| "/podcasts/"
+		| "/projects/"
+		| "/uses/";
+	fileRoutesById: FileRoutesById;
 }
 
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  AboutIndexRoute: typeof AboutIndexRoute
-  ArticlesIndexRoute: typeof ArticlesIndexRoute
-  ContactIndexRoute: typeof ContactIndexRoute
-  InvestingIndexRoute: typeof InvestingIndexRoute
-  NewsletterIndexRoute: typeof NewsletterIndexRoute
-  PlaygroundIndexRoute: typeof PlaygroundIndexRoute
-  PodcastsIndexRoute: typeof PodcastsIndexRoute
-  ProjectsIndexRoute: typeof ProjectsIndexRoute
-  UsesIndexRoute: typeof UsesIndexRoute
+	IndexRoute: typeof IndexRoute;
+	AboutIndexRoute: typeof AboutIndexRoute;
+	ArticlesIndexRoute: typeof ArticlesIndexRoute;
+	ContactIndexRoute: typeof ContactIndexRoute;
+	InvestingIndexRoute: typeof InvestingIndexRoute;
+	NewsletterIndexRoute: typeof NewsletterIndexRoute;
+	PlaygroundIndexRoute: typeof PlaygroundIndexRoute;
+	PodcastsIndexRoute: typeof PodcastsIndexRoute;
+	ProjectsIndexRoute: typeof ProjectsIndexRoute;
+	UsesIndexRoute: typeof UsesIndexRoute;
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  AboutIndexRoute: AboutIndexRoute,
-  ArticlesIndexRoute: ArticlesIndexRoute,
-  ContactIndexRoute: ContactIndexRoute,
-  InvestingIndexRoute: InvestingIndexRoute,
-  NewsletterIndexRoute: NewsletterIndexRoute,
-  PlaygroundIndexRoute: PlaygroundIndexRoute,
-  PodcastsIndexRoute: PodcastsIndexRoute,
-  ProjectsIndexRoute: ProjectsIndexRoute,
-  UsesIndexRoute: UsesIndexRoute,
-}
+	IndexRoute: IndexRoute,
+	AboutIndexRoute: AboutIndexRoute,
+	ArticlesIndexRoute: ArticlesIndexRoute,
+	ContactIndexRoute: ContactIndexRoute,
+	InvestingIndexRoute: InvestingIndexRoute,
+	NewsletterIndexRoute: NewsletterIndexRoute,
+	PlaygroundIndexRoute: PlaygroundIndexRoute,
+	PodcastsIndexRoute: PodcastsIndexRoute,
+	ProjectsIndexRoute: ProjectsIndexRoute,
+	UsesIndexRoute: UsesIndexRoute,
+};
 
 export const routeTree = rootRoute
-  ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>()
+	._addFileChildren(rootRouteChildren)
+	._addFileTypes<FileRouteTypes>();
 
 /* ROUTE_MANIFEST_START
 {
