@@ -141,6 +141,7 @@ export const ThemeSwitcher = ({ className }: { className?: string }) => {
 				>
 					{theme === tab.id && (
 						<motion.span
+							layout
 							layoutId="bubble"
 							className="-z-10 absolute inset-0 bg-neutral-300 dark:bg-neutral-600"
 							style={{ borderRadius: 9999 }}
