@@ -1,9 +1,9 @@
-import { useTheme } from "@/lib/hooks/use-theme";
+import { useTheme } from "@/lib/styles/theme-provider";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 
 export function ThemeToggle({ className }: { className?: string }) {
-	const { toggleTheme, theme } = useTheme();
+	const { theme, setTheme } = useTheme();
 
 	return (
 		<motion.button
@@ -22,7 +22,7 @@ export function ThemeToggle({ className }: { className?: string }) {
 				bounce: 0.2,
 				duration: 0.3,
 			}}
-			onClick={toggleTheme}
+			onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
 			type="button"
 			className={cn(
 				"relative flex h-6 w-10 cursor-pointer items-center justify-center rounded-(--toggle-radius) border-[1.5px] px-(--toggle-padding) [--toggle-padding:--spacing(0.75)] [--toggle-radius:var(--radius-2xl)]",

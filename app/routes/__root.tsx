@@ -12,6 +12,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { StackedLayout } from "@/components/catalyst/stacked-layout";
 import { MobileMenu } from "@/components/ui/playground/mobile-menu";
+import { ThemeProvider } from "@/lib/styles/theme-provider";
 
 export const Route = createRootRoute({
 	head: () => ({
@@ -66,14 +67,11 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
 				<HeadContent />
 			</head>
 			<body className="font-sans antialiased">
-				<StackedLayout navbar={<Header />} sidebar={<MobileMenu />}>
-					{children}
-				</StackedLayout>
-				{/* <div className="relative z-0 flex min-h-screen flex-col">
-					<Header />
-					{children}
-					<Footer />
-				</div> */}
+				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+					<StackedLayout navbar={<Header />} sidebar={<MobileMenu />}>
+						{children}
+					</StackedLayout>
+				</ThemeProvider>
 				<Scripts />
 			</body>
 		</html>
