@@ -33,7 +33,11 @@ const colors = {
 	pink: "bg-pink-400/15 text-pink-700 group-data-hover:bg-pink-400/25 dark:bg-pink-400/10 dark:text-pink-400 dark:group-data-hover:bg-pink-400/20",
 	rose: "bg-rose-400/15 text-rose-700 group-data-hover:bg-rose-400/25 dark:bg-rose-400/10 dark:text-rose-400 dark:group-data-hover:bg-rose-400/20",
 	zinc: "bg-zinc-600/10 text-zinc-700 group-data-hover:bg-zinc-600/20 dark:bg-white/5 dark:text-zinc-400 dark:group-data-hover:bg-white/10",
+	primary:
+		"bg-primary/15 text-primary group-data-hover:bg-primary/25 dark:bg-primary/10 dark:text-[#f25a17] dark:group-data-hover:bg-primary/20",
 };
+
+// primaryColor="#f12711" secondaryColor="#f5af19"
 
 type BadgeProps = { color?: keyof typeof colors };
 
