@@ -228,8 +228,8 @@
 	--font-heading: "Geomanist", "sans-serif";
 	--color-vaillant: #00917e;
 	--color-primary: #f25118;
-	--foreground: #0a0a0a;
-	--background: #ededed;
+	--foreground: #08070b;
+	--background: #f2f2f2;
 	--gradient-title-primary: var(--color-neutral-950);
 	--gradient-title-secondary: var(--color-neutral-800);
 }
@@ -246,8 +246,8 @@
 }
 
 .dark {
-	--foreground: #ededed;
-	--background: #0a0a0a;
+	--foreground: #f2f2f2;
+	--background: #08070b;
 	--gradient-title-primary: var(--color-neutral-100);
 	--gradient-title-secondary: var(--color-neutral-300);
 }

@@ -15,7 +15,7 @@ const components = {
 	h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
 		<h1
 			className={cn(
-				"mt-2 scroll-m-20 font-bold font-heading text-4xl tracking-tight",
+				"mt-2 scroll-m-20 font-heading font-medium text-4xl tracking-tight",
 				className,
 			)}
 			{...props}
@@ -24,7 +24,7 @@ const components = {
 	h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
 		<h2
 			className={cn(
-				"mt-10 scroll-m-20 border-b pb-1 font-heading font-semibold text-3xl tracking-tight first:mt-0",
+				"mt-10 scroll-m-20 border-b pb-1 font-heading font-medium text-3xl tracking-tight first:mt-0",
 				className,
 			)}
 			{...props}
@@ -33,7 +33,7 @@ const components = {
 	h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
 		<h3
 			className={cn(
-				"mt-8 scroll-m-20 font-heading font-semibold text-2xl tracking-tight",
+				"mt-8 scroll-m-20 font-heading font-medium text-2xl tracking-tight",
 				className,
 			)}
 			{...props}
@@ -42,7 +42,7 @@ const components = {
 	h4: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
 		<h4
 			className={cn(
-				"mt-8 scroll-m-20 font-heading font-semibold text-xl tracking-tight",
+				"mt-8 scroll-m-20 font-heading font-medium text-xl tracking-tight",
 				className,
 			)}
 			{...props}
@@ -51,7 +51,7 @@ const components = {
 	h5: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
 		<h5
 			className={cn(
-				"mt-8 scroll-m-20 font-heading font-semibold text-lg tracking-tight",
+				"mt-8 scroll-m-20 font-heading font-medium text-lg tracking-tight",
 				className,
 			)}
 			{...props}
@@ -60,7 +60,7 @@ const components = {
 	h6: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
 		<h6
 			className={cn(
-				"mt-8 scroll-m-20 font-heading font-semibold text-base tracking-tight",
+				"mt-8 scroll-m-20 font-heading font-medium text-base tracking-tight",
 				className,
 			)}
 			{...props}
