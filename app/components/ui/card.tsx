@@ -20,7 +20,7 @@ export const CardHeader = ({ children }: { children?: React.ReactNode }) => {
 };
 
 export const CardTitle = ({ children }: { children?: React.ReactNode }) => {
-	return <h2 className="font-bold">{children}</h2>;
+	return <h2 className="font-medium">{children}</h2>;
 };
 
 export const CardDescription = ({

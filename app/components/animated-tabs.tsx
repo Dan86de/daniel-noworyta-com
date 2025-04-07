@@ -1,11 +1,12 @@
 import { activePages } from "@/lib/pages";
+import { cn } from "@/lib/utils";
 import { Link, useLocation } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 export const AnimatedTabs = () => {
 	const { pathname } = useLocation();
-	const currentPage = pathname.split("/").pop();
+	const currentPage = pathname === "/" ? "home" : pathname.split("/").pop();
 
 	const [activeTab, setActiveTab] = useState(currentPage);
 
@@ -19,9 +20,9 @@ export const AnimatedTabs = () => {
 				<Link
 					key={id}
 					to={to}
-					className={`${
-						activeTab === id ? "" : "hover:text-primary"
-					} relative rounded-full px-3 py-1.5 font-medium text-sm outline-primary/60 transition focus-visible:outline-2`}
+					className={cn(
+						"relative rounded-full px-3 py-1.5 font-medium text-sm outline-primary/60 transition hover:text-primary focus-visible:outline-2",
+					)}
 					style={{
 						WebkitTapHighlightColor: "transparent",
 					}}
