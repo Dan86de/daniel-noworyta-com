@@ -40,3 +40,10 @@ yarn-error.log*
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Content collections
+.content-collections
+
+# Vercel
+.vercel
+.vinxi

@@ -8,11 +8,12 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vinxi dev",
-		"build": "vinxi build",
+		"build": "content-collections build && vinxi build",
 		"start": "vinxi start"
 	},
 	"description": "",
 	"dependencies": {
+		"@content-collections/mdx": "^0.2.2",
 		"@headlessui/react": "^2.2.1",
 		"@tailwindcss/vite": "^4.1.2",
 		"@tanstack/react-router": "^1.114.29",
@@ -21,20 +22,22 @@
 		"clsx": "^2.1.1",
 		"motion": "^12.6.2",
 		"react": "^19.1.0",
-		"react-aria-components": "^1.7.1",
 		"react-dom": "^19.1.0",
-		"react-stately": "^3.36.1",
 		"tailwind-merge": "^3.1.0",
 		"tailwindcss": "^4.1.2",
-		"tailwindcss-react-aria-components": "^2.0.0",
 		"vinxi": "^0.5.3"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
+		"@content-collections/cli": "^0.1.6",
+		"@content-collections/core": "^0.8.2",
+		"@content-collections/vinxi": "^0.1.0",
+		"@tailwindcss/typography": "^0.5.16",
 		"@types/react": "^19.0.12",
 		"@types/react-dom": "^19.0.4",
 		"@vitejs/plugin-react": "^4.3.4",
 		"babel-plugin-react-compiler": "^19.0.0-beta-e993439-20250328",
+		"concurrently": "^9.1.2",
 		"typescript": "^5.8.2",
 		"vite-tsconfig-paths": "^5.1.4"
 	}
