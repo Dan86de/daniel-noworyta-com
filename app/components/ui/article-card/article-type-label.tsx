@@ -64,8 +64,8 @@ export const ArticleTypeLabel = ({
 	return (
 		<p
 			className={cn(
-				"inline-flex items-center gap-1 pb-1.5 font-medium font-mono text-primary",
-				size === "md" ? "text-sm" : "text-xs",
+				"inline-flex items-center gap-1 font-medium font-mono text-primary",
+				size === "md" ? "pb-1.5 text-sm" : "pb-1 text-xs",
 				"uppercase",
 			)}
 		>
