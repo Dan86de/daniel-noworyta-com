@@ -17,7 +17,6 @@ const articles = defineCollection({
   }),
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document);
-    // Here think about typecasting the slug
     const slug = document._meta.path.split("/").pop() as string;
     return {
       ...document,

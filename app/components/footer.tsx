@@ -203,12 +203,12 @@ const AnimatedLink = ({ link }: { link: (typeof links)[number] }) => {
 				className="group relative flex flex-col items-center gap-2"
 			>
 				<span className="touch-target" />
-				<div className="flex h-8 w-8 items-center justify-center transition-colors duration-200 group-hover:text-primary sm:h-5 sm:w-5">
+				<div className="flex h-8 w-8 items-center justify-center transition-colors duration-250 group-hover:text-primary sm:h-5 sm:w-5">
 					<span className="sr-only">{link.title}</span>
 					<span className="touch-target" />
 					{link.icon}
 				</div>
-				<span className="hidden text-xs transition-colors duration-200 group-hover:text-primary sm:block">
+				<span className="hidden text-xs transition-colors duration-250 group-hover:text-primary sm:block">
 					{link.title}
 				</span>
 			</Link>
