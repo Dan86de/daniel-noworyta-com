@@ -2,7 +2,6 @@ import { Body } from "@/components/ui/Typography/Body";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { GradientTitle } from "@/components/ui/gradient-title";
 import { motion } from "framer-motion";
-import { HeroAnimation } from "@/components/hero-animation";
 
 export const Route = createFileRoute("/")({
 	component: Home,
@@ -16,7 +15,7 @@ function Home() {
 			</GradientTitle>
 			<Body className="mt-4">
 				<strong>
-					Software Developer at{" "}
+					Currently making better software at{" "}
 					<motion.a
 						initial={{ opacity: 0, filter: "blur(10px)" }}
 						animate={{ opacity: 1, filter: "blur(0px)" }}
@@ -30,7 +29,7 @@ function Home() {
 				</strong>
 			</Body>
 			<span className="-mt-3 block">
-				Obsessed with user and developer experience
+				Obsessed with good design and user experience.
 			</span>
 		</div>
 	);
