@@ -3,6 +3,7 @@ import { allArticles } from "content-collections";
 import { GradientTitle } from "@/components/ui/gradient-title";
 import { Mdx } from "@/components/mdx/mdx-components";
 import { Badge } from "@/components/catalyst/badge";
+import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/articles/$slug")({
 	component: RouteComponent,
 	loader: ({ params }) => {
@@ -22,9 +23,18 @@ function RouteComponent() {
 			</GradientTitle>
 			<div className="my-2 flex flex-wrap gap-2">
 				{article?.tags.map((tag) => (
-					<Badge key={tag} color="primary" className="text-xs">
+					<div
+						key={tag}
+						className={cn(
+							"flex items-center rounded-full border border-neutral-300 p-0.5 px-2 pt-1 font-semibold text-[10px] text-foreground transition-colors ",
+							"focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+							// DARK MODE
+							"dark:border-neutral-600",
+						)}
+					>
+						{"# "}
 						{tag}
-					</Badge>
+					</div>
 				))}
 			</div>
 			<Mdx code={article?.mdx ?? ""} />
