@@ -39,6 +39,22 @@ export const ArticleListItem = ({
 			)}
 		>
 			<div className="flex grow-1 flex-col space-y-2 p-0 transition-all duration-250 ease-in-out">
+				<div className="flex items-center gap-1 md:hidden">
+					{tags.map((tag) => (
+						<div
+							key={tag}
+							className={cn(
+								"flex items-center rounded-full border border-neutral-300 p-0.5 px-2 pt-1 font-semibold text-[10px] text-foreground transition-colors ",
+								"focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+								// DARK MODE
+								"dark:border-neutral-600",
+							)}
+						>
+							{"# "}
+							{tag}
+						</div>
+					))}
+				</div>
 				<div className="flex flex-col space-y-0.5 p-0">
 					<h3 className="fluid-lg font-semibold text-lg leading-tight tracking-tight">
 						{title}
@@ -56,16 +72,26 @@ export const ArticleListItem = ({
 						className="h-8 w-8"
 					/>
 					<span className="text-sm">{author.name}</span>
-					<div className="flex items-center gap-1">
-						<div className="inline-flex items-center rounded-full border border-neutral-300 p-0.5 px-2 pt-1 font-semibold text-[10px] text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 dark:border-neutral-600">
-							{"# "}
-							{tags[0]}
-						</div>
+					<div className="hidden items-center gap-1 md:flex">
+						{tags.map((tag) => (
+							<div
+								key={tag}
+								className={cn(
+									"flex items-center rounded-full border border-neutral-300 p-0.5 px-2 pt-1 font-semibold text-[10px] text-foreground transition-colors ",
+									"focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+									// DARK MODE
+									"dark:border-neutral-600",
+								)}
+							>
+								{"# "}
+								{tag}
+							</div>
+						))}
 					</div>
 				</div>
 			</div>
 			<div>
-				<div className="mt-2 flex flex-col items-start justify-between gap-2 p-0 text-sm">
+				<div className="flex flex-col items-start justify-between gap-2 p-0 text-sm md:mt-2">
 					<ArticleTypeLabel type={type} size="sm" />
 					<span className="text-xs">{publishedAt}</span>
 				</div>
