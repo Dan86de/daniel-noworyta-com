@@ -34,7 +34,7 @@ export const FeaturedArticles = ({ articles }: { articles: Article[] }) => {
 						to={"/articles/$slug"}
 						params={{ slug: articles[0].slug }}
 						key={articles[0]._meta.fileName}
-						className="group relative inset-0 block h-full w-full p-2 transition duration-300 ease-in-out hover:bg-neutral-200/20 dark:hover:bg-neutral-800/50"
+						className="group relative inset-0 block h-full w-full p-2 transition duration-250 ease-in-out hover:bg-neutral-200/20 dark:hover:bg-neutral-800/50"
 					>
 						<ArticleCard
 							title={articles[0].title}
@@ -65,7 +65,7 @@ export const FeaturedArticles = ({ articles }: { articles: Article[] }) => {
 							}}
 							tags={articles[1].tags}
 							type={articles[1].type}
-							className="transition duration-300 ease-in-out group-hover:bg-neutral-200/20 md:border-t dark:group-hover:bg-neutral-800/50"
+							className="transition duration-250 ease-in-out group-hover:bg-neutral-200/20 md:border-t dark:group-hover:bg-neutral-800/50"
 						/>
 					</Link>
 					<Link
@@ -83,7 +83,7 @@ export const FeaturedArticles = ({ articles }: { articles: Article[] }) => {
 							}}
 							tags={articles[2].tags}
 							type={articles[2].type}
-							className="transition duration-300 ease-in-out group-hover:bg-neutral-200/20 dark:group-hover:bg-neutral-800/50"
+							className="transition duration-250 ease-in-out group-hover:bg-neutral-200/20 dark:group-hover:bg-neutral-800/50"
 						/>
 					</Link>
 				</div>

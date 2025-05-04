@@ -34,11 +34,11 @@ export const ArticleListItem = ({
 				"border-neutral-200 border-b last:border-b-0 dark:border-neutral-800",
 				"dark:bg-neutral-950 dark:shadow-[inset_0_1px,inset_0_0_0_1px] dark:shadow-white/[0.025]",
 				"hover:bg-neutral-200/20 dark:hover:bg-neutral-800/50",
-				"transition duration-300 ease-in-out",
+				"transition-all duration-250 ease-in-out",
 				className,
 			)}
 		>
-			<div className="flex grow-1 flex-col space-y-2 p-0 transition duration-300 ease-in-out">
+			<div className="flex grow-1 flex-col space-y-2 p-0 transition-all duration-250 ease-in-out">
 				<div className="flex flex-col space-y-0.5 p-0">
 					<h3 className="fluid-lg font-semibold text-lg leading-tight tracking-tight">
 						{title}

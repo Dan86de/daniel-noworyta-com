@@ -64,7 +64,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
 			<head>
 				<HeadContent />
 			</head>
-			<body className="font-sans antialiased">
+			<body className="font-sans antialiased transition duration-250">
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<StackedLayout navbar={<Header />} sidebar={<MobileMenu />}>
 						{children}

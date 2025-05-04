@@ -17,6 +17,8 @@ export const Route = createFileRoute("/articles/")({
 function RouteComponent() {
 	const articles = useLoaderData({ from: "/articles/" });
 
+	console.log(articles);
+
 	return (
 		<ContentContainer>
 			<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
@@ -29,7 +31,8 @@ function RouteComponent() {
 				technology.
 			</Body>
 
-			<FeaturedArticles articles={articles} />
+			{/* Featured articles section (need minimum 3 articles) */}
+			{/* <FeaturedArticles articles={articles} /> */}
 
 			{/* All articles */}
 			<AllArticles articles={articles} />
