@@ -9,7 +9,7 @@ export function Text({
 		<p
 			data-slot="text"
 			{...props}
-			className={clsx(className, "text-zinc-700 dark:text-zinc-300")}
+			className={clsx(className, "text-neutral-700 dark:text-neutral-300")}
 		/>
 	);
 }
@@ -23,7 +23,7 @@ export function TextLink({
 			{...props}
 			className={clsx(
 				className,
-				"text-zinc-950 underline decoration-zinc-950/50 data-hover:decoration-zinc-950 dark:text-white dark:decoration-white/50 dark:data-hover:decoration-white",
+				"text-neutral-950 underline decoration-neutral-950/50 data-hover:decoration-neutral-950 dark:text-white dark:decoration-white/50 dark:data-hover:decoration-white",
 			)}
 		/>
 	);
@@ -36,7 +36,10 @@ export function Strong({
 	return (
 		<strong
 			{...props}
-			className={clsx(className, "font-medium text-zinc-950 dark:text-white")}
+			className={clsx(
+				className,
+				"font-medium text-neutral-950 dark:text-white",
+			)}
 		/>
 	);
 }
@@ -50,7 +53,7 @@ export function Code({
 			{...props}
 			className={clsx(
 				className,
-				"rounded-sm border border-zinc-950/10 bg-zinc-950/[2.5%] px-0.5 font-medium text-sm text-zinc-950 sm:text-[0.8125rem] dark:border-white/20 dark:bg-white/5 dark:text-white",
+				"rounded-sm border border-neutral-950/10 bg-neutral-950/[2.5%] px-0.5 font-medium text-neutral-950 text-sm sm:text-[0.8125rem] dark:border-white/20 dark:bg-white/5 dark:text-white",
 			)}
 		/>
 	);

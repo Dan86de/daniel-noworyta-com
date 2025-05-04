@@ -29,7 +29,7 @@ function MobileSidebar({
 				transition
 				className="fixed top-0 right-0 h-full w-full max-w-80 bg-(--background) transition-transform duration-300 ease-in-out data-closed:translate-x-full"
 			>
-				<div className="flex h-full flex-col shadow-xs ring-1 ring-zinc-950/5 dark:ring-white/10">
+				<div className="flex h-full flex-col shadow-xs ring-1 ring-neutral-950/5 dark:ring-white/10">
 					{children}
 				</div>
 			</Headless.DialogPanel>
