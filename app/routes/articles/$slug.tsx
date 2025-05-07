@@ -16,7 +16,7 @@ function RouteComponent() {
 	const article = useLoaderData({ from: "/articles/$slug" });
 
 	return (
-		<div className="mx-auto mb-auto h-full max-w-3xl p-4">
+		<div className="mx-auto mb-auto h-full max-w-prose p-4">
 			<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
 				{article?.title}
 			</GradientTitle>
