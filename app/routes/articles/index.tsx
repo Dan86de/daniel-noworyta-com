@@ -20,11 +20,11 @@ function RouteComponent() {
 	console.log(articles);
 
 	return (
-		<ContentContainer>
+		<ContentContainer className="max-w-prose">
 			<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
 				Think. Write. Share.
 			</GradientTitle>
-			<Body className="max-w-prose text-balance">
+			<Body className="text-balance">
 				Writing helps me <strong>organize my thoughts</strong> and share
 				knowledge. Through articles, I document my journey, share technical
 				insights, and help others learn from my experiences in programming and

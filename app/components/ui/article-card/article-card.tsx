@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import { Avatar } from "../../catalyst/avatar";
-import { ArticleTypeLabel } from "./article-type-label";
+import { Avatar } from "@/components/catalyst/avatar";
+import { ArticleTypeLabel } from "@/components/ui/article-card/article-type-label";
 
 interface ArticleCardProps {
 	title: string;

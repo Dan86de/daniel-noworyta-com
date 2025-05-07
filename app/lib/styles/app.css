@@ -235,6 +235,10 @@
 	--gradient-title-secondary: var(--color-neutral-800);
 }
 
+* {
+	/* outline: 1px solid orange; */
+}
+
 :root {
 	line-height: 1.5;
 	font-weight: 400;

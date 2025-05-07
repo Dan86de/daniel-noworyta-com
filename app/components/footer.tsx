@@ -6,7 +6,7 @@ const links = [
 		title: "Email",
 		url: "/contact",
 		icon: (
-			<svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+			<svg className="size-6" fill="none" viewBox="0 0 24 24">
 				<title>Email</title>
 				<path
 					stroke="currentColor"
@@ -30,8 +30,7 @@ const links = [
 		url: "https://twitter.com/danielnoworyta",
 		icon: (
 			<svg
-				width="24"
-				height="24"
+				className="size-6"
 				viewBox="0 0 24 24"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
@@ -52,8 +51,7 @@ const links = [
 		url: "https://github.com/dan86de",
 		icon: (
 			<svg
-				width="24"
-				height="24"
+				className="size-6"
 				viewBox="0 0 24 24"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
@@ -74,8 +72,7 @@ const links = [
 		url: "https://linkedin.com/in/danielnoworyta",
 		icon: (
 			<svg
-				width="24"
-				height="24"
+				className="size-6"
 				viewBox="0 0 24 24"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
@@ -124,8 +121,7 @@ const links = [
 		url: "https://instagram.com/programistafrontend",
 		icon: (
 			<svg
-				width="24"
-				height="24"
+				className="size-6"
 				viewBox="0 0 24 24"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +154,7 @@ const links = [
 		title: "YouTube",
 		url: "https://youtube.com/@danielnoworyta",
 		icon: (
-			<svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+			<svg className="size-6" fill="none" viewBox="0 0 24 24">
 				<title>YouTube</title>
 				<path
 					stroke="currentColor"
@@ -203,9 +199,8 @@ const AnimatedLink = ({ link }: { link: (typeof links)[number] }) => {
 				className="group relative flex flex-col items-center gap-2"
 			>
 				<span className="touch-target" />
-				<div className="flex h-8 w-8 items-center justify-center transition-colors duration-250 group-hover:text-primary sm:h-5 sm:w-5">
+				<div className="flex items-center justify-center transition-colors duration-250 group-hover:text-primary">
 					<span className="sr-only">{link.title}</span>
-					<span className="touch-target" />
 					{link.icon}
 				</div>
 				<span className="hidden text-xs transition-colors duration-250 group-hover:text-primary sm:block">

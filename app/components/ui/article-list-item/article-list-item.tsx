@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { ArticleTypeLabel } from "../article-card/article-type-label";
+import { ArticleTypeLabel } from "@/components/ui/article-card/article-type-label";
 import { Avatar } from "@/components/catalyst/avatar";
 import { Link } from "@/components/catalyst/link";
 
@@ -30,31 +30,15 @@ export const ArticleListItem = ({
 			params={{ slug }}
 			className={cn(
 				"w-full cursor-pointer bg-neutral-100",
-				"flex space-x-8 p-4",
+				"flex space-x-12 p-4",
 				"border-neutral-200 border-b last:border-b-0 dark:border-neutral-800",
 				"dark:bg-neutral-950 dark:shadow-[inset_0_1px,inset_0_0_0_1px] dark:shadow-white/[0.025]",
 				"hover:bg-neutral-200/20 dark:hover:bg-neutral-800/50",
-				"transition-all duration-250 ease-in-out",
+				"transition-all duration-250",
 				className,
 			)}
 		>
-			<div className="flex grow-1 flex-col space-y-2 p-0 transition-all duration-250 ease-in-out">
-				<div className="flex items-center gap-1 md:hidden">
-					{tags.map((tag) => (
-						<div
-							key={tag}
-							className={cn(
-								"flex items-center rounded-full border border-neutral-300 p-0.5 px-2 pt-1 font-semibold text-[10px] text-foreground transition-colors ",
-								"focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
-								// DARK MODE
-								"dark:border-neutral-600",
-							)}
-						>
-							{"# "}
-							{tag}
-						</div>
-					))}
-				</div>
+			<div className="flex grow-1 flex-col space-y-2">
 				<div className="flex flex-col space-y-0.5 p-0">
 					<h3 className="fluid-lg font-semibold text-lg leading-tight tracking-tight">
 						{title}
@@ -77,7 +61,7 @@ export const ArticleListItem = ({
 							<div
 								key={tag}
 								className={cn(
-									"flex items-center rounded-full border border-neutral-300 p-0.5 px-2 pt-1 font-semibold text-[10px] text-foreground transition-colors ",
+									"flex items-center rounded-full border border-neutral-300 p-0.5 px-2 pt-1 font-semibold text-[10px] text-foreground",
 									"focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
 									// DARK MODE
 									"dark:border-neutral-600",
