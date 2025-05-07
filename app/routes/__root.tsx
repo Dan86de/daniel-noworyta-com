@@ -12,7 +12,6 @@ import { Header } from "@/components/header";
 import { StackedLayout } from "@/components/catalyst/stacked-layout";
 import { MobileMenu } from "@/components/ui/mobile-menu";
 import { ThemeProvider } from "@/lib/styles/theme-provider";
-import { Footer } from "@/components/footer";
 export const Route = createRootRoute({
 	head: () => ({
 		meta: [
@@ -25,7 +24,7 @@ export const Route = createRootRoute({
 			},
 			{
 				title: "Daniel Noworyta",
-				description: "Obsessed with user and developer experience",
+				description: "Obsessed with user and developer experience.",
 			},
 		],
 		links: [
@@ -65,7 +64,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
 			<head>
 				<HeadContent />
 			</head>
-			<body className="font-sans antialiased">
+			<body className="font-sans antialiased transition duration-250">
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<StackedLayout navbar={<Header />} sidebar={<MobileMenu />}>
 						{children}

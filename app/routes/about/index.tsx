@@ -1,3 +1,4 @@
+import { ContentContainer } from "@/components/ui/content-container";
 import { FadeUp } from "@/components/ui/fade-up";
 import { GradientTitle } from "@/components/ui/gradient-title";
 import { Body } from "@/components/ui/Typography/Body";
@@ -10,15 +11,15 @@ export const Route = createFileRoute("/about/")({
 
 function RouteComponent() {
 	return (
-		<div className="container mx-auto mb-auto h-full max-w-3xl p-5">
+		<ContentContainer className="max-w-prose">
 			<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
 				Developer. Father. Creator.
 			</GradientTitle>
-			<Body>
+			<Body className="text-balance">
 				From dreaming of becoming a programmer to{" "}
-				<strong>making it reality</strong> in 2020. Now I&apos;m sharing my
-				journey through <strong>teaching and creating</strong>, helping others
-				transition into tech while building useful things along the way.
+				<strong>making it a reality in 2020</strong>, I&apos;m now sharing my
+				journey through teaching and creating. I help others transition into
+				tech while building useful things along the way.
 			</Body>
 			<div className="mt:2 grid items-center gap-2 sm:grid-cols-2 sm:gap-6 md:items-center">
 				<motion.img
@@ -42,7 +43,7 @@ function RouteComponent() {
 					className={cn("mx-auto aspect-square w-full rounded-lg object-cover")}
 				/>
 
-				<FadeUp delay={0.2}>
+				<FadeUp delay={0.2} className="self-start">
 					<Body>
 						<strong>Hey, I&apos;m Daniel Noworyta.</strong> For most of my life,
 						I pushed aside my dream of becoming a programmer and doing what I
@@ -66,6 +67,6 @@ function RouteComponent() {
 					</Body>
 				</FadeUp>
 			</div>
-		</div>
+		</ContentContainer>
 	);
 }
