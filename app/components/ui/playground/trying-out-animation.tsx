@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export const TryingOutAnimation = () => {
 	return (
-		<div className="relative hidden h-100 w-100 items-center justify-center border border-red-500 md:flex">
+		<div className="relative h-100 w-100 items-center justify-center md:flex">
 			<svg
 				width="1245"
 				height="1000"
@@ -73,7 +73,7 @@ export const TryingOutAnimation = () => {
 					ease: "easeInOut",
 				}}
 				className={cn(
-					"-left-24 absolute top-12 flex aspect-square w-20 items-center justify-center rounded-2xl p-4",
+					"-left-24 absolute top-12 z-10 flex aspect-square w-20 items-center justify-center rounded-2xl p-4",
 					"shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)]",
 					"dark:bg-neutral-900 dark:shadow-[inset_0_1px,inset_0_0_0_1px] dark:shadow-white/[0.025]",
 				)}
@@ -346,7 +346,7 @@ export const TryingOutAnimation = () => {
 					ease: "easeInOut",
 				}}
 				className={cn(
-					"-bottom-13 absolute right-12 flex aspect-square w-20 items-center justify-center rounded-2xl p-4",
+					"-bottom-13 absolute right-12 z-10 flex aspect-square w-20 items-center justify-center rounded-2xl p-4",
 					"shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)]",
 					"dark:bg-neutral-900 dark:shadow-[inset_0_1px,inset_0_0_0_1px] dark:shadow-white/[0.025]",
 				)}
@@ -357,7 +357,7 @@ export const TryingOutAnimation = () => {
 					viewBox="0 0 160 160"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
-					className="h-full w-full"
+					className="z-50 h-full w-full"
 				>
 					<title>Goal</title>
 					<path

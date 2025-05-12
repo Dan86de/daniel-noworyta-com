@@ -34,6 +34,7 @@
 		"@content-collections/vinxi": "^0.1.0",
 		"@tailwindcss/typography": "^0.5.16",
 		"@tanstack/react-router-devtools": "^1.116.0",
+		"@types/node": "^22.15.17",
 		"@types/react": "^19.0.12",
 		"@types/react-dom": "^19.0.4",
 		"@vitejs/plugin-react": "^4.3.4",
