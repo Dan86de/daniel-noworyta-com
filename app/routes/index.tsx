@@ -1,6 +1,6 @@
 import { Body } from "@/components/ui/Typography/Body";
-import { createFileRoute, Link } from "@tanstack/react-router";
 import { GradientTitle } from "@/components/ui/gradient-title";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 
 export const Route = createFileRoute("/")({
@@ -9,7 +9,8 @@ export const Route = createFileRoute("/")({
 
 function Home() {
 	return (
-		<div className="container relative mx-auto my-auto h-full max-w-3xl p-4 text-left">
+		<div className="container mx-auto my-auto h-full max-w-3xl p-4 text-left">
+			<div className="-z-10 mask-radial-at-center mask-radial-from-20% absolute inset-0 h-full w-full bg-[radial-gradient(circle,#73737350_0.1px,transparent_1px)] bg-[size:8px_8px]" />
 			<GradientTitle className="text-2xl md:text-5xl">
 				Daniel Noworyta
 			</GradientTitle>
