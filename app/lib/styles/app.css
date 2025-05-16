@@ -233,6 +233,9 @@
 	--background: #f2f2f2;
 	--gradient-title-primary: var(--color-neutral-950);
 	--gradient-title-secondary: var(--color-neutral-800);
+
+	/* STACK */
+	--space: 1.5rem;
 }
 
 * {
@@ -284,39 +287,67 @@ span.touch-target {
 	line-height: var(--fluid-line-height);
 	letter-spacing: var(--fluid-letter-spacing);
 	--fluid-line-height: 1.4;
-	--fluid-letter-spacing: 0.5px
+	--fluid-letter-spacing: 0.5px;
 }
 
 .fluid-lg {
-	font-size: clamp(1.2rem,calc(.133vw + 1.1734rem),1.333rem);
+	font-size: clamp(1.2rem, calc(.133vw + 1.1734rem), 1.333rem);
 	--fluid-line-height: 1.2;
-	--fluid-letter-spacing: 0.009375em
+	--fluid-letter-spacing: 0.009375em;
 }
 
-.fluid-lg,.fluid-xl {
+.fluid-lg,
+.fluid-xl {
 	letter-spacing: var(--fluid-letter-spacing);
-	line-height: var(--fluid-line-height)
+	line-height: var(--fluid-line-height);
 }
 
 .fluid-xl {
-	font-size: clamp(1.44rem,calc(.3369vw + 1.3726rem),1.7769rem);
+	font-size: clamp(1.44rem, calc(.3369vw + 1.3726rem), 1.7769rem);
 	--fluid-line-height: 1.2;
-	--fluid-letter-spacing: 0.0125em
+	--fluid-letter-spacing: 0.0125em;
 }
 
 .fluid-2xl {
-	font-size: clamp(1.728rem,calc(.6406vw + 1.5999rem),2.3686rem);
+	font-size: clamp(1.728rem, calc(.6406vw + 1.5999rem), 2.3686rem);
 	--fluid-line-height: 1.2;
-	--fluid-letter-spacing: normal
+	--fluid-letter-spacing: normal;
 }
 
-.fluid-2xl,.fluid-3xl {
+.fluid-2xl,
+.fluid-3xl {
 	letter-spacing: var(--fluid-letter-spacing);
-	line-height: var(--fluid-line-height)
+	line-height: var(--fluid-line-height);
 }
 
 .fluid-3xl {
-	font-size: clamp(2.0736rem,calc(1.0837vw + 1.8569rem),3.1573rem);
+	font-size: clamp(2.0736rem, calc(1.0837vw + 1.8569rem), 3.1573rem);
 	--fluid-line-height: 1.2;
-	--fluid-letter-spacing: 0.0073529412em
+	--fluid-letter-spacing: 0.0073529412em;
+}
+
+/* EVERY LAYOUT STYLES */
+/* STACK COMPONENT */
+.stack {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.stack > * {
+	margin-block: 0;
+}
+.stack > * + * {
+	margin-block-start: var(--space, 1.5rem);
+}
+
+@utility stack {
+	@apply flex flex-col justify-start;
+
+	& > * {
+		@apply my-0;
+	}
+
+	& > * + * {
+		margin-block-start: var(--space, 1.5rem);
+	}
 }
