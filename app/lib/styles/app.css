@@ -244,6 +244,8 @@
 	--center-max-width: 60ch;
 	/* COVER */
 	--cover-min-block-size: 100vh;
+	/* CLUSTER */
+	--cluster-space: 0.25rem;
 }
 
 * {
@@ -399,6 +401,16 @@ span.touch-target {
 	& > div {
 		margin-block: auto;
 	}
+}
+
+/* CLUSTER COMPONENT */
+
+@utility cluster {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--cluster-space, 1rem);
+	justify-content: flex-start;
+	align-items: center;
 }
 
 /* EVERY LAYOUT STYLES END */
