@@ -13,11 +13,7 @@ interface StackProps {
  *
  * More on Every Layout [Stack](https://every-layout.dev/layouts/stack/)
  */
-export const Stack = ({
-	children,
-	space = "1.5rem",
-	className,
-}: StackProps) => {
+export const Stack = ({ children, space, className }: StackProps) => {
 	return (
 		<div
 			className={cn("stack", className)}

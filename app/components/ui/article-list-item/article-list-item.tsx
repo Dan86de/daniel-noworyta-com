@@ -1,7 +1,7 @@
-import { cn } from "@/lib/utils";
-import { ArticleTypeLabel } from "@/components/ui/article-card/article-type-label";
 import { Avatar } from "@/components/catalyst/avatar";
 import { Link } from "@/components/catalyst/link";
+import { ArticleTypeLabel } from "@/components/ui/article-card/article-type-label";
+import { cn } from "@/lib/utils";
 
 interface ArticleListItemProps {
 	title: string;
@@ -29,11 +29,11 @@ export const ArticleListItem = ({
 			to={"/articles/$slug"}
 			params={{ slug }}
 			className={cn(
-				"w-full cursor-pointer bg-neutral-100",
-				"flex space-x-12 p-4",
-				"border-neutral-200 border-b last:border-b-0 dark:border-neutral-800",
-				"dark:bg-neutral-950 dark:shadow-[inset_0_1px,inset_0_0_0_1px] dark:shadow-white/[0.025]",
-				"hover:bg-neutral-200/20 dark:hover:bg-neutral-800/50",
+				"w-full cursor-pointer",
+				"flex space-x-12 py-4",
+				// "border-neutral-200 border-b last:border-b-0 dark:border-neutral-800",
+				"dark:shadow-[inset_0_1px,inset_0_0_0_1px] dark:shadow-white/[0.025]",
+				"hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50",
 				"transition-all duration-250",
 				className,
 			)}

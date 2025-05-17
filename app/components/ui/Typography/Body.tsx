@@ -4,7 +4,5 @@ export const Body = ({
 	children,
 	className,
 }: { children: React.ReactNode; className?: string }) => {
-	return (
-		<p className={cn("my-5 text-base lg:text-lg", className)}>{children}</p>
-	);
+	return <p className={cn("text-base lg:text-lg", className)}>{children}</p>;
 };

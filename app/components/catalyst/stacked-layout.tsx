@@ -4,6 +4,8 @@ import { Footer } from "@/components/footer";
 import * as Headless from "@headlessui/react";
 import type React from "react";
 import { useState } from "react";
+import { Center } from "../every-layout-components/Center";
+import { Cluster } from "../every-layout-components/Cluster";
 import { Cover } from "../every-layout-components/Cover";
 import { NavbarItem } from "./navbar";
 
@@ -56,16 +58,20 @@ export function StackedLayout({
 			</MobileSidebar>
 
 			{/* Navbar */}
-			<header className="flex items-center px-2">
-				<div className="min-w-0 flex-1">{navbar}</div>
-				<div className="lg:hidden">
-					<NavbarItem
-						onClick={() => setShowSidebar(true)}
-						aria-label="Open navigation"
-					>
-						<OpenMenuIcon />
-					</NavbarItem>
-				</div>
+			<header>
+				<Center>
+					<Cluster className="w-full justify-between">
+						<div className="min-w-0 flex-1">{navbar}</div>
+						<div className="lg:hidden">
+							<NavbarItem
+								onClick={() => setShowSidebar(true)}
+								aria-label="Open navigation"
+							>
+								<OpenMenuIcon />
+							</NavbarItem>
+						</div>
+					</Cluster>
+				</Center>
 			</header>
 
 			{/* Content */}

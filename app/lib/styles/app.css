@@ -241,7 +241,7 @@
 	--box-border-width: 1px; /* defines width of border for box (give also units */
 	/* CENTER */
 	--center-padding: 4;
-	--center-max-width: 60ch;
+	--center-max-width: 75ch;
 	/* COVER */
 	--cover-min-block-size: 100vh;
 	/* CLUSTER */

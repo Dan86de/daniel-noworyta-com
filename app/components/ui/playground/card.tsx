@@ -27,13 +27,17 @@ const Tutorial = {
 
 export const Card = () => {
 	return (
-		<div className="max-w-2xl">
+		<div className="group max-w-2xl">
 			<div
 				className={cn(
 					"w-full rounded-xl bg-neutral-100",
 					"shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)]",
 					"flex flex-col p-6",
-					"dark:bg-neutral-900 dark:shadow-[inset_0_1px,inset_0_0_0_1px] dark:shadow-white/[0.025]",
+					"dark:bg-neutral-900",
+					"group-hover:shadow-[0_1px_1px_rgba(242,81,24,0.05),0_2px_3px_rgba(242,81,24,0.1),0_12px_34px_rgba(242,81,24,0.08),0_2px_3px_rgba(242,81,24,0.04)]",
+					"dark:shadow-[0_1px_1px_rgba(255,255,255,0.025),0_4px_6px_rgba(255,255,255,0.05),0_24px_68px_rgba(255,255,255,0.04),0_2px_3px_rgba(255,255,255,0.02)]",
+					"transform-all duration-200",
+					// "dark:bg-neutral-900 dark:shadow-[inset_0_1px,inset_0_0_0_1px] dark:shadow-white/[0.04]",
 				)}
 			>
 				<div>
