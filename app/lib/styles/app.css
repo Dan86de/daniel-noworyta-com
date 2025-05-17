@@ -236,6 +236,9 @@
 
 	/* STACK */
 	--space: 1.5rem;
+	/* BOX */
+	--box-padding: 1; /* defines padding multiplicator * --spacing (0.25rem) */
+	--box-border-width: 1px; /* defines width of border for box (give also units) */
 }
 
 * {
@@ -328,18 +331,6 @@ span.touch-target {
 
 /* EVERY LAYOUT STYLES */
 /* STACK COMPONENT */
-.stack {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-}
-.stack > * {
-	margin-block: 0;
-}
-.stack > * + * {
-	margin-block-start: var(--space, 1.5rem);
-}
-
 @utility stack {
 	@apply flex flex-col justify-start;
 
@@ -351,3 +342,16 @@ span.touch-target {
 		margin-block-start: var(--space, 1.5rem);
 	}
 }
+/* BOX COMPONENT */
+@utility box {
+	@apply p-[--spacing(var(--box-padding))] outline-offset-[calc(var(--box-border-width)*-1)] text-(--foreground) bg-(--background);
+	outline: var(--box-border-width) transparent;
+	border-width: var(--box-border-width);
+}
+
+@utility box-invert {
+	@apply p-[--spacing(var(--box-padding))] outline-offset-[calc(var(--box-border-width)*-1)] text-(--background) bg-(--foreground);
+	outline: var(--box-border-width) transparent;
+	border-width: var(--box-border-width);
+}
+/* EVERY LAYOUT STYLES END */
