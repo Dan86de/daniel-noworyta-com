@@ -1,7 +1,7 @@
+import { Body } from "@/components/ui/Typography/Body";
 import { ContentContainer } from "@/components/ui/content-container";
 import { FadeUp } from "@/components/ui/fade-up";
 import { GradientTitle } from "@/components/ui/gradient-title";
-import { Body } from "@/components/ui/Typography/Body";
 import { cn } from "@/lib/utils";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";

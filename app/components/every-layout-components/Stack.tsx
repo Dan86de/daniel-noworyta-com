@@ -1,8 +1,10 @@
+import { cn } from "@/lib/utils";
 import type { CSSProperties, ReactNode } from "react";
 
 interface StackProps {
 	children: ReactNode;
 	space?: string;
+	className?: string;
 }
 
 /**
@@ -11,9 +13,16 @@ interface StackProps {
  *
  * More on Every Layout [Stack](https://every-layout.dev/layouts/stack/)
  */
-export const Stack = ({ children, space = "1.5rem" }: StackProps) => {
+export const Stack = ({
+	children,
+	space = "1.5rem",
+	className,
+}: StackProps) => {
 	return (
-		<div className="stack" style={{ "--space": space } as CSSProperties}>
+		<div
+			className={cn("stack", className)}
+			style={{ "--space": space } as CSSProperties}
+		>
 			{children}
 		</div>
 	);

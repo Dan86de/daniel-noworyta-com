@@ -238,7 +238,12 @@
 	--space: 1.5rem;
 	/* BOX */
 	--box-padding: 1; /* defines padding multiplicator * --spacing (0.25rem) */
-	--box-border-width: 1px; /* defines width of border for box (give also units) */
+	--box-border-width: 1px; /* defines width of border for box (give also units */
+	/* CENTER */
+	--center-padding: 4;
+	--center-max-width: 60ch;
+	/* COVER */
+	--cover-min-block-size: 100vh;
 }
 
 * {
@@ -329,7 +334,8 @@ span.touch-target {
 	--fluid-letter-spacing: 0.0073529412em;
 }
 
-/* EVERY LAYOUT STYLES */
+/*=== EVERY LAYOUT STYLES ===*/
+
 /* STACK COMPONENT */
 @utility stack {
 	@apply flex flex-col justify-start;
@@ -354,4 +360,45 @@ span.touch-target {
 	outline: var(--box-border-width) transparent;
 	border-width: var(--box-border-width);
 }
+
+/* CENTER COMPONENT */
+@utility center {
+	/* ↓ Apply the minimum horizontal space */
+	@apply px-[--spacing(var(--center-padding))];
+
+	/* ↓ Remove padding from the width calculation */
+	box-sizing: content-box;
+
+	/* ↓ The maximum width is the maximum measure */
+	max-inline-size: var(--center-max-width);
+
+	/* ↓ Only affect horizontal margins */
+	margin-inline: auto;
+	/* padding-inline-start: var(--spacing); */
+	/* padding-inline-end: var(--spacing); */
+}
+
+/* COVER COMPONENT */
+@utility cover {
+	display: flex;
+	flex-direction: column;
+	min-block-size: var(--cover-min-block-size);
+
+	& > * {
+		margin-block: auto;
+	}
+
+	& > :first-child:not(div) {
+		margin-block-start: 0;
+	}
+
+	& > :last-child:not(div) {
+		margin-block-end: 0;
+	}
+
+	& > div {
+		margin-block: auto;
+	}
+}
+
 /* EVERY LAYOUT STYLES END */

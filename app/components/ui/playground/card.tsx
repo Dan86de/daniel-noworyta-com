@@ -27,7 +27,7 @@ const Tutorial = {
 
 export const Card = () => {
 	return (
-		<div className="z-10 max-w-2xl">
+		<div className="max-w-2xl">
 			<div
 				className={cn(
 					"w-full rounded-xl bg-neutral-100",

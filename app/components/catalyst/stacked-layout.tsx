@@ -1,10 +1,11 @@
 "use client";
 
+import { Footer } from "@/components/footer";
 import * as Headless from "@headlessui/react";
 import type React from "react";
 import { useState } from "react";
+import { Cover } from "../every-layout-components/Cover";
 import { NavbarItem } from "./navbar";
-import { Footer } from "@/components/footer";
 
 function OpenMenuIcon() {
 	return (
@@ -48,16 +49,16 @@ export function StackedLayout({
 	const [showSidebar, setShowSidebar] = useState(false);
 
 	return (
-		<div className="relative isolate flex min-h-svh w-full flex-col">
+		<Cover>
 			{/* Sidebar on mobile */}
 			<MobileSidebar open={showSidebar} close={() => setShowSidebar(false)}>
 				{sidebar}
 			</MobileSidebar>
 
 			{/* Navbar */}
-			<header className="flex items-center">
+			<header className="flex items-center px-2">
 				<div className="min-w-0 flex-1">{navbar}</div>
-				<div className="p-2 lg:hidden">
+				<div className="lg:hidden">
 					<NavbarItem
 						onClick={() => setShowSidebar(true)}
 						aria-label="Open navigation"
@@ -68,10 +69,10 @@ export function StackedLayout({
 			</header>
 
 			{/* Content */}
-			<main className="flex flex-1 flex-col pb-2 lg:px-2">{children}</main>
+			<main className="flex flex-grow">{children}</main>
 
 			{/* Footer */}
 			<Footer />
-		</div>
+		</Cover>
 	);
 }

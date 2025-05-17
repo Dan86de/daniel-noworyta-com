@@ -1,11 +1,12 @@
-import { Link } from "@tanstack/react-router";
 import { AnimatedTabs } from "@/components/animated-tabs";
 import { ThemeSwitcher } from "@/components/ui/playground/theme-switcher";
+import { Link } from "@tanstack/react-router";
+import { Center } from "./every-layout-components/Center";
 
 export const Header = () => {
 	return (
-		<div className="flex items-center justify-between p-4">
-			<Link to="/" className="flex items-center">
+		<Center className="flex items-center justify-between py-4" gutters={0}>
+			<Link to="/">
 				<svg
 					width="82"
 					height="70"
@@ -27,14 +28,12 @@ export const Header = () => {
 					</g>
 				</svg>
 			</Link>
-			<div className="flex grow" />
-			<section className="hidden gap-5 lg:flex">
+			<section className="hidden lg:flex">
 				<AnimatedTabs />
 			</section>
-			<div className="flex grow" />
 			<section className="flex gap-4">
 				<ThemeSwitcher className="hidden lg:flex" />
 			</section>
-		</div>
+		</Center>
 	);
 };
