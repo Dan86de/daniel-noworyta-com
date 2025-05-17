@@ -253,6 +253,9 @@
 	/* SWITCHER */
 	--switcher-gap: 0.25rem;
 	--switcher-container-width: 30rem;
+	/* GRID */
+	--grid-min-width: 250px;
+	--grid-space: 1rem;
 }
 
 * {
@@ -451,6 +454,18 @@ span.touch-target {
 	& > :nth-last-child(n + 4),
 	& > :nth-last-child(n + 4) ~ * {
 		flex-basis: 100%;
+	}
+}
+/* GRID COMPONENT */
+@utility grid-utility {
+	display: grid;
+	grid-gap: var(--grid-space);
+
+	@supports (width: min(var(--grid-min-width), 100%)) {
+		grid-template-columns: repeat(
+				auto-fit,
+				minmax(min(var(--grid-min-width), 100%), 1fr)
+			);
 	}
 }
 
