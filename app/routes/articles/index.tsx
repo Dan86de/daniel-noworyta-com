@@ -20,7 +20,7 @@ function RouteComponent() {
 	console.log(articles);
 
 	return (
-		<Center>
+		<Center className="mt-10">
 			<Stack>
 				<Stack>
 					<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">

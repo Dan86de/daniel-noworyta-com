@@ -3,7 +3,6 @@ import { Center } from "@/components/every-layout-components/Center";
 import { Cluster } from "@/components/every-layout-components/Cluster";
 import { Stack } from "@/components/every-layout-components/Stack";
 import { Body } from "@/components/ui/Typography/Body";
-import { ContentContainer } from "@/components/ui/content-container";
 import { FadeUp } from "@/components/ui/fade-up";
 import { GradientTitle } from "@/components/ui/gradient-title";
 import { cn } from "@/lib/utils";
@@ -15,7 +14,7 @@ export const Route = createFileRoute("/about/")({
 
 function RouteComponent() {
 	return (
-		<Center>
+		<Center className="mt-10">
 			<Stack>
 				<Stack>
 					<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
