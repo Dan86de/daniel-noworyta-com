@@ -19,7 +19,7 @@ function RouteComponent() {
 	const article = useLoaderData({ from: "/articles/$slug" });
 
 	return (
-		<Center className="mt-10" gutters={0}>
+		<Center className="mt-10" gutters={4}>
 			<Stack space="0.75rem">
 				<Box borderWidth="0" padding="0">
 					<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
@@ -46,7 +46,9 @@ function RouteComponent() {
 				</Box>
 			</Stack>
 
-			<Mdx code={article?.mdx ?? ""} />
+			<article className="mt-10">
+				<Mdx code={article?.mdx ?? ""} />
+			</article>
 		</Center>
 	);
 }
