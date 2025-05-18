@@ -38,23 +38,7 @@ function RouteComponent() {
 					/>
 					<Imposter>
 						<Box>
-							"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Curabitur et nisi fermentum, iaculis nisl ut, malesuada justo.
-							Etiam ut sapien dictum, facilisis augue volutpat, vulputate diam.
-							In hac habitasse platea dictumst. Quisque tempor mauris at purus
-							suscipit ultricies. Nulla quis odio efficitur, dictum mauris id,
-							venenatis quam. Praesent mattis odio id posuere fermentum. Fusce
-							convallis, nulla quis egestas congue, quam quam consequat odio, et
-							suscipit urna tellus vitae mauris. Cras blandit dolor ac diam
-							porttitor, eu faucibus urna accumsan. Integer sodales lacus felis,
-							ut luctus est facilisis eu. Cras aliquam nunc eu dignissim
-							maximus. Integer tempus turpis mi, eget vestibulum nisi convallis
-							at. Duis interdum orci nec nisl viverra tincidunt. Nam ut volutpat
-							risus. Proin varius lacinia volutpat. Mauris mollis turpis at
-							dolor venenatis, eget facilisis nulla venenatis. Cras eu pharetra
-							sapien, at maximus nisi. Sed quis orci tempus, vulputate magna at,
-							dignissim ex. Ut et nulla consequat, efficitur libero eget,
-							fermentum lectus. Nam semper mi turpis."
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 						</Box>
 					</Imposter>
 				</Frame>
