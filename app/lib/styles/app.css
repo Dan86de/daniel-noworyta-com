@@ -256,6 +256,9 @@
 	/* GRID */
 	--grid-min-width: 250px;
 	--grid-space: 1rem;
+	/* FRAME */
+	--frame-n: 16;
+	--frame-d: 9;
 }
 
 * {
@@ -386,8 +389,6 @@ span.touch-target {
 
 	/* ↓ Only affect horizontal margins */
 	margin-inline: auto;
-	/* padding-inline-start: var(--spacing); */
-	/* padding-inline-end: var(--spacing); */
 }
 
 /* COVER COMPONENT */
@@ -466,6 +467,22 @@ span.touch-target {
 				auto-fit,
 				minmax(min(var(--grid-min-width), 100%), 1fr)
 			);
+	}
+}
+
+/* FRAME COMPONENT */
+@utility frame {
+	aspect-ratio: var(--frame-n) / var(--frame-d);
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	& > img,
+	& > video {
+		inline-size: 100%;
+		block-size: 100%;
+		object-fit: cover;
 	}
 }
 

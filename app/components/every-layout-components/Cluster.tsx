@@ -7,6 +7,13 @@ interface ClusterProps {
 	className?: string;
 }
 
+/**
+ *
+ * @param children - The content to be displayed within the cluster.
+ * @param clusterSpace - The space between the cluster items.
+ * @param className - Additional CSS classes to apply to the cluster.
+ * @returns The rendered cluster component.
+ */
 export const Cluster = ({
 	children,
 	clusterSpace,

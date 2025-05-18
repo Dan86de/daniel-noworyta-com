@@ -1,6 +1,7 @@
 import { Box } from "@/components/every-layout-components/Box";
 import { Center } from "@/components/every-layout-components/Center";
 import { Cluster } from "@/components/every-layout-components/Cluster";
+import { Frame } from "@/components/every-layout-components/Frame";
 import { Stack } from "@/components/every-layout-components/Stack";
 import { Body } from "@/components/ui/Typography/Body";
 import { FadeUp } from "@/components/ui/fade-up";
@@ -28,7 +29,7 @@ function RouteComponent() {
 					</Body>
 				</Stack>
 
-				<Cluster clusterSpace="24px">
+				<Cluster clusterSpace="calc(var(--spacing)*6)">
 					<Box
 						className="w-full bg-transparent sm:w-[calc(50%-(var(--cluster-space)/2))]"
 						padding="0px"
