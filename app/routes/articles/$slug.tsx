@@ -19,7 +19,7 @@ function RouteComponent() {
 	const article = useLoaderData({ from: "/articles/$slug" });
 
 	return (
-		<Center className="mt-10" gutters={4}>
+		<Center maxWidth={"75ch"} gutters={4} className="w-[75ch]">
 			<Stack space="0.75rem">
 				<Box borderWidth="0" padding="0">
 					<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">

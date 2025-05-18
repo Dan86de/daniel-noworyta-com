@@ -14,8 +14,8 @@ function RouteComponent() {
 	return (
 		<Cover className="flex-grow" minHeight="100%">
 			<div className="-z-10 mask-radial-at-center mask-radial-from-20% absolute inset-0 h-full w-full bg-[radial-gradient(circle,#73737350_0.1px,transparent_1px)] bg-[size:8px_8px]" />
-			<Center className="w-xl">
-				<Frame className="relative mt-40 border">
+			<Center>
+				<Frame className="relative mt-40 w-full border [--frame-d:1] [--frame-n:1] sm:[--frame-d:9] sm:[--frame-n:16]">
 					<motion.img
 						initial={{
 							opacity: 0,

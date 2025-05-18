@@ -27,7 +27,7 @@ function Home() {
 							<Box borderWidth="0" padding="0" className="bg-transparent">
 								<Body>
 									<strong>
-										Currently making better software at{" "}
+										Making better software at{" "}
 										<motion.a
 											initial={{ opacity: 0, filter: "blur(10px)" }}
 											animate={{ opacity: 1, filter: "blur(0px)" }}
