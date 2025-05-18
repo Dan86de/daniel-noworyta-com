@@ -14,8 +14,8 @@ function RouteComponent() {
 	return (
 		<Cover className="flex-grow" minHeight="100%">
 			<div className="-z-10 mask-radial-at-center mask-radial-from-20% absolute inset-0 h-full w-full bg-[radial-gradient(circle,#73737350_0.1px,transparent_1px)] bg-[size:8px_8px]" />
-			<Center>
-				<Frame className="relative mt-40 w-full border [--frame-d:1] [--frame-n:1] sm:[--frame-d:9] sm:[--frame-n:16]">
+			<Center maxWidth={"40ch"}>
+				<Frame className="relative mt-40 w-full border [--frame-d:1] [--frame-n:1]">
 					<motion.img
 						initial={{
 							opacity: 0,
@@ -34,7 +34,7 @@ function RouteComponent() {
 						src="/images/avatar.webp"
 						width="336"
 						height="336"
-						className={cn("w-full rounded-lg object-cover")}
+						className={cn("w-full")}
 					/>
 					<Imposter>
 						<Box>
