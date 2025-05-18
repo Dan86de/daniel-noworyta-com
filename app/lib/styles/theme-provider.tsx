@@ -1,7 +1,7 @@
 "use client";
 
 /*
-  This file is adapted from next-themes to work with tanstack start. 
+  This file is adapted from next-themes to work with tanstack start.
   next-themes can be found at https://github.com/pacocoursey/next-themes under the MIT license.
 */
 
@@ -72,7 +72,7 @@ const defaultThemes = ["light", "dark"];
 
 const Theme = ({
 	forcedTheme,
-	disableTransitionOnChange = false,
+	disableTransitionOnChange = true,
 	enableSystem = true,
 	enableColorScheme = true,
 	storageKey = "theme",

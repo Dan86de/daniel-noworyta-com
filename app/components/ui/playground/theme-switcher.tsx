@@ -1,6 +1,7 @@
 import { useTheme } from "@/lib/styles/theme-provider";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
+import { useCallback, useEffect } from "react";
 
 const tabs = [
 	{
@@ -129,7 +130,6 @@ export const ThemeSwitcher = ({ className }: { className?: string }) => {
 					type="button"
 					key={tab.id}
 					onClick={() => {
-						console.log("clicked", tab.id);
 						setTheme(tab.id);
 					}}
 					style={{
