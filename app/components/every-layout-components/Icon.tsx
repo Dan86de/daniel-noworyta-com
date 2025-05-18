@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import type { CSSProperties } from "react";
 
 interface IconProps {
@@ -26,7 +27,10 @@ export const Icon = ({
 	space,
 }: IconProps) => {
 	return (
-		<svg className="icon" style={{ "--icon-space": space } as CSSProperties}>
+		<svg
+			className={cn("icon", className)}
+			style={{ "--icon-space": space } as CSSProperties}
+		>
 			<title>{label}</title>
 			<use href={iconPath} />
 		</svg>
