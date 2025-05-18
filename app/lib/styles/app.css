@@ -259,6 +259,8 @@
 	/* FRAME */
 	--frame-n: 16;
 	--frame-d: 9;
+	/* IMPOSTER */
+	--imposter-margin: 0px;
 }
 
 * {
@@ -483,6 +485,19 @@ span.touch-target {
 		inline-size: 100%;
 		block-size: 100%;
 		object-fit: cover;
+	}
+}
+/* IMPOSTER COMPONENT */
+@utility imposter {
+	position: absolute;
+	inset-block-start: 50%;
+	inset-inline-start: 50%;
+	transform: translate(-50%, -50%);
+
+	&.contain {
+		overflow: auto;
+		max-inline-size: calc(100% - (var(--imposter-margin) * 2));
+		max-block-size: calc(100% - (var(--imposter-margin) * 2));
 	}
 }
 
