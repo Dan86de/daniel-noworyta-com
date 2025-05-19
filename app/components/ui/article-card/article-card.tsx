@@ -35,7 +35,7 @@ export const ArticleCard = ({
 			<div>
 				<div className="flex flex-col space-y-1.5 p-0">
 					<ArticleTypeLabel type={type} />
-					<h3 className="fluid-xl font-semibold text-lg leading-tight tracking-tight">
+					<h3 className="font-semibold text-lg leading-tight tracking-tight">
 						{title}
 					</h3>
 				</div>

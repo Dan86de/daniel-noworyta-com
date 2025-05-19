@@ -40,7 +40,7 @@ export const ArticleListItem = ({
 		>
 			<div className="flex grow-1 flex-col space-y-2">
 				<div className="flex flex-col space-y-0.5 p-0">
-					<h3 className="fluid-lg font-semibold text-lg leading-tight tracking-tight">
+					<h3 className="font-semibold text-lg leading-tight tracking-tight">
 						{title}
 					</h3>
 				</div>

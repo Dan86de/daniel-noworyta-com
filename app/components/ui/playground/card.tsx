@@ -61,7 +61,7 @@ export const Card = () => {
 							</svg>
 							{Article.type}
 						</p>
-						<h3 className="fluid-xl font-semibold text-lg leading-tight tracking-tight">
+						<h3 className="font-semibold text-lg leading-tight tracking-tight">
 							{Article.title}
 						</h3>
 					</div>
