@@ -21,7 +21,7 @@ function RouteComponent() {
 					<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
 						Developer. Father. Creator.
 					</GradientTitle>
-					<Body className="text-balance">
+					<Body>
 						From dreaming of becoming a programmer to{" "}
 						<strong>making it a reality in 2020</strong>, I&apos;m now sharing
 						my journey through teaching and creating. I help others transition
