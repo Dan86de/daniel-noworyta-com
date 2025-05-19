@@ -1,7 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Box } from "./every-layout-components/Box";
 import { Center } from "./every-layout-components/Center";
-import { Cluster } from "./every-layout-components/Cluster";
 const links = [
 	{
 		title: "Email",
@@ -178,23 +176,13 @@ const links = [
 
 export const Footer = () => {
 	return (
-		// <footer className="grid w-full grid-cols-3 p-4">
-
-		<footer>
+		<footer className="pb-2">
 			<Center gutters={2}>
-				<Box borderWidth="0" padding="2">
-					<Cluster className="justify-between">
-						<div />
-						<ul className="flex items-center justify-center gap-4 sm:gap-8">
-							{links.map((link) => (
-								<AnimatedLink key={link.title} link={link} />
-							))}
-						</ul>
-						<Box borderWidth="0" padding="0">
-							<p className="hidden items-center text-xs sm:block">© 2025</p>
-						</Box>
-					</Cluster>
-				</Box>
+				<ul className="flex items-center justify-center gap-4 sm:gap-8">
+					{links.map((link) => (
+						<AnimatedLink key={link.title} link={link} />
+					))}
+				</ul>
 			</Center>
 		</footer>
 	);
@@ -202,7 +190,7 @@ export const Footer = () => {
 
 const AnimatedLink = ({ link }: { link: (typeof links)[number] }) => {
 	return (
-		<li>
+		<li key={link.url}>
 			<Link
 				to={link.url}
 				className="group relative flex flex-col items-center gap-2"

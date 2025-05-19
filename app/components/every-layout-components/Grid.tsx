@@ -1,9 +1,11 @@
+import { cn } from "@/lib/utils";
 import type { CSSProperties, ReactNode } from "react";
 
 interface GridProps {
 	children: ReactNode;
 	minWidth?: string;
 	gap?: string;
+	className?: string;
 }
 
 /**
@@ -13,10 +15,10 @@ interface GridProps {
  * @param gap - The gap between grid items (CSS gap value).
  * @returns
  */
-export const Grid = ({ children, minWidth, gap }: GridProps) => {
+export const Grid = ({ children, minWidth, gap, className }: GridProps) => {
 	return (
 		<div
-			className="grid-utility"
+			className={cn("grid-utility", className)}
 			style={
 				{ "--grid-min-width": minWidth, "--grid-space": gap } as CSSProperties
 			}
