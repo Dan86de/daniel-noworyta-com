@@ -31,7 +31,7 @@ export const ArticleListItem = ({
 			className={cn(
 				"w-full cursor-pointer",
 				"flex space-x-12 py-4",
-				// "border-neutral-200 border-b last:border-b-0 dark:border-neutral-800",
+				"border-neutral-200 border-b last:border-b-0 dark:border-neutral-800",
 				"dark:shadow-[inset_0_1px,inset_0_0_0_1px] dark:shadow-white/[0.025]",
 				"hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50",
 				"transition-all duration-250",
