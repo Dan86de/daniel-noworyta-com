@@ -8,8 +8,8 @@ export default defineConfig({
 		port: 3000,
 	},
 	plugins: [
+		tailwindcss(),
 		tsConfigPaths(),
 		tanstackStart({ target: "vercel" }),
-		tailwindcss(),
 	],
 });
