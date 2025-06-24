@@ -1,16 +1,17 @@
-import type { ReactNode } from "react";
-import {
-	Outlet,
-	createRootRoute,
-	HeadContent,
-	Scripts,
-	ScriptOnce,
-} from "@tanstack/react-router";
+/// <reference types="vite/client" />
 
-import appCss from "@/lib/styles/app.css?url";
-import { Header } from "@/components/header";
+import {
+	HeadContent,
+	Outlet,
+	Scripts,
+	createRootRoute,
+} from "@tanstack/react-router";
+import type { ReactNode } from "react";
+
 import { StackedLayout } from "@/components/catalyst/stacked-layout";
+import { Header } from "@/components/header";
 import { MobileMenu } from "@/components/ui/mobile-menu";
+import appCss from "@/lib/styles/app.css?url";
 import { ThemeProvider } from "@/lib/styles/theme-provider";
 export const Route = createRootRoute({
 	head: () => ({
@@ -60,7 +61,7 @@ function RootComponent() {
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang="en">
 			<head>
 				<HeadContent />
 			</head>
