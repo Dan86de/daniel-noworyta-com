@@ -6,6 +6,8 @@ import {
 	Scripts,
 	createRootRoute,
 } from "@tanstack/react-router";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { ReactNode } from "react";
 
 import { StackedLayout } from "@/components/catalyst/stacked-layout";
@@ -72,6 +74,8 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
 					</StackedLayout>
 				</ThemeProvider>
 				<Scripts />
+				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);
