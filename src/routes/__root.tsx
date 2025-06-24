@@ -7,7 +7,7 @@ import {
 	createRootRoute,
 } from "@tanstack/react-router";
 import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import type { ReactNode } from "react";
 
 import { StackedLayout } from "@/components/catalyst/stacked-layout";
