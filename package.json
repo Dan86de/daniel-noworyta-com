@@ -7,7 +7,7 @@
   "license": "ISC",
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "concurrently \"content-collections watch\" \"vite dev\"",
     "build": "content-collections build && vite build",
     "start": "vite start",
     "lint": "biome lint --write",
