@@ -1,4 +1,4 @@
-import { Center } from "@/components/every-layout-components/Center";
+
 import { Stack } from "@/components/every-layout-components/Stack";
 import { ArticleListItem } from "@/components/ui/article-list-item/article-list-item";
 import type { Article } from "content-collections";

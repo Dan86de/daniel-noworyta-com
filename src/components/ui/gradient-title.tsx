@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { CSSProperties, ReactNode } from "react";
+import type { CSSProperties, } from "react";
 import type { PropsWithChildren } from "react";
 
 interface GradientTitleProps {

@@ -1,7 +1,5 @@
-import { Box } from "@/components/every-layout-components/Box";
-import { Center } from "@/components/every-layout-components/Center";
+
 import { Cover } from "@/components/every-layout-components/Cover";
-import { Grid } from "@/components/every-layout-components/Grid";
 import { createFileRoute } from "@tanstack/react-router";
 import ReactECharts from "echarts-for-react";
 import { useRef } from "react";

@@ -1,7 +1,6 @@
-import { Strong } from "@/components/catalyst/text";
+
 import { Box } from "@/components/every-layout-components/Box";
 import { Center } from "@/components/every-layout-components/Center";
-import { Cluster } from "@/components/every-layout-components/Cluster";
 import { Cover } from "@/components/every-layout-components/Cover";
 import { Stack } from "@/components/every-layout-components/Stack";
 import { Body } from "@/components/ui/Typography/Body";

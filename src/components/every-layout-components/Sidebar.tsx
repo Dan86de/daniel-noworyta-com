@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { noop } from "motion";
 import type { CSSProperties } from "react";
 interface SidebarProps {
 	children: React.ReactNode;
