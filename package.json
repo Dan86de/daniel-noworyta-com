@@ -33,7 +33,7 @@
 		"vite": "^7.0.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
+		"@biomejs/biome": "2.0.0",
 		"@content-collections/cli": "^0.1.6",
 		"@content-collections/core": "^0.8.2",
 		"@content-collections/vinxi": "^0.1.1",

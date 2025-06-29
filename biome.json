@@ -1,12 +1,16 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.0.6/schema.json",
+	"assist": {
+		"enabled": true
+	},
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git",
 		"useIgnoreFile": true
 	},
 	"files": {
-		"ignoreUnknown": false
+		"ignoreUnknown": false,
+		"includes": ["src/**/*.js", "src/**/*.ts", "src/**/*.tsx"]
 	},
 	"formatter": {
 		"enabled": true,
@@ -30,7 +34,10 @@
 				"noRestrictedImports": "error"
 			},
 			"correctness": {
-				"noUnusedImports": { "level": "error", "fix": "safe" }
+				"noUnusedImports": {
+					"level": "error",
+					"fix": "unsafe"
+				}
 			}
 		}
 	},
