@@ -24,6 +24,7 @@
     "@vercel/speed-insights": "^1.2.0",
     "add": "^2.0.6",
     "clsx": "^2.1.1",
+    "codehike": "^1.0.7",
     "motion": "^12.19.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

@@ -12,3 +12,31 @@ type: "article"
 There is some content here to be presented.
 
 ### And other one
+
+```ts
+// utils/dateUtils.js
+import { format, parseISO } from 'date-fns';
+
+// Define types for better clarity
+export type DateString = string;
+
+export const formatDate = (date: DateString, dateFormat: string): string => {
+  const parsedDate = parseISO(date);
+  return format(parsedDate, dateFormat);
+};
+
+// components/ExampleComponent.js
+import React from 'react';
+import { formatDate } from '../utils/dateUtils';
+
+const ExampleComponent = () => {
+  const date = '2025-06-29T12:16:00';
+  const formattedDate = formatDate(date, 'yyyy/MM/dd HH:mm:ss');
+
+  return (
+    <div>
+      <p>Formatted Date: {formattedDate}</p>
+    </div>
+  );
+};
+```

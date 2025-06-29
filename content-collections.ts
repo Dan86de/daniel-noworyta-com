@@ -1,5 +1,6 @@
 import { defineCollection, defineConfig } from "@content-collections/core";
 import { compileMDX } from "@content-collections/mdx";
+import { remarkCodeHike } from "codehike/mdx";
 
 const articles = defineCollection({
 	name: "articles",
@@ -16,7 +17,9 @@ const articles = defineCollection({
 		type: z.enum(["article", "tutorial"]),
 	}),
 	transform: async (document, context) => {
-		const mdx = await compileMDX(context, document);
+		const mdx = await compileMDX(context, document,{
+		  remarkPlugins: [remarkCodeHike],
+		});
 		const slug = document._meta.path.split("/").pop() as string;
 		return {
 			...document,
