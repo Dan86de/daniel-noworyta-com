@@ -1,9 +1,9 @@
-import { Center } from "@/components/every-layout-components/Center";
-import { Stack } from "@/components/every-layout-components/Stack";
-import { Body } from "@/components/ui/Typography/Body";
-import { GradientTitle } from "@/components/ui/gradient-title";
 import { createFileRoute, useLoaderData } from "@tanstack/react-router";
 import { allArticles } from "content-collections";
+import { Center } from "@/components/every-layout-components/Center";
+import { Stack } from "@/components/every-layout-components/Stack";
+import { GradientTitle } from "@/components/ui/gradient-title";
+import { Body } from "@/components/ui/Typography/Body";
 import { AllArticles } from "./-components/all-articles";
 
 export const Route = createFileRoute("/articles/")({
@@ -16,8 +16,6 @@ export const Route = createFileRoute("/articles/")({
 
 function RouteComponent() {
 	const articles = useLoaderData({ from: "/articles/" });
-
-	console.log(articles);
 
 	return (
 		<Center className="mt-10">
