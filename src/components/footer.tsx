@@ -193,6 +193,7 @@ const AnimatedLink = ({ link }: { link: (typeof links)[number] }) => {
 		<li key={link.url}>
 			<Link
 				to={link.url}
+				target="_blank"
 				className="group relative flex flex-col items-center gap-2"
 			>
 				<span className="touch-target" />

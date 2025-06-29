@@ -9,7 +9,8 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "content-collections build && vite build",
-		"start": "vite start"
+		"start": "vite start",
+		"lint": "biome format ."
 	},
 	"description": "",
 	"dependencies": {

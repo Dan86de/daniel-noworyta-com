@@ -4,7 +4,10 @@ import { useCallback } from "react";
 export const ArticleTypeLabel = ({
 	type,
 	size = "md",
-}: { type: "article" | "tutorial"; size?: "md" | "sm" }) => {
+}: {
+	type: "article" | "tutorial";
+	size?: "md" | "sm";
+}) => {
 	const getIcon = useCallback(() => {
 		if (type === "article") {
 			return (

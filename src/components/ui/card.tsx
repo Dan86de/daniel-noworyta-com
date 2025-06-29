@@ -25,7 +25,9 @@ export const CardTitle = ({ children }: { children?: React.ReactNode }) => {
 
 export const CardDescription = ({
 	children,
-}: { children?: React.ReactNode }) => {
+}: {
+	children?: React.ReactNode;
+}) => {
 	return (
 		<p className="mt-2 text-[12px] text-neutral-700 dark:text-neutral-300">
 			{children}

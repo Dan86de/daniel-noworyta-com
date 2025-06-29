@@ -1,3 +1,4 @@
+import { NavbarItem } from "@/components/catalyst/navbar";
 import {
 	Sidebar,
 	SidebarBody,
@@ -6,9 +7,8 @@ import {
 	SidebarSection,
 	SidebarSpacer,
 } from "@/components/catalyst/sidebar";
-import { NavbarItem } from "@/components/catalyst/navbar";
-import * as Headless from "@headlessui/react";
 import { activePages } from "@/lib/pages";
+import * as Headless from "@headlessui/react";
 import { ThemeSwitcher } from "./playground/theme-switcher";
 
 function CloseMenuIcon() {
