@@ -10,7 +10,12 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["src/**/*.js", "src/**/*.ts", "src/**/*.tsx"]
+    "includes": [
+      "src/**/*.js",
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "!src/routeTree.gen.ts"
+    ]
   },
   "formatter": {
     "enabled": true,
