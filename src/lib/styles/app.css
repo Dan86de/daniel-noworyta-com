@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import "./fonts.css";
 @import "./theme.css";
-@import "./3dbutton.css";
 
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
@@ -10,20 +9,20 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Prevent font size inflation */
 html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-sans);
 }
 
 /* Remove default margin in favour of better control in authored CSS */
@@ -37,22 +36,22 @@ figure,
 blockquote,
 dl,
 dd {
-  margin-block-end: 0;
+	margin-block-end: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
-  list-style: none;
+	list-style: none;
 }
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
-  line-height: 1.5;
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
+	min-height: 100vh;
+	line-height: 1.5;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-sans);
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -63,7 +62,7 @@ h4,
 button,
 input,
 label {
-  line-height: 1.1;
+	line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
@@ -71,20 +70,20 @@ h1,
 h2,
 h3,
 h4 {
-  text-wrap: balance;
+	text-wrap: balance;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
+	text-decoration-skip-ink: auto;
+	color: currentColor;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
-  display: block;
+	max-width: 100%;
+	display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -92,198 +91,197 @@ input,
 button,
 textarea,
 select {
-  font-family: inherit;
-  font-size: inherit;
+	font-family: inherit;
+	font-size: inherit;
 }
 
 /* Make sure textareas without a rows attribute are not tiny */
 textarea:not([rows]) {
-  min-height: 10em;
+	min-height: 10em;
 }
 
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
-  scroll-margin-block: 5ex;
+	scroll-margin-block: 5ex;
 }
 
 .dark {
-  --foreground: #f2f2f2;
-  --background: #08070b;
-  --gradient-title-primary: var(--color-neutral-100);
-  --gradient-title-secondary: var(--color-neutral-300);
-  --brightness: 2;
+	--foreground: #f2f2f2;
+	--background: #08070b;
+	--gradient-title-primary: var(--color-neutral-100);
+	--gradient-title-secondary: var(--color-neutral-300);
 }
 
 /* Nice trick for mobile buttons to make touchable area bigger on tablets and mobile devices */
 /* Don't forget to add relative to the parent element */
 /* More info here: https://www.youtube.com/watch?v=soFSSkf4oVY */
 span.touch-target {
-  @apply size-12 absolute top-1/2 left-1/2 -translate-1/2 [@media(pointer:fine)]:hidden;
+	@apply size-12 absolute top-1/2 left-1/2 -translate-1/2 [@media(pointer:fine)]:hidden;
 }
 
 /*=== EVERY LAYOUT STYLES ===*/
 
 /* STACK COMPONENT */
 @utility stack {
-  @apply flex flex-col justify-start;
+	@apply flex flex-col justify-start;
 
-  & > * {
-    @apply my-0;
-  }
+	& > * {
+		@apply my-0;
+	}
 
-  & > * + * {
-    margin-block-start: var(--space, 1.5rem);
-  }
+	& > * + * {
+		margin-block-start: var(--space, 1.5rem);
+	}
 }
 /* BOX COMPONENT */
 @utility box {
-  @apply p-[--spacing(var(--box-padding))] outline-offset-[calc(var(--box-border-width)*-1)] text-(--foreground) bg-(--background);
-  outline: var(--box-border-width) transparent;
-  border-width: var(--box-border-width);
+	@apply p-[--spacing(var(--box-padding))] outline-offset-[calc(var(--box-border-width)*-1)] text-(--foreground) bg-(--background);
+	outline: var(--box-border-width) transparent;
+	border-width: var(--box-border-width);
 }
 
 @utility box-invert {
-  @apply p-[--spacing(var(--box-padding))] outline-offset-[calc(var(--box-border-width)*-1)] text-(--background) bg-(--foreground);
-  outline: var(--box-border-width) transparent;
-  border-width: var(--box-border-width);
+	@apply p-[--spacing(var(--box-padding))] outline-offset-[calc(var(--box-border-width)*-1)] text-(--background) bg-(--foreground);
+	outline: var(--box-border-width) transparent;
+	border-width: var(--box-border-width);
 }
 
 /* CENTER COMPONENT */
 @utility center {
-  /* ↓ Apply the minimum horizontal space */
-  @apply px-[--spacing(var(--center-padding))];
+	/* ↓ Apply the minimum horizontal space */
+	@apply px-[--spacing(var(--center-padding))];
 
-  /* ↓ Remove padding from the width calculation */
-  box-sizing: content-box;
+	/* ↓ Remove padding from the width calculation */
+	box-sizing: content-box;
 
-  /* ↓ The maximum width is the maximum measure */
-  max-inline-size: var(--center-max-width);
+	/* ↓ The maximum width is the maximum measure */
+	max-inline-size: var(--center-max-width);
 
-  /* ↓ Only affect horizontal margins */
-  margin-inline: auto;
+	/* ↓ Only affect horizontal margins */
+	margin-inline: auto;
 }
 
 /* COVER COMPONENT */
 @utility cover {
-  display: flex;
-  flex-direction: column;
-  min-block-size: var(--cover-min-block-size);
+	display: flex;
+	flex-direction: column;
+	min-block-size: var(--cover-min-block-size);
 
-  & > * {
-    margin-block: auto;
-  }
+	& > * {
+		margin-block: auto;
+	}
 
-  & > :first-child:not(div) {
-    margin-block-start: 0;
-  }
+	& > :first-child:not(div) {
+		margin-block-start: 0;
+	}
 
-  & > :last-child:not(div) {
-    margin-block-end: 0;
-  }
+	& > :last-child:not(div) {
+		margin-block-end: 0;
+	}
 
-  & > div {
-    margin-block: auto;
-  }
+	& > div {
+		margin-block: auto;
+	}
 }
 
 /* CLUSTER COMPONENT */
 @utility cluster {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--cluster-space, 1rem);
-  justify-content: flex-start;
-  align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--cluster-space, 1rem);
+	justify-content: flex-start;
+	align-items: center;
 }
 
 /* SIDEBAR COMPONENT */
 @utility sidebar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sidebar-gap);
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sidebar-gap);
 
-  & > :first-child {
-    flex-basis: var(--sidebar-width);
-    flex-grow: 1;
-  }
+	& > :first-child {
+		flex-basis: var(--sidebar-width);
+		flex-grow: 1;
+	}
 
-  & > :last-child {
-    flex-basis: 0;
-    flex-grow: 999;
-    min-inline-size: var(--sidebar-content-min);
-  }
+	& > :last-child {
+		flex-basis: 0;
+		flex-grow: 999;
+		min-inline-size: var(--sidebar-content-min);
+	}
 }
 
 /* SWITCHER COMPONENT */
 @utility switcher {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--switcher-gap);
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--switcher-gap);
 
-  & > * {
-    flex-grow: 1;
-    flex-basis: calc((var(--switcher-container-width) - 100%) * 999);
-  }
+	& > * {
+		flex-grow: 1;
+		flex-basis: calc((var(--switcher-container-width) - 100%) * 999);
+	}
 
-  & > :nth-last-child(n + 4),
-  & > :nth-last-child(n + 4) ~ * {
-    flex-basis: 100%;
-  }
+	& > :nth-last-child(n + 4),
+	& > :nth-last-child(n + 4) ~ * {
+		flex-basis: 100%;
+	}
 }
 /* GRID COMPONENT */
 @utility grid-utility {
-  display: grid;
-  grid-gap: var(--grid-space);
+	display: grid;
+	grid-gap: var(--grid-space);
 
-  @supports (width: min(var(--grid-min-width), 100%)) {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(min(var(--grid-min-width), 100%), 1fr)
-    );
-  }
+	@supports (width: min(var(--grid-min-width), 100%)) {
+		grid-template-columns: repeat(
+				auto-fit,
+				minmax(min(var(--grid-min-width), 100%), 1fr)
+			);
+	}
 }
 
 /* FRAME COMPONENT */
 @utility frame {
-  aspect-ratio: var(--frame-n) / var(--frame-d);
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	aspect-ratio: var(--frame-n) / var(--frame-d);
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  & > img,
-  & > video {
-    inline-size: 100%;
-    block-size: 100%;
-    object-fit: cover;
-  }
+	& > img,
+	& > video {
+		inline-size: 100%;
+		block-size: 100%;
+		object-fit: cover;
+	}
 }
 /* IMPOSTER COMPONENT */
 @utility imposter {
-  position: absolute;
-  inset-block-start: 50%;
-  inset-inline-start: 50%;
-  transform: translate(-50%, -50%);
+	position: absolute;
+	inset-block-start: 50%;
+	inset-inline-start: 50%;
+	transform: translate(-50%, -50%);
 
-  &.contain {
-    overflow: auto;
-    max-inline-size: calc(100% - (var(--imposter-margin) * 2));
-    max-block-size: calc(100% - (var(--imposter-margin) * 2));
-  }
+	&.contain {
+		overflow: auto;
+		max-inline-size: calc(100% - (var(--imposter-margin) * 2));
+		max-block-size: calc(100% - (var(--imposter-margin) * 2));
+	}
 }
 /* ICON COMPONENT */
 @utility icon {
-  width: 0.75em;
-  width: 1cap;
-  height: 0.75em;
-  height: 1cap;
+	width: 0.75em;
+	width: 1cap;
+	height: 0.75em;
+	height: 1cap;
 }
 @utility with-icon {
-  display: inline-flex;
-  align-items: baseline;
+	display: inline-flex;
+	align-items: baseline;
 
-  & .icon {
-    margin-inline-end: var(--icon-space);
-  }
+	& .icon {
+		margin-inline-end: var(--icon-space);
+	}
 }
 
 /* EVERY LAYOUT STYLES END */

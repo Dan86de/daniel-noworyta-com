@@ -1,42 +1,41 @@
 @theme {
-  --font-display: "Biotif", "sans-serif";
-  --font-sans: "Biotif", "sans-serif";
-  --font-heading: "Geomanist", "sans-serif";
-  --color-vaillant: #00917e;
-  --color-yt: #cd201f;
-  --color-primary: #f25118;
-  --foreground: #08070b;
-  --background: #f2f2f2;
-  --gradient-title-primary: var(--color-neutral-950);
-  --gradient-title-secondary: var(--color-neutral-800);
+	--font-display: "Biotif", "sans-serif";
+	--font-sans: "Biotif", "sans-serif";
+	--font-heading: "Geomanist", "sans-serif";
+	--color-vaillant: #00917e;
+	--color-primary: #f25118;
+	--foreground: #08070b;
+	--background: #f2f2f2;
+	--gradient-title-primary: var(--color-neutral-950);
+	--gradient-title-secondary: var(--color-neutral-800);
 
-  /* STACK */
-  --space: 1.5rem;
-  /* BOX */
-  --box-padding: 1; /* defines padding multiplicator * --spacing (0.25rem) */
-  --box-border-width: 1px; /* defines width of border for box (give also units */
-  /* CENTER */
-  --center-padding: 4;
-  --center-max-width: 65ch;
-  /* COVER */
-  --cover-min-block-size: 100vh;
-  /* CLUSTER */
-  --cluster-space: 0.25rem;
-  /* SIDEBAR */
-  --sidebar-gap: 1rem;
-  --sidebar-width: content;
-  --sidebar-content-min: 50%;
-  /* SWITCHER */
-  --switcher-gap: 0.25rem;
-  --switcher-container-width: 30rem;
-  /* GRID */
-  --grid-min-width: 250px;
-  --grid-space: 1rem;
-  /* FRAME */
-  --frame-n: 16;
-  --frame-d: 9;
-  /* IMPOSTER */
-  --imposter-margin: 0px;
-  /* ICON */
-  --icon-space: 0.25rem;
+	/* STACK */
+	--space: 1.5rem;
+	/* BOX */
+	--box-padding: 1; /* defines padding multiplicator * --spacing (0.25rem) */
+	--box-border-width: 1px; /* defines width of border for box (give also units */
+	/* CENTER */
+	--center-padding: 4;
+	--center-max-width: 65ch;
+	/* COVER */
+	--cover-min-block-size: 100vh;
+	/* CLUSTER */
+	--cluster-space: 0.25rem;
+	/* SIDEBAR */
+	--sidebar-gap: 1rem;
+	--sidebar-width: content;
+	--sidebar-content-min: 50%;
+	/* SWITCHER */
+	--switcher-gap: 0.25rem;
+	--switcher-container-width: 30rem;
+	/* GRID */
+	--grid-min-width: 250px;
+	--grid-space: 1rem;
+	/* FRAME */
+	--frame-n: 16;
+	--frame-d: 9;
+	/* IMPOSTER */
+	--imposter-margin: 0px;
+	/* ICON */
+	--icon-space: 0.25rem;
 }
