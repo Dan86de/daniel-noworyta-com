@@ -1,4 +1,3 @@
-
 import { Box } from "@/components/every-layout-components/Box";
 import { Center } from "@/components/every-layout-components/Center";
 import { Cover } from "@/components/every-layout-components/Cover";
