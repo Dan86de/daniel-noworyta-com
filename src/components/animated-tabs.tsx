@@ -1,8 +1,8 @@
-import { activePages } from "@/lib/pages";
-import { cn } from "@/lib/utils";
 import { Link, useLocation } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
+import { activePages } from "@/lib/pages";
+import { cn } from "@/lib/utils";
 
 export const AnimatedTabs = () => {
 	const { pathname } = useLocation();

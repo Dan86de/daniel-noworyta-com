@@ -19,6 +19,7 @@ import { Route as InvestingIndexRouteImport } from './routes/investing/index'
 import { Route as ContactIndexRouteImport } from './routes/contact/index'
 import { Route as ArticlesIndexRouteImport } from './routes/articles/index'
 import { Route as AboutIndexRouteImport } from './routes/about/index'
+import { Route as ProcessPageRouteImport } from './routes/process/page'
 import { Route as ArticlesSlugRouteImport } from './routes/articles/$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -71,6 +72,11 @@ const AboutIndexRoute = AboutIndexRouteImport.update({
   path: '/about/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProcessPageRoute = ProcessPageRouteImport.update({
+  id: '/process/page',
+  path: '/process/page',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ArticlesSlugRoute = ArticlesSlugRouteImport.update({
   id: '/articles/$slug',
   path: '/articles/$slug',
@@ -80,6 +86,7 @@ const ArticlesSlugRoute = ArticlesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/articles/$slug': typeof ArticlesSlugRoute
+  '/process/page': typeof ProcessPageRoute
   '/about': typeof AboutIndexRoute
   '/articles': typeof ArticlesIndexRoute
   '/contact': typeof ContactIndexRoute
@@ -93,6 +100,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/articles/$slug': typeof ArticlesSlugRoute
+  '/process/page': typeof ProcessPageRoute
   '/about': typeof AboutIndexRoute
   '/articles': typeof ArticlesIndexRoute
   '/contact': typeof ContactIndexRoute
@@ -107,6 +115,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/articles/$slug': typeof ArticlesSlugRoute
+  '/process/page': typeof ProcessPageRoute
   '/about/': typeof AboutIndexRoute
   '/articles/': typeof ArticlesIndexRoute
   '/contact/': typeof ContactIndexRoute
@@ -122,6 +131,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/articles/$slug'
+    | '/process/page'
     | '/about'
     | '/articles'
     | '/contact'
@@ -135,6 +145,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/articles/$slug'
+    | '/process/page'
     | '/about'
     | '/articles'
     | '/contact'
@@ -148,6 +159,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/articles/$slug'
+    | '/process/page'
     | '/about/'
     | '/articles/'
     | '/contact/'
@@ -162,6 +174,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArticlesSlugRoute: typeof ArticlesSlugRoute
+  ProcessPageRoute: typeof ProcessPageRoute
   AboutIndexRoute: typeof AboutIndexRoute
   ArticlesIndexRoute: typeof ArticlesIndexRoute
   ContactIndexRoute: typeof ContactIndexRoute
@@ -245,6 +258,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/process/page': {
+      id: '/process/page'
+      path: '/process/page'
+      fullPath: '/process/page'
+      preLoaderRoute: typeof ProcessPageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/articles/$slug': {
       id: '/articles/$slug'
       path: '/articles/$slug'
@@ -258,6 +278,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArticlesSlugRoute: ArticlesSlugRoute,
+  ProcessPageRoute: ProcessPageRoute,
   AboutIndexRoute: AboutIndexRoute,
   ArticlesIndexRoute: ArticlesIndexRoute,
   ContactIndexRoute: ContactIndexRoute,

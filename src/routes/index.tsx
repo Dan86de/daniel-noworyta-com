@@ -1,11 +1,11 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "motion/react";
 import { Box } from "@/components/every-layout-components/Box";
 import { Center } from "@/components/every-layout-components/Center";
 import { Cover } from "@/components/every-layout-components/Cover";
 import { Stack } from "@/components/every-layout-components/Stack";
-import { Body } from "@/components/ui/Typography/Body";
 import { GradientTitle } from "@/components/ui/gradient-title";
-import { createFileRoute } from "@tanstack/react-router";
-import { motion } from "framer-motion";
+import { Body } from "@/components/ui/Typography/Body";
 
 export const Route = createFileRoute("/")({
 	component: Home,

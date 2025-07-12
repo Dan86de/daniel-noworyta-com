@@ -11,6 +11,7 @@ export const pages = linkOptions([
 	{ id: "podcasts", label: "Podcasts", to: "/podcasts", status: "draft" },
 	{ id: "uses", label: "Uses", to: "/uses", status: "draft" },
 	{ id: "investing", label: "Investing", to: "/investing", status: "draft" },
+	{ id: "process", label: "Process", to: "/process", status: "draft" },
 	{
 		id: "playground",
 		label: "Playground",
