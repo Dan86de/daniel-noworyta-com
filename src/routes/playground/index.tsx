@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Center } from "@/components/every-layout-components/Center";
 import { Cover } from "@/components/every-layout-components/Cover";
 import { Stack } from "@/components/every-layout-components/Stack";
-import { Card } from "@/components/ui/playground/card";
 import { cn } from "@/lib/utils";
 import { Authentication } from "./-components/Authentication";
 
@@ -22,7 +21,6 @@ function RouteComponent() {
 			<Center>
 				<Stack className="max-w-lg">
 					<Authentication digits={new Set([4, 2, 6, 6, 8, 9])} />
-					<Card />
 				</Stack>
 			</Center>
 		</Cover>
