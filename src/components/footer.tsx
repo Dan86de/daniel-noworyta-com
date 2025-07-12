@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Center } from "./every-layout-components/Center";
+
 const links = [
 	{
 		title: "Email",
@@ -176,7 +177,7 @@ const links = [
 
 export const Footer = () => {
 	return (
-		<footer className="pb-2">
+		<footer className="mt-10 pb-2">
 			<Center gutters={2}>
 				<ul className="flex items-center justify-center gap-4 sm:gap-8">
 					{links.map((link) => (

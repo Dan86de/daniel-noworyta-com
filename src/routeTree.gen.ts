@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as UsesIndexRouteImport } from './routes/uses/index'
 import { Route as ProjectsIndexRouteImport } from './routes/projects/index'
+import { Route as ProcessIndexRouteImport } from './routes/process/index'
 import { Route as PodcastsIndexRouteImport } from './routes/podcasts/index'
 import { Route as PlaygroundIndexRouteImport } from './routes/playground/index'
 import { Route as NewsletterIndexRouteImport } from './routes/newsletter/index'
@@ -19,7 +20,6 @@ import { Route as InvestingIndexRouteImport } from './routes/investing/index'
 import { Route as ContactIndexRouteImport } from './routes/contact/index'
 import { Route as ArticlesIndexRouteImport } from './routes/articles/index'
 import { Route as AboutIndexRouteImport } from './routes/about/index'
-import { Route as ProcessPageRouteImport } from './routes/process/page'
 import { Route as ArticlesSlugRouteImport } from './routes/articles/$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -35,6 +35,11 @@ const UsesIndexRoute = UsesIndexRouteImport.update({
 const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
   id: '/projects/',
   path: '/projects/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProcessIndexRoute = ProcessIndexRouteImport.update({
+  id: '/process/',
+  path: '/process/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PodcastsIndexRoute = PodcastsIndexRouteImport.update({
@@ -72,11 +77,6 @@ const AboutIndexRoute = AboutIndexRouteImport.update({
   path: '/about/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProcessPageRoute = ProcessPageRouteImport.update({
-  id: '/process/page',
-  path: '/process/page',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ArticlesSlugRoute = ArticlesSlugRouteImport.update({
   id: '/articles/$slug',
   path: '/articles/$slug',
@@ -86,7 +86,6 @@ const ArticlesSlugRoute = ArticlesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/articles/$slug': typeof ArticlesSlugRoute
-  '/process/page': typeof ProcessPageRoute
   '/about': typeof AboutIndexRoute
   '/articles': typeof ArticlesIndexRoute
   '/contact': typeof ContactIndexRoute
@@ -94,13 +93,13 @@ export interface FileRoutesByFullPath {
   '/newsletter': typeof NewsletterIndexRoute
   '/playground': typeof PlaygroundIndexRoute
   '/podcasts': typeof PodcastsIndexRoute
+  '/process': typeof ProcessIndexRoute
   '/projects': typeof ProjectsIndexRoute
   '/uses': typeof UsesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/articles/$slug': typeof ArticlesSlugRoute
-  '/process/page': typeof ProcessPageRoute
   '/about': typeof AboutIndexRoute
   '/articles': typeof ArticlesIndexRoute
   '/contact': typeof ContactIndexRoute
@@ -108,6 +107,7 @@ export interface FileRoutesByTo {
   '/newsletter': typeof NewsletterIndexRoute
   '/playground': typeof PlaygroundIndexRoute
   '/podcasts': typeof PodcastsIndexRoute
+  '/process': typeof ProcessIndexRoute
   '/projects': typeof ProjectsIndexRoute
   '/uses': typeof UsesIndexRoute
 }
@@ -115,7 +115,6 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/articles/$slug': typeof ArticlesSlugRoute
-  '/process/page': typeof ProcessPageRoute
   '/about/': typeof AboutIndexRoute
   '/articles/': typeof ArticlesIndexRoute
   '/contact/': typeof ContactIndexRoute
@@ -123,6 +122,7 @@ export interface FileRoutesById {
   '/newsletter/': typeof NewsletterIndexRoute
   '/playground/': typeof PlaygroundIndexRoute
   '/podcasts/': typeof PodcastsIndexRoute
+  '/process/': typeof ProcessIndexRoute
   '/projects/': typeof ProjectsIndexRoute
   '/uses/': typeof UsesIndexRoute
 }
@@ -131,7 +131,6 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/articles/$slug'
-    | '/process/page'
     | '/about'
     | '/articles'
     | '/contact'
@@ -139,13 +138,13 @@ export interface FileRouteTypes {
     | '/newsletter'
     | '/playground'
     | '/podcasts'
+    | '/process'
     | '/projects'
     | '/uses'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/articles/$slug'
-    | '/process/page'
     | '/about'
     | '/articles'
     | '/contact'
@@ -153,13 +152,13 @@ export interface FileRouteTypes {
     | '/newsletter'
     | '/playground'
     | '/podcasts'
+    | '/process'
     | '/projects'
     | '/uses'
   id:
     | '__root__'
     | '/'
     | '/articles/$slug'
-    | '/process/page'
     | '/about/'
     | '/articles/'
     | '/contact/'
@@ -167,6 +166,7 @@ export interface FileRouteTypes {
     | '/newsletter/'
     | '/playground/'
     | '/podcasts/'
+    | '/process/'
     | '/projects/'
     | '/uses/'
   fileRoutesById: FileRoutesById
@@ -174,7 +174,6 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArticlesSlugRoute: typeof ArticlesSlugRoute
-  ProcessPageRoute: typeof ProcessPageRoute
   AboutIndexRoute: typeof AboutIndexRoute
   ArticlesIndexRoute: typeof ArticlesIndexRoute
   ContactIndexRoute: typeof ContactIndexRoute
@@ -182,6 +181,7 @@ export interface RootRouteChildren {
   NewsletterIndexRoute: typeof NewsletterIndexRoute
   PlaygroundIndexRoute: typeof PlaygroundIndexRoute
   PodcastsIndexRoute: typeof PodcastsIndexRoute
+  ProcessIndexRoute: typeof ProcessIndexRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
   UsesIndexRoute: typeof UsesIndexRoute
 }
@@ -207,6 +207,13 @@ declare module '@tanstack/react-router' {
       path: '/projects'
       fullPath: '/projects'
       preLoaderRoute: typeof ProjectsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/process/': {
+      id: '/process/'
+      path: '/process'
+      fullPath: '/process'
+      preLoaderRoute: typeof ProcessIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/podcasts/': {
@@ -258,13 +265,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/process/page': {
-      id: '/process/page'
-      path: '/process/page'
-      fullPath: '/process/page'
-      preLoaderRoute: typeof ProcessPageRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/articles/$slug': {
       id: '/articles/$slug'
       path: '/articles/$slug'
@@ -278,7 +278,6 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArticlesSlugRoute: ArticlesSlugRoute,
-  ProcessPageRoute: ProcessPageRoute,
   AboutIndexRoute: AboutIndexRoute,
   ArticlesIndexRoute: ArticlesIndexRoute,
   ContactIndexRoute: ContactIndexRoute,
@@ -286,6 +285,7 @@ const rootRouteChildren: RootRouteChildren = {
   NewsletterIndexRoute: NewsletterIndexRoute,
   PlaygroundIndexRoute: PlaygroundIndexRoute,
   PodcastsIndexRoute: PodcastsIndexRoute,
+  ProcessIndexRoute: ProcessIndexRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
   UsesIndexRoute: UsesIndexRoute,
 }
