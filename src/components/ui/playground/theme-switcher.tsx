@@ -1,6 +1,6 @@
+import { motion } from "motion/react";
 import { useTheme } from "@/lib/styles/theme-provider";
 import { cn } from "@/lib/utils";
-import { motion } from "motion/react";
 
 const tabs = [
 	{
@@ -135,7 +135,7 @@ export const ThemeSwitcher = ({ className }: { className?: string }) => {
 						WebkitTapHighlightColor: "transparent",
 					}}
 					className={cn(
-						"relative flex cursor-pointer items-center justify-center rounded-[calc(var(--toggle-radius)-var(--toggle-padding))] p-0.5 outline-primary/60",
+						"relative flex cursor-pointer items-center justify-center rounded-[calc(var(--toggle-radius)-var(--toggle-padding))] p-0.5 outline-primary",
 					)}
 				>
 					{theme === tab.id && (
@@ -148,7 +148,7 @@ export const ThemeSwitcher = ({ className }: { className?: string }) => {
 						/>
 					)}
 					<span className="touch-target" />
-					<div className="flex h-5 w-5 items-center justify-center">
+					<div className="focus:link flex h-5 w-5 items-center justify-center">
 						{tab.label}
 					</div>
 				</button>

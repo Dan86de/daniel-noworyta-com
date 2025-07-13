@@ -73,7 +73,7 @@ export const BadgeButton = forwardRef(function BadgeButton(
 ) {
 	const classes = clsx(
 		className,
-		"group relative inline-flex rounded-md focus:outline-hidden data-focus:outline-2 data-focus:outline-offset-2 data-focus:outline-blue-500",
+		"group relative inline-flex rounded-md focus:outline-hidden data-focus:outline-2 data-focus:outline-offset-2 data-focus:outline-primary",
 	);
 
 	return "href" in props ? (

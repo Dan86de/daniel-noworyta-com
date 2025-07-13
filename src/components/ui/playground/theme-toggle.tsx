@@ -1,6 +1,6 @@
+import { motion } from "motion/react";
 import { useTheme } from "@/lib/styles/theme-provider";
 import { cn } from "@/lib/utils";
-import { motion } from "motion/react";
 
 export function ThemeToggle({ className }: { className?: string }) {
 	const { theme, setTheme } = useTheme();

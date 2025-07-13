@@ -3,11 +3,11 @@
   --font-sans: "Biotif", "sans-serif";
   --font-heading: "Geomanist", "sans-serif";
   --color-vaillant: #00917e;
-  --color-primary: #f25118;
+  --color-primary: #ff5800;
   --color-primary-rgb: 241, 81, 24;
-  --foreground: #08070b;
-  --background: #f2f2f2;
-  --gradient-title-primary: var(--color-neutral-950);
+  --foreground: #171717;
+  --background: #fcfcfc;
+  --gradient-title-primary: var(--foreground);
   --gradient-title-secondary: var(--color-neutral-800);
 
   /* STACK */

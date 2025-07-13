@@ -164,7 +164,7 @@ export function Switch({
 				// Checked
 				"data-checked:bg-(--switch-bg) data-checked:ring-(--switch-bg-ring) dark:data-checked:bg-(--switch-bg) dark:data-checked:ring-(--switch-bg-ring)",
 				// Focus
-				"focus:outline-hidden data-focus:outline-2 data-focus:outline-blue-500 data-focus:outline-offset-2",
+				"focus:outline-hidden data-focus:outline-2 data-focus:outline-primary data-focus:outline-offset-2",
 				// Hover
 				"data-hover:data-checked:ring-(--switch-bg-ring) data-hover:ring-black/15",
 				"dark:data-hover:data-checked:ring-(--switch-bg-ring) dark:data-hover:ring-white/25",
