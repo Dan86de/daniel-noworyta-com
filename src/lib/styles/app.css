@@ -290,6 +290,6 @@ span.touch-target {
   @apply outline-primary outline-2 outline-offset-2;
 }
 
-a:focus {
+a:focus-visible {
   @apply outline-primary outline-2 outline-offset-2;
 }

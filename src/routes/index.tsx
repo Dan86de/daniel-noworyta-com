@@ -32,7 +32,7 @@ function Home() {
 											transition={{ duration: 0.3 }}
 											href="https://vaillant.com"
 											target="blank"
-											className="text-vaillant"
+											className="rounded-xs text-vaillant"
 										>
 											Vaillant
 										</motion.a>
