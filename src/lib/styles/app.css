@@ -324,3 +324,12 @@ a:focus-visible {
     background-size: var(--size) 1px;
   }
 }
+
+.stacking {
+  display: grid;
+  place-items: center;
+
+  > * {
+    grid-area: 1 / 1;
+  }
+}
