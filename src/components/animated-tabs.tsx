@@ -21,7 +21,7 @@ export const AnimatedTabs = () => {
 					key={id}
 					to={to}
 					className={cn(
-						"relative rounded-full pb-1.5 font-medium text-sm transition hover:text-primary",
+						"relative rounded-xs pb-1.5 font-medium text-sm transition hover:text-primary",
 					)}
 					style={{
 						WebkitTapHighlightColor: "transparent",

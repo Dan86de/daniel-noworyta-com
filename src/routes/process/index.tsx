@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "@/components/catalyst/link";
 import { Center } from "@/components/every-layout-components/Center";
 import { Cover } from "@/components/every-layout-components/Cover";
 import { Grid } from "@/components/every-layout-components/Grid";
@@ -29,134 +30,166 @@ function RouteComponent() {
 				</Center>
 				<div className="mx-auto w-full max-w-[1280px] px-4">
 					<Grid className="grid-row-[repeat(2,minmax(0,1fr))]" minWidth="320px">
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
-						<Card className="relative aspect-square">
-							<p className="absolute top-3 left-3 font-heading font-light text-xs">
-								2025/06/11
-							</p>
-							<p className="absolute top-3 right-3 font-heading font-light text-xs">
-								ID 123
-							</p>
-						</Card>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
+						<Link className="rounded-xl">
+							<Card className="relative aspect-square rounded-xl">
+								<p className="absolute top-3 left-3 font-heading font-light text-xs">
+									2025/06/11
+								</p>
+								<p className="absolute top-3 right-3 font-heading font-light text-xs">
+									ID 123
+								</p>
+							</Card>
+						</Link>
 					</Grid>
 				</div>
 			</Stack>

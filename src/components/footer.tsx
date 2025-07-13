@@ -195,7 +195,7 @@ const AnimatedLink = ({ link }: { link: (typeof links)[number] }) => {
 			<Link
 				to={link.url}
 				target="_blank"
-				className="group relative flex flex-col items-center gap-2"
+				className="group relative flex flex-col items-center gap-2 rounded-xs"
 			>
 				<span className="touch-target" />
 				<div className="flex items-center justify-center transition-colors duration-250 group-hover:text-primary">

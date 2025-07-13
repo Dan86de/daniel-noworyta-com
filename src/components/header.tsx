@@ -1,12 +1,12 @@
+import { Link } from "@tanstack/react-router";
 import { AnimatedTabs } from "@/components/animated-tabs";
 import { ThemeSwitcher } from "@/components/ui/playground/theme-switcher";
-import { Link } from "@tanstack/react-router";
 import { Center } from "./every-layout-components/Center";
 
 export const Header = () => {
 	return (
 		<Center className="flex items-center justify-between py-4" gutters={0}>
-			<Link to="/">
+			<Link to="/" className="rounded-xs">
 				<svg
 					width="82"
 					height="70"

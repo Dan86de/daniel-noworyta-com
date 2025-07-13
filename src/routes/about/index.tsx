@@ -73,7 +73,7 @@ function RouteComponent() {
 									I have a{" "}
 									<a
 										href="https://youtube.com/c/danielnoworyta"
-										className="underline"
+										className="rounded-xs underline"
 									>
 										channel
 									</a>{" "}
