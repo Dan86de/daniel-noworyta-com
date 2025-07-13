@@ -7,7 +7,7 @@ import { Cover } from "@/components/every-layout-components/Cover";
 import { Stack } from "@/components/every-layout-components/Stack";
 import { GradientTitle } from "@/components/ui/gradient-title";
 import { Body } from "@/components/ui/Typography/Body";
-import { Rectangles } from "./playground/-components/Rectangles";
+import { Rectangles } from "./playground/-components/Rectangles/Rectangles";
 
 export const Route = createFileRoute("/")({
 	component: Home,
