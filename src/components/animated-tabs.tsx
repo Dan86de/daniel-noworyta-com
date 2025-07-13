@@ -15,13 +15,13 @@ export const AnimatedTabs = () => {
 	}, [currentPage]);
 
 	return (
-		<div className="flex space-x-4">
+		<div className="flex space-x-4 align-center">
 			{activePages.map(({ id, label, to }) => (
 				<Link
 					key={id}
 					to={to}
 					className={cn(
-						"relative rounded-xs pb-1.5 font-medium text-sm transition hover:text-primary",
+						"-mb-2.5 relative rounded-xs pb-1.5 font-medium text-sm transition hover:text-primary",
 					)}
 					style={{
 						WebkitTapHighlightColor: "transparent",
