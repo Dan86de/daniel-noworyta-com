@@ -6,8 +6,8 @@ import { Card } from "@/components/ui/card";
 import { Body } from "@/components/ui/Typography/Body";
 import { cn } from "@/lib/utils";
 
-export const Authentication = ({ digits }: { digits: Set<number> }) => {
-	const [activeIndex, setActiveIndex] = useState<number>(0);
+export const ClerkAuthAnimation = ({ digits }: { digits: number[] }) => {
+	const [activeIndex, setActiveIndex] = useState(0);
 	const [fadeOut, setFadeOut] = useState(false);
 	const [isHovering, setIsHovering] = useState(false);
 	const [isTransitioning, setIsTransitioning] = useState(false);
@@ -40,7 +40,7 @@ export const Authentication = ({ digits }: { digits: Set<number> }) => {
 		timerRef.current = setInterval(() => {
 			setActiveIndex((prev) => {
 				// When we reach the last digit
-				if (prev >= digits.size - 1) {
+				if (prev >= digits.length - 1) {
 					// Clear the current interval to stop incrementing
 					if (timerRef.current) {
 						clearInterval(timerRef.current);
@@ -78,13 +78,11 @@ export const Authentication = ({ digits }: { digits: Set<number> }) => {
 			clearInterval(timerRef.current);
 			timerRef.current = null;
 		}
-
-		// Clear any pending fadeOut timeout
+		// Clear any pending fadeOut Timeout
 		if (fadeOutRef.current) {
 			clearTimeout(fadeOutRef.current);
 			fadeOutRef.current = null;
 		}
-
 		// Reset the states
 		setActiveIndex(0);
 		setFadeOut(false);
@@ -116,15 +114,14 @@ export const Authentication = ({ digits }: { digits: Set<number> }) => {
 
 	return (
 		<Card
-			className="relative w-md select-none"
 			onMouseEnter={() => setIsHovering(true)}
 			onMouseLeave={() => setIsHovering(false)}
 		>
 			<Center>
 				<Cluster clusterSpace="16px" className="relative pt-10 pb-16">
-					{Array.from(digits).map((digit, idx) => (
+					{digits.map((digit, idx) => (
 						<div
-							key={idx + digit}
+							key={digit}
 							className={cn(
 								"relative flex h-10 w-8 cursor-default items-center justify-center rounded-md bg-gradient-to-br from-neutral-100 to-neutral-50 dark:from-neutral-800 dark:to-neutral-800",
 							)}
@@ -133,7 +130,7 @@ export const Authentication = ({ digits }: { digits: Set<number> }) => {
 									"0 10px 19px 4px rgb(0 0 0 / 0.16), 0 -10px 16px -4px rgb(255 255 255 / 0.04), 0 0 0 1px rgb(255 255 255 / 0.01), 0 1px 0 0 rgb(255 255 255 / 0.02)",
 							}}
 						>
-							{activeIndex === digits.size - 1 && (
+							{activeIndex === digits.length - 1 && (
 								<motion.div
 									layout
 									className="absolute inset-0 rounded-md border border-primary "
@@ -160,10 +157,10 @@ export const Authentication = ({ digits }: { digits: Set<number> }) => {
 
 							{activeIndex === idx && isHovering && !isTransitioning && (
 								<motion.div
-									key={`glow-${idx}-${digit}`}
-									layoutId={"glow"}
-									className="absolute inset-0 rounded-md border border-primary brightness-100 dark:bg-primary/25"
-									initial={{ scale: 1.25, opacity: 0 }}
+									initial={{
+										scale: 1.25,
+										opacity: 0,
+									}}
 									animate={{
 										scale: [1.25, 1, fadeOut ? 1 : 1.25],
 										opacity: fadeOut ? 0 : 1,
@@ -177,12 +174,13 @@ export const Authentication = ({ digits }: { digits: Set<number> }) => {
 											duration: fadeOut ? 0.35 : 0.5,
 										},
 									}}
+									className="absolute inset-0 rounded-md border border-primary brightness-100 dark:bg-primary/25"
 									style={{
 										boxShadow: `
-											            inset 0 0 24px rgba(242, 81, 24, 0.2),
-																	0 0 12px rgba(242, 81, 24, 0.2),
-																	0 0 16px rgba(242, 81, 24, 0.4)
-																	`,
+		                  inset 0 0 24px rgba(242, 81, 24, 0.2),
+											0 0 12px rgba(242, 81, 24, 0.2),
+											0 0 16px rgba(242, 81, 24, 0.4)
+								`,
 									}}
 								>
 									<svg
@@ -199,10 +197,7 @@ export const Authentication = ({ digits }: { digits: Set<number> }) => {
 								</motion.div>
 							)}
 							<motion.span
-								initial={{
-									opacity: 0,
-									scale: 1,
-								}}
+								initial={{ opacity: 0, scale: 1 }}
 								animate={{
 									opacity: isHovering
 										? fadeOut
@@ -218,7 +213,6 @@ export const Authentication = ({ digits }: { digits: Set<number> }) => {
 									ease: "easeInOut",
 									delay: fadeOut ? 0.1 : 0,
 								}}
-								className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2"
 							>
 								{digit}
 							</motion.span>
@@ -226,6 +220,7 @@ export const Authentication = ({ digits }: { digits: Set<number> }) => {
 					))}
 				</Cluster>
 			</Center>
+
 			<h3 className="text-pretty font-semibold text-primary lg:text-sm ">
 				Multifactor Authentication
 			</h3>

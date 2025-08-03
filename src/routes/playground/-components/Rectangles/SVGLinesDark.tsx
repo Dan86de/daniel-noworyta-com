@@ -42,7 +42,7 @@ export const SVGLinesDark = ({ isHovering }: { isHovering: boolean }) => {
 					x2="27.25"
 					y2="123"
 					stroke="url(#paint3_linear_3116_352)"
-					stroke-width="0.5"
+					strokeWidth="0.5"
 					stroke-dasharray="2 3"
 				/>
 				<line
@@ -51,7 +51,7 @@ export const SVGLinesDark = ({ isHovering }: { isHovering: boolean }) => {
 					x2="128"
 					y2="122.75"
 					stroke="url(#paint4_linear_3116_352)"
-					stroke-width="0.5"
+					strokeWidth="0.5"
 					stroke-dasharray="2 3"
 				/>
 				<line
@@ -60,7 +60,7 @@ export const SVGLinesDark = ({ isHovering }: { isHovering: boolean }) => {
 					x2="128.25"
 					y2="137"
 					stroke="url(#paint5_linear_3116_352)"
-					stroke-width="0.5"
+					strokeWidth="0.5"
 					stroke-dasharray="2 3"
 				/>
 				<line
@@ -69,7 +69,7 @@ export const SVGLinesDark = ({ isHovering }: { isHovering: boolean }) => {
 					x2="128.25"
 					y2="245"
 					stroke="url(#paint6_linear_3116_352)"
-					stroke-width="0.5"
+					strokeWidth="0.5"
 					stroke-dasharray="2 3"
 				/>
 				<line
@@ -78,7 +78,7 @@ export const SVGLinesDark = ({ isHovering }: { isHovering: boolean }) => {
 					x2="225"
 					y2="244.75"
 					stroke="url(#paint7_linear_3116_352)"
-					stroke-width="0.5"
+					strokeWidth="0.5"
 					stroke-dasharray="2 3"
 				/>
 				<line
@@ -87,7 +87,7 @@ export const SVGLinesDark = ({ isHovering }: { isHovering: boolean }) => {
 					x2="225.25"
 					y2="123"
 					stroke="url(#paint8_linear_3116_352)"
-					stroke-width="0.5"
+					strokeWidth="0.5"
 					stroke-dasharray="2 3"
 				/>
 				<line
@@ -96,7 +96,7 @@ export const SVGLinesDark = ({ isHovering }: { isHovering: boolean }) => {
 					x2="225.25"
 					y2="272"
 					stroke="url(#paint9_linear_3116_352)"
-					stroke-width="0.5"
+					strokeWidth="0.5"
 					stroke-dasharray="2 3"
 				/>
 				<line
@@ -105,7 +105,7 @@ export const SVGLinesDark = ({ isHovering }: { isHovering: boolean }) => {
 					x2="27.25"
 					y2="271"
 					stroke="url(#paint10_linear_3116_352)"
-					stroke-width="0.5"
+					strokeWidth="0.5"
 					stroke-dasharray="2 3"
 				/>
 				<line
@@ -114,7 +114,7 @@ export const SVGLinesDark = ({ isHovering }: { isHovering: boolean }) => {
 					x2="225"
 					y2="122.75"
 					stroke="url(#paint11_linear_3116_352)"
-					stroke-width="0.5"
+					strokeWidth="0.5"
 					stroke-dasharray="2 3"
 				/>
 				<rect
@@ -185,85 +185,85 @@ export const SVGLinesDark = ({ isHovering }: { isHovering: boolean }) => {
 				<path
 					d="M141.292 26.5404C141.292 25.5279 140.471 24.707 139.458 24.707H131.667C129.642 24.707 128 26.3487 128 28.3737V51.2904L129.519 49.7716C130.894 48.3963 132.759 47.6237 134.704 47.6237H139.458C140.471 47.6237 141.292 46.8029 141.292 45.7904V26.5404Z"
 					stroke="url(#paint27_linear_3116_352)"
-					stroke-width="1.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="1.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 				<path
 					d="M114.707 26.5404C114.707 25.5279 115.528 24.707 116.54 24.707H124.332C126.357 24.707 127.999 26.3487 127.999 28.3737V51.2904L126.48 49.7716C125.105 48.3963 123.239 47.6237 121.294 47.6237H116.54C115.528 47.6237 114.707 46.8029 114.707 45.7904V26.5404Z"
 					stroke="url(#paint28_linear_3116_352)"
-					stroke-width="1.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="1.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 				<path
 					d="M211.707 28.3737C211.707 26.3487 213.349 24.707 215.374 24.707H234.624C236.649 24.707 238.29 26.3487 238.29 28.3737V47.6237C238.29 49.6488 236.649 51.2904 234.624 51.2904H215.374C213.349 51.2904 211.707 49.6488 211.707 47.6237V28.3737Z"
 					stroke="url(#paint29_linear_3116_352)"
-					stroke-width="1.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="1.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 				<path
 					d="M230.958 38.0013L220.875 32.043V43.9596L230.958 38.0013Z"
 					stroke="url(#paint30_linear_3116_352)"
-					stroke-width="1.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="1.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 				<path
 					d="M13.707 306.874C13.707 304.849 15.3487 303.207 17.3737 303.207H36.6237C38.6488 303.207 40.2904 304.849 40.2904 306.874V320.624C40.2904 322.649 38.6488 324.29 36.6237 324.29H17.3737C15.3487 324.29 13.707 322.649 13.707 320.624V306.874Z"
 					stroke="url(#paint31_linear_3116_352)"
-					stroke-width="1.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="1.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 				<path
 					d="M21.043 323.374V301.374C21.043 299.349 22.6846 297.707 24.7096 297.707H29.293C31.3181 297.707 32.9596 299.349 32.9596 301.374V323.374"
 					stroke="url(#paint32_linear_3116_352)"
-					stroke-width="1.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="1.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 				<path
 					d="M217.21 324.29H232.793C234.818 324.29 236.46 322.649 236.46 320.624V305.499L228.668 297.707H217.21C215.185 297.707 213.543 299.349 213.543 301.374V320.624C213.543 322.649 215.185 324.29 217.21 324.29Z"
 					stroke="url(#paint33_linear_3116_352)"
-					stroke-width="1.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="1.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 				<path
 					d="M235.999 305.96H228.207V298.168"
 					stroke="url(#paint34_linear_3116_352)"
-					stroke-width="1.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="1.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 				<path
 					d="M116.54 172.79V171.722C116.54 170.303 117.104 168.943 118.107 167.94C119.11 166.937 120.47 166.374 121.888 166.374H122.132C122.343 165.338 122.906 164.408 123.724 163.74C124.543 163.072 125.567 162.707 126.624 162.707H127.999M127.999 162.707H129.374C130.43 162.707 131.455 163.072 132.273 163.74C133.092 164.408 133.654 165.338 133.865 166.374H134.109C135.528 166.374 136.888 166.937 137.891 167.94C138.894 168.943 139.457 170.303 139.457 171.722V172.79M127.999 162.707V168.665M119.29 171.874C116.76 171.874 114.707 174.131 114.707 176.915C114.707 178.36 115.259 179.664 116.144 180.582C116.284 180.727 116.432 180.863 116.588 180.987M116.588 180.987C117.351 181.611 118.305 181.954 119.29 181.957H120.207M116.588 180.987C116.76 182.27 117.392 183.448 118.367 184.3C119.341 185.153 120.592 185.623 121.886 185.624H122.132C122.343 186.659 122.906 187.589 123.724 188.258C124.543 188.926 125.567 189.291 126.624 189.29H127.999M127.999 189.29H129.374C130.43 189.291 131.455 188.926 132.273 188.258C133.092 187.589 133.654 186.659 133.865 185.624H134.109C135.404 185.624 136.655 185.154 137.63 184.301C138.605 183.448 139.237 182.271 139.409 180.987M127.999 189.29V181.499M127.999 168.665V181.499M127.999 168.665C127.999 170.865 126.165 174.165 123.874 174.624M139.409 180.987C139.566 180.862 139.714 180.726 139.853 180.582C140.739 179.664 141.29 178.36 141.29 176.915C141.29 174.131 139.237 171.874 136.707 171.874M139.409 180.987C138.652 181.598 137.717 181.957 136.707 181.957H135.79M127.999 181.499C127.999 178.565 130.443 177.374 131.665 177.374H132.124"
 					stroke="url(#paint35_linear_3116_352)"
-					stroke-width="1.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="1.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 				<path
 					d="M17.375 37.082V45.7904C17.375 45.7904 19.6667 49.457 27 49.457C34.3333 49.457 36.625 45.7904 36.625 45.7904V37.082"
 					stroke="url(#paint36_linear_3116_352)"
-					stroke-width="1.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="1.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 				<path
 					d="M13.707 34.3346L26.9987 26.543L40.2905 34.3346L26.9987 42.1263L13.707 34.3346Z"
 					stroke="url(#paint37_linear_3116_352)"
-					stroke-width="1.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="1.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 				<path
 					d="M27.9154 34.3346C27.9154 34.8408 27.5049 35.2513 26.9987 35.2513C26.4925 35.2513 26.082 34.8408 26.082 34.3346C26.082 33.8284 26.4925 33.418 26.9987 33.418C27.5049 33.418 27.9154 33.8284 27.9154 34.3346Z"
 					stroke="url(#paint38_linear_3116_352)"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 				<defs>
 					<radialGradient

@@ -255,6 +255,7 @@ span.touch-target {
     object-fit: cover;
   }
 }
+
 /* IMPOSTER COMPONENT */
 @utility imposter {
   position: absolute;

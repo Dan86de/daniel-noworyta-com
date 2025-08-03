@@ -3,7 +3,7 @@ import { Center } from "@/components/every-layout-components/Center";
 import { Cover } from "@/components/every-layout-components/Cover";
 import { Stack } from "@/components/every-layout-components/Stack";
 import { cn } from "@/lib/utils";
-import { Authentication } from "./-components/Authentication";
+import { ClerkAuthAnimation } from "./-components/ClerkAuthAnimation";
 
 export const Route = createFileRoute("/playground/")({
 	component: RouteComponent,
@@ -20,7 +20,8 @@ function RouteComponent() {
 			/>
 			<Center>
 				<Stack className="max-w-lg">
-					<Authentication digits={new Set([4, 2, 6, 6, 8, 9])} />
+					{/* <Authentication digits={new Set([4, 2, 6, 6, 8, 9])} /> */}
+					<ClerkAuthAnimation digits={[4, 2, 6, 6, 8, 9]} />
 				</Stack>
 			</Center>
 		</Cover>
