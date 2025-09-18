@@ -88,6 +88,167 @@ function RouteComponent() {
 							</Stack>
 						</FadeUp>
 					</Box>
+					<FadeUp delay={0.4}>
+						<Stack className="[--space:0.5rem] sm:[--space:1rem]">
+							<Body>
+								<strong>My Personal Brand Story</strong>
+							</Body>
+							<Body>
+								I used to live a life that, on the surface, looked successful
+								but felt deeply unfulfilling. As a Class A surface modeler in
+								the automotive industry, I spent my days working long hours in
+								front of a computer, creating 3D models in specialized software.
+								My routine was grueling: waking up at 6:00 AM, working from 8:00
+								AM to 5:00 PM, and frequently traveling to production facilities
+								in places like Detroit, Turin, Sweden, and Germany.
+							</Body>
+							<Body>
+								The constant delegations kept me away from home, which became
+								unbearable when I met my wife and dreamed of starting a family.
+								I felt trapped, knowing I’d hit the ceiling of my career with no
+								room to grow or earn more, and my true passion—creating web
+								pages and solving problems through coding—was just a distant
+								dream I lacked the courage to pursue.
+							</Body>
+							<Body>
+								My mindset back then was a mix of hope and frustration. I
+								believed I could change my life, inspired by YouTube creators
+								and tech blogs, but I wasn’t sure if I could pull it off. I felt
+								excited about the possibility of becoming a software developer,
+								yet the demands of my job and the fear of failure held me back.
+							</Body>
+							<Body>
+								The lowest point came when my son was born, and my company sent
+								me to Detroit for a six-month project. Missing those precious
+								early months with my newborn son was heartbreaking—it was my
+								rock bottom. I knew I couldn’t keep living a life that kept me
+								away from my family and my true calling. That moment, coupled
+								with my desire to return to Poland and raise my son there, was
+								the spark that pushed me to act.
+							</Body>
+							<Body>
+								Determined to change my life, I committed to learning how to
+								code. I started with online courses from Udemy and YouTube,
+								focusing on HTML, CSS, and JavaScript. To make progress, I
+								reshaped my routine, waking up at 5:30 AM—or even 4:30 AM—to
+								study before my 8-to-5 job, then coding again in the evenings.
+								It wasn’t easy.
+							</Body>
+							<Body>
+								As a self-taught developer, I faced imposter syndrome and
+								struggled to find well-structured resources. I often redid
+								courses multiple times to solidify my knowledge, and without a
+								mentor, I had to rely on sheer persistence. But my dream of
+								working from home, building a SaaS product, and achieving
+								financial independence kept me going. After two and a half years
+								of relentless effort, I landed my first job as a full-stack
+								developer in the TypeScript ecosystem.
+							</Body>
+							<Body>
+								Today, I work remotely for a German company, building
+								applications for installers of heat pumps and gas boilers using
+								React and React Native. With six years of professional coding
+								experience, I earn a good living and have the freedom to be with
+								my family in Poland. My life has transformed—I’m no longer
+								tethered to constant travel or a career ceiling.{" "}
+							</Body>
+							<Body>
+								I also run a YouTube channel with over 5,500 subscribers, where
+								I share my coding journey and inspire others, recently switching
+								to English to reach a broader audience. The key lesson I’ve
+								learned is that with enough will and dedication, anyone can make
+								a significant life change, no matter their circumstances. Two
+								and a half years may seem long, but it’s a small price to pay
+								for a lifetime of fulfillment.
+							</Body>
+							<Body>
+								This journey fuels my current mission: to{" "}
+								<strong>
+									show others that they, too, can transform their lives by
+									pursuing their passions, especially in the IT industry.
+								</strong>{" "}
+								In an era where AI is changing the landscape, I want to inspire
+								people to embrace challenges, learn to code, and build careers
+								that offer freedom and impact. My story is proof that with
+								persistence, anyone can turn their dreams into reality.
+							</Body>
+						</Stack>
+					</FadeUp>
+					<FadeUp delay={0.6}>
+						<Stack className="[--space:0.5rem] sm:[--space:1rem]">
+							<Body>
+								<strong>My Core Beliefs</strong>
+							</Body>
+							<Body>
+								<strong>Coding:</strong>
+							</Body>
+							<ul className="list-inside list-disc space-y-1">
+								<li>
+									Coding is a learnable skill that anyone can master with
+									persistence, leading to a fulfilling career as a software
+									developer.
+								</li>
+								<li>
+									Coding offers unparalleled freedom, requiring only a laptop
+									and internet to work from anywhere and solve real-world
+									problems.
+								</li>
+								<li>
+									Collaboration and feedback are critical to becoming a great
+									coder—sharing your work with experienced developers
+									accelerates growth.
+								</li>
+							</ul>
+							<Body>
+								<em className="text-primary text-shadow-primary">
+									Debunking Myth:
+								</em>{" "}
+								You don’t need to be a math genius to be a good coder. Soft
+								skills, problem-solving, and communication are just as
+								important, if not more so.
+							</Body>
+							<Body>
+								<strong>Developing a Career in IT:</strong>
+							</Body>
+							<ul className="list-inside list-disc space-y-1">
+								<li>
+									Anyone can break into the IT industry with dedication and
+									passion, regardless of age or responsibilities like family.
+								</li>
+								<li>
+									Soft skills, such as openness to criticism and collaboration,
+									are as crucial as technical skills, especially in the AI era.
+								</li>
+							</ul>
+							<Body>
+								<em className="text-primary text-shadow-primary">
+									Debunking Myth:
+								</em>{" "}
+								AI won’t take jobs from developers; it’s a powerful tool that
+								coders should embrace to enhance their work (state for 2025).
+							</Body>
+							<Body>
+								<strong>Personal Growth:</strong>
+							</Body>
+							<ul className="list-inside list-disc space-y-1">
+								<li>
+									Personal growth requires taking responsibility for your own
+									path and embracing challenges and setbacks as opportunities to
+									learn.
+								</li>
+								<li>
+									Staying open-minded, seeking advice from those ahead of you,
+									and building self-awareness through tools like assessments are
+									key to growth.
+								</li>
+								<li>
+									There’s no universal pace for personal growth—everyone must
+									find their own path and remain open to others’ perspectives to
+									accelerate progress.
+								</li>
+							</ul>
+						</Stack>
+					</FadeUp>
 				</Cluster>
 			</Stack>
 		</Center>
