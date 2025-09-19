@@ -6,7 +6,7 @@ import { Cluster } from "@/components/every-layout-components/Cluster";
 import { Stack } from "@/components/every-layout-components/Stack";
 import { FadeUp } from "@/components/ui/fade-up";
 import { GradientTitle } from "@/components/ui/gradient-title";
-import { Body } from "@/components/ui/Typography/Body";
+import { Body, H2, H3 } from "@/components/ui/Typography/Body";
 import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/about/")({
 	component: RouteComponent,
@@ -90,9 +90,7 @@ function RouteComponent() {
 					</Box>
 					<FadeUp delay={0.4}>
 						<Stack className="[--space:0.5rem] sm:[--space:1rem]">
-							<Body>
-								<strong>My Personal Brand Story</strong>
-							</Body>
+							<H2>My Personal Brand Story</H2>
 							<Body>
 								I used to live a life that, on the surface, looked successful
 								but felt deeply unfulfilling. As a Class A surface modeler in
@@ -117,6 +115,7 @@ function RouteComponent() {
 								excited about the possibility of becoming a software developer,
 								yet the demands of my job and the fear of failure held me back.
 							</Body>
+							<H3>My "rock bottom" moment</H3>
 							<Body>
 								The lowest point came when my son was born, and my company sent
 								me to Detroit for a six-month project. Missing those precious
@@ -144,6 +143,7 @@ function RouteComponent() {
 								of relentless effort, I landed my first job as a full-stack
 								developer in the TypeScript ecosystem.
 							</Body>
+							<H3>What I'm doing today</H3>
 							<Body>
 								Today, I work remotely for a German company, building
 								applications for installers of heat pumps and gas boilers using
@@ -176,12 +176,8 @@ function RouteComponent() {
 					</FadeUp>
 					<FadeUp delay={0.6}>
 						<Stack className="[--space:0.5rem] sm:[--space:1rem]">
-							<Body>
-								<strong>My Core Beliefs</strong>
-							</Body>
-							<Body>
-								<strong>Coding:</strong>
-							</Body>
+							<H2>My Core Beliefs</H2>
+							<H3>Coding:</H3>
 							<ul className="list-inside list-disc space-y-1">
 								<li>
 									Coding is a learnable skill that anyone can master with
@@ -207,9 +203,7 @@ function RouteComponent() {
 								skills, problem-solving, and communication are just as
 								important, if not more so.
 							</Body>
-							<Body>
-								<strong>Developing a Career in IT:</strong>
-							</Body>
+							<H3>Developing a Career in IT:</H3>
 							<ul className="list-inside list-disc space-y-1">
 								<li>
 									Anyone can break into the IT industry with dedication and
@@ -227,9 +221,7 @@ function RouteComponent() {
 								AI won’t take jobs from developers; it’s a powerful tool that
 								coders should embrace to enhance their work (state for 2025).
 							</Body>
-							<Body>
-								<strong>Personal Growth:</strong>
-							</Body>
+							<H3>Personal Growth:</H3>
 							<ul className="list-inside list-disc space-y-1">
 								<li>
 									Personal growth requires taking responsibility for your own
