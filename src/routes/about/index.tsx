@@ -176,7 +176,7 @@ function RouteComponent() {
 					</FadeUp>
 					<FadeUp delay={0.6}>
 						<Stack className="[--space:0.5rem] sm:[--space:1rem]">
-							<H2>My Core Beliefs</H2>
+							<H2 className="pb-4">My Core Beliefs</H2>
 							<H3>Coding:</H3>
 							<ul className="list-inside list-disc space-y-1">
 								<li>
