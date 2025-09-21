@@ -2,10 +2,14 @@ import { linkOptions } from "@tanstack/react-router";
 
 const isDev = process.env.NODE_ENV === "development";
 
+/**
+ * Configuration for active routes.
+ */
 export const pages = linkOptions([
 	{ id: "home", label: "Home", to: "/", status: "active" },
 	{ id: "about", label: "About", to: "/about", status: "active" },
 	{ id: "articles", label: "Articles", to: "/articles", status: "draft" },
+	{ id: "core", label: "Core", to: "/core", status: "active" },
 	{ id: "newsletter", label: "Newsletter", to: "/newsletter", status: "draft" },
 	{ id: "projects", label: "Projects", to: "/projects", status: "draft" },
 	{ id: "podcasts", label: "Podcasts", to: "/podcasts", status: "draft" },

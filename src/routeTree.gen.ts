@@ -17,6 +17,7 @@ import { Route as PodcastsIndexRouteImport } from './routes/podcasts/index'
 import { Route as PlaygroundIndexRouteImport } from './routes/playground/index'
 import { Route as NewsletterIndexRouteImport } from './routes/newsletter/index'
 import { Route as InvestingIndexRouteImport } from './routes/investing/index'
+import { Route as CoreIndexRouteImport } from './routes/core/index'
 import { Route as ContactIndexRouteImport } from './routes/contact/index'
 import { Route as ArticlesIndexRouteImport } from './routes/articles/index'
 import { Route as AboutIndexRouteImport } from './routes/about/index'
@@ -62,6 +63,11 @@ const InvestingIndexRoute = InvestingIndexRouteImport.update({
   path: '/investing/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CoreIndexRoute = CoreIndexRouteImport.update({
+  id: '/core/',
+  path: '/core/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactIndexRoute = ContactIndexRouteImport.update({
   id: '/contact/',
   path: '/contact/',
@@ -89,6 +95,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutIndexRoute
   '/articles': typeof ArticlesIndexRoute
   '/contact': typeof ContactIndexRoute
+  '/core': typeof CoreIndexRoute
   '/investing': typeof InvestingIndexRoute
   '/newsletter': typeof NewsletterIndexRoute
   '/playground': typeof PlaygroundIndexRoute
@@ -103,6 +110,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutIndexRoute
   '/articles': typeof ArticlesIndexRoute
   '/contact': typeof ContactIndexRoute
+  '/core': typeof CoreIndexRoute
   '/investing': typeof InvestingIndexRoute
   '/newsletter': typeof NewsletterIndexRoute
   '/playground': typeof PlaygroundIndexRoute
@@ -118,6 +126,7 @@ export interface FileRoutesById {
   '/about/': typeof AboutIndexRoute
   '/articles/': typeof ArticlesIndexRoute
   '/contact/': typeof ContactIndexRoute
+  '/core/': typeof CoreIndexRoute
   '/investing/': typeof InvestingIndexRoute
   '/newsletter/': typeof NewsletterIndexRoute
   '/playground/': typeof PlaygroundIndexRoute
@@ -134,6 +143,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/articles'
     | '/contact'
+    | '/core'
     | '/investing'
     | '/newsletter'
     | '/playground'
@@ -148,6 +158,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/articles'
     | '/contact'
+    | '/core'
     | '/investing'
     | '/newsletter'
     | '/playground'
@@ -162,6 +173,7 @@ export interface FileRouteTypes {
     | '/about/'
     | '/articles/'
     | '/contact/'
+    | '/core/'
     | '/investing/'
     | '/newsletter/'
     | '/playground/'
@@ -177,6 +189,7 @@ export interface RootRouteChildren {
   AboutIndexRoute: typeof AboutIndexRoute
   ArticlesIndexRoute: typeof ArticlesIndexRoute
   ContactIndexRoute: typeof ContactIndexRoute
+  CoreIndexRoute: typeof CoreIndexRoute
   InvestingIndexRoute: typeof InvestingIndexRoute
   NewsletterIndexRoute: typeof NewsletterIndexRoute
   PlaygroundIndexRoute: typeof PlaygroundIndexRoute
@@ -244,6 +257,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InvestingIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/core/': {
+      id: '/core/'
+      path: '/core'
+      fullPath: '/core'
+      preLoaderRoute: typeof CoreIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact/': {
       id: '/contact/'
       path: '/contact'
@@ -281,6 +301,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutIndexRoute: AboutIndexRoute,
   ArticlesIndexRoute: ArticlesIndexRoute,
   ContactIndexRoute: ContactIndexRoute,
+  CoreIndexRoute: CoreIndexRoute,
   InvestingIndexRoute: InvestingIndexRoute,
   NewsletterIndexRoute: NewsletterIndexRoute,
   PlaygroundIndexRoute: PlaygroundIndexRoute,
