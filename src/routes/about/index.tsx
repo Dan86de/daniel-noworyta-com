@@ -10,171 +10,217 @@ import { Body, H2, H3 } from "@/components/ui/Typography/Body";
 import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/about/")({
 	component: RouteComponent,
+	head: () => ({
+		meta: [
+			{
+				title: "About Me | Daniel Noworyta",
+			},
+			{
+				name: "description",
+				content:
+					"Learn about Daniel Noworyta's journey from automotive modeler to full-stack developer. Discover his passion for coding, YouTube teaching, and inspiring others to pursue careers in tech.",
+			},
+			{
+				property: "og:title",
+				content: "About Me | Daniel Noworyta",
+			},
+			{
+				property: "og:description",
+				content:
+					"Learn about Daniel Noworyta's journey from automotive modeler to full-stack developer. Discover his passion for coding, YouTube teaching, and inspiring others to pursue careers in tech.",
+			},
+			{
+				property: "og:type",
+				content: "website",
+			},
+			{
+				name: "twitter:card",
+				content: "summary",
+			},
+			{
+				name: "twitter:title",
+				content: "About Me | Daniel Noworyta",
+			},
+			{
+				name: "twitter:description",
+				content:
+					"Learn about Daniel Noworyta's journey from automotive modeler to full-stack developer. Discover his passion for coding, YouTube teaching, and inspiring others to pursue careers in tech.",
+			},
+		],
+	}),
 });
 
 function RouteComponent() {
 	return (
 		<Center className="mt-10">
 			<Stack>
-				<Stack>
-					<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
-						Developer. Father. Creator.
-					</GradientTitle>
-					<Body>
-						From dreaming of becoming a programmer to{" "}
-						<strong>making it a reality in 2020</strong>, I&apos;m now sharing
-						my journey through teaching and creating. I help others transition
-						into tech while building useful things along the way.
-					</Body>
-				</Stack>
+				<header>
+					<Stack>
+						<GradientTitle primaryColor="#f12711" secondaryColor="#f5af19">
+							Developer. Father. Creator.
+						</GradientTitle>
+						<Body>
+							From dreaming of becoming a programmer to{" "}
+							<strong>making it a reality in 2020</strong>, I&apos;m now sharing
+							my journey through teaching and creating. I help others transition
+							into tech while building useful things along the way.
+						</Body>
+					</Stack>
+				</header>
 
-				<Cluster clusterSpace="calc(var(--spacing)*6)">
-					<Box
-						className="w-full bg-transparent sm:w-[calc(50%-(var(--cluster-space)/2))]"
-						padding="0px"
-						borderWidth="0"
-					>
-						<motion.img
-							initial={{
-								opacity: 0,
-								filter: "blur(10px) brightness(20%) grayscale(100%)",
-								scale: 0.7,
-								rotate: -30,
-							}}
-							animate={{
-								opacity: 1,
-								filter: "blur(0px) brightness(130%) grayscale(100%)",
-								scale: [0.7, 1.1, 1],
-								rotate: 0,
-							}}
-							transition={{ duration: 0.4 }}
-							alt="Daniel Noworyta"
-							src="/images/avatar.webp"
-							width="336"
-							height="336"
-							className={cn("w-full rounded-lg object-cover")}
-						/>
-					</Box>
+				<main>
+					<Cluster clusterSpace="calc(var(--spacing)*6)">
+						<Box
+							className="w-full bg-transparent sm:w-[calc(50%-(var(--cluster-space)/2))]"
+							padding="0px"
+							borderWidth="0"
+						>
+							<motion.img
+								initial={{
+									opacity: 0,
+									filter: "blur(10px) brightness(20%) grayscale(100%)",
+									scale: 0.7,
+									rotate: -30,
+								}}
+								animate={{
+									opacity: 1,
+									filter: "blur(0px) brightness(130%) grayscale(100%)",
+									scale: [0.7, 1.1, 1],
+									rotate: 0,
+								}}
+								transition={{ duration: 0.4 }}
+								alt="Daniel Noworyta"
+								src="/images/avatar.webp"
+								width="336"
+								height="336"
+								className={cn("w-full rounded-lg object-cover")}
+							/>
+						</Box>
 
-					<Box
-						className="w-full bg-transparent sm:w-[calc(50%-(var(--cluster-space)/2))]"
-						borderWidth="0"
-						padding="0px"
-					>
-						<FadeUp delay={0.2}>
-							<Stack className="[--space:0.75rem] sm:[--space:2rem]">
+						<Box
+							className="w-full bg-transparent sm:w-[calc(50%-(var(--cluster-space)/2))]"
+							borderWidth="0"
+							padding="0px"
+						>
+							<FadeUp delay={0.2}>
+								<Stack className="[--space:0.75rem] sm:[--space:2rem]">
+									<Body>
+										<strong>Hey, I&apos;m Daniel Noworyta.</strong> For most of
+										my life, I pushed aside my dream of becoming a programmer
+										and doing what I love. In 2020, I fulfilled that dream and
+										became a programmer.
+									</Body>
+									<Body>
+										I have a{" "}
+										<a
+											href="https://youtube.com/c/danielnoworyta"
+											className="rounded-xs underline"
+										>
+											channel
+										</a>{" "}
+										on YouTube where I share my insights and experiences in
+										learning programming, transitioning to new fields, and
+										advancing my career in IT.
+									</Body>
+									<Body>
+										I love dark mode and side projects. When I&apos;m not
+										working, I like playing football, reading books, and eating
+										pizza.
+									</Body>
+								</Stack>
+							</FadeUp>
+						</Box>
+						<FadeUp delay={0.4}>
+							<Stack className="[--space:0.5rem] sm:[--space:1rem]">
+								<H2>My Personal Brand Story</H2>
 								<Body>
-									<strong>Hey, I&apos;m Daniel Noworyta.</strong> For most of my
-									life, I pushed aside my dream of becoming a programmer and
-									doing what I love. In 2020, I fulfilled that dream and became
-									a programmer.
+									I used to live a life that, on the surface, looked successful
+									but felt deeply unfulfilling. As a Class A surface modeler in
+									the automotive industry, I spent my days working long hours in
+									front of a computer, creating 3D models in specialized
+									software. My routine was grueling: waking up at 6:00 AM,
+									working from 8:00 AM to 5:00 PM, and frequently traveling to
+									production facilities in places like Detroit, Turin, Sweden,
+									and Germany.
 								</Body>
 								<Body>
-									I have a{" "}
-									<a
-										href="https://youtube.com/c/danielnoworyta"
-										className="rounded-xs underline"
-									>
-										channel
-									</a>{" "}
-									on YouTube where I share my insights and experiences in
-									learning programming, transitioning to new fields, and
-									advancing my career in IT.
+									The constant delegations kept me away from home, which became
+									unbearable when I met my wife and dreamed of starting a
+									family. I felt trapped, knowing I’d hit the ceiling of my
+									career with no room to grow or earn more, and my true
+									passion—creating web pages and solving problems through
+									coding—was just a distant dream I lacked the courage to
+									pursue.
 								</Body>
 								<Body>
-									I love dark mode and side projects. When I&apos;m not working,
-									I like playing football, reading books, and eating pizza.
+									My mindset back then was a mix of hope and frustration. I
+									believed I could change my life, inspired by YouTube creators
+									and tech blogs, but I wasn’t sure if I could pull it off. I
+									felt excited about the possibility of becoming a software
+									developer, yet the demands of my job and the fear of failure
+									held me back.
+								</Body>
+								<H3>My "rock bottom" moment</H3>
+								<Body>
+									The lowest point came when my son was born, and my company
+									sent me to Detroit for a six-month project. Missing those
+									precious early months with my newborn son was heartbreaking—it
+									was my rock bottom. I knew I couldn’t keep living a life that
+									kept me away from my family and my true calling. That moment,
+									coupled with my desire to return to Poland and raise my son
+									there, was the spark that pushed me to act.
+								</Body>
+								<Body>
+									Determined to change my life, I committed to learning how to
+									code. I started with online courses from Udemy and YouTube,
+									focusing on HTML, CSS, and JavaScript. To make progress, I
+									reshaped my routine, waking up at 5:30 AM—or even 4:30 AM—to
+									study before my 8-to-5 job, then coding again in the evenings.
+									It wasn’t easy.
+								</Body>
+								<Body>
+									As a self-taught developer, I faced imposter syndrome and
+									struggled to find well-structured resources. I often redid
+									courses multiple times to solidify my knowledge, and without a
+									mentor, I had to rely on sheer persistence. But my dream of
+									working from home, building a SaaS product, and achieving
+									financial independence kept me going. After two and a half
+									years of relentless effort, I landed my first job as a
+									full-stack developer in the TypeScript ecosystem.
+								</Body>
+								<H3>What I'm doing today</H3>
+								<Body>
+									Today, I work remotely for a German company, building
+									applications for installers of heat pumps and gas boilers
+									using React and React Native. With six years of professional
+									coding experience, I earn a good living and have the freedom
+									to be with my family in Poland. My life has transformed—I’m no
+									longer tethered to constant travel or a career ceiling.{" "}
+								</Body>
+								<Body>
+									I also run a YouTube channel with over 5,500 subscribers,
+									where I share my coding journey and inspire others, recently
+									switching to English to reach a broader audience. The key
+									lesson I’ve learned is that with enough will and dedication,
+									anyone can make a significant life change, no matter their
+									circumstances. Two and a half years may seem long, but it’s a
+									small price to pay for a lifetime of fulfillment.
+								</Body>
+								<Body>
+									This journey fuels my current mission: to{" "}
+									<strong>
+										show others that they, too, can transform their lives by
+										pursuing their passions, especially in the IT industry.
+									</strong>{" "}
+									In an era where AI is changing the landscape, I want to
+									inspire people to embrace challenges, learn to code, and build
+									careers that offer freedom and impact. My story is proof that
+									with persistence, anyone can turn their dreams into reality.
 								</Body>
 							</Stack>
 						</FadeUp>
-					</Box>
-					<FadeUp delay={0.4}>
-						<Stack className="[--space:0.5rem] sm:[--space:1rem]">
-							<H2>My Personal Brand Story</H2>
-							<Body>
-								I used to live a life that, on the surface, looked successful
-								but felt deeply unfulfilling. As a Class A surface modeler in
-								the automotive industry, I spent my days working long hours in
-								front of a computer, creating 3D models in specialized software.
-								My routine was grueling: waking up at 6:00 AM, working from 8:00
-								AM to 5:00 PM, and frequently traveling to production facilities
-								in places like Detroit, Turin, Sweden, and Germany.
-							</Body>
-							<Body>
-								The constant delegations kept me away from home, which became
-								unbearable when I met my wife and dreamed of starting a family.
-								I felt trapped, knowing I’d hit the ceiling of my career with no
-								room to grow or earn more, and my true passion—creating web
-								pages and solving problems through coding—was just a distant
-								dream I lacked the courage to pursue.
-							</Body>
-							<Body>
-								My mindset back then was a mix of hope and frustration. I
-								believed I could change my life, inspired by YouTube creators
-								and tech blogs, but I wasn’t sure if I could pull it off. I felt
-								excited about the possibility of becoming a software developer,
-								yet the demands of my job and the fear of failure held me back.
-							</Body>
-							<H3>My "rock bottom" moment</H3>
-							<Body>
-								The lowest point came when my son was born, and my company sent
-								me to Detroit for a six-month project. Missing those precious
-								early months with my newborn son was heartbreaking—it was my
-								rock bottom. I knew I couldn’t keep living a life that kept me
-								away from my family and my true calling. That moment, coupled
-								with my desire to return to Poland and raise my son there, was
-								the spark that pushed me to act.
-							</Body>
-							<Body>
-								Determined to change my life, I committed to learning how to
-								code. I started with online courses from Udemy and YouTube,
-								focusing on HTML, CSS, and JavaScript. To make progress, I
-								reshaped my routine, waking up at 5:30 AM—or even 4:30 AM—to
-								study before my 8-to-5 job, then coding again in the evenings.
-								It wasn’t easy.
-							</Body>
-							<Body>
-								As a self-taught developer, I faced imposter syndrome and
-								struggled to find well-structured resources. I often redid
-								courses multiple times to solidify my knowledge, and without a
-								mentor, I had to rely on sheer persistence. But my dream of
-								working from home, building a SaaS product, and achieving
-								financial independence kept me going. After two and a half years
-								of relentless effort, I landed my first job as a full-stack
-								developer in the TypeScript ecosystem.
-							</Body>
-							<H3>What I'm doing today</H3>
-							<Body>
-								Today, I work remotely for a German company, building
-								applications for installers of heat pumps and gas boilers using
-								React and React Native. With six years of professional coding
-								experience, I earn a good living and have the freedom to be with
-								my family in Poland. My life has transformed—I’m no longer
-								tethered to constant travel or a career ceiling.{" "}
-							</Body>
-							<Body>
-								I also run a YouTube channel with over 5,500 subscribers, where
-								I share my coding journey and inspire others, recently switching
-								to English to reach a broader audience. The key lesson I’ve
-								learned is that with enough will and dedication, anyone can make
-								a significant life change, no matter their circumstances. Two
-								and a half years may seem long, but it’s a small price to pay
-								for a lifetime of fulfillment.
-							</Body>
-							<Body>
-								This journey fuels my current mission: to{" "}
-								<strong>
-									show others that they, too, can transform their lives by
-									pursuing their passions, especially in the IT industry.
-								</strong>{" "}
-								In an era where AI is changing the landscape, I want to inspire
-								people to embrace challenges, learn to code, and build careers
-								that offer freedom and impact. My story is proof that with
-								persistence, anyone can turn their dreams into reality.
-							</Body>
-						</Stack>
-					</FadeUp>
-				</Cluster>
+					</Cluster>
+				</main>
 			</Stack>
 		</Center>
 	);
