@@ -1,4 +1,7 @@
 {
+  "inlay_hints": {
+    "show_background": false
+  },
   "lsp": {
     "biome": {
       "settings": {

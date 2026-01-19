@@ -8,6 +8,7 @@ import { FadeUp } from "@/components/ui/fade-up";
 import { GradientTitle } from "@/components/ui/gradient-title";
 import { Body, H2, H3 } from "@/components/ui/Typography/Body";
 import { cn } from "@/lib/utils";
+// TODO: something here is a todo
 export const Route = createFileRoute("/about/")({
 	component: RouteComponent,
 	head: () => ({
